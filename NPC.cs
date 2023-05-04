@@ -96,12 +96,12 @@ namespace WindowsFormsApp1
         public slime()
         {
             name = "슬라임";
-            img = Image.FromFile(".\\slim.png");
-            img_attack= Image.FromFile(".\\slim_attack.png");
-            img_defend= Image.FromFile(".\\slim_defend.png");
-            img_attacked=Image.FromFile(".\\slim_attacked.png");
-            img_skill= Image.FromFile(".\\slim_skill.png");
-            img_dead = Image.FromFile(".\\slim_dead.png");
+            img = Image.FromFile(".\\img\\slim.png");
+            img_attack= Image.FromFile(".\\img\\slim_attack.png");
+            img_defend= Image.FromFile(".\\img\\slim_defend.png");
+            img_attacked=Image.FromFile(".\\img\\slim_attacked.png");
+            img_skill= Image.FromFile(".\\img\\slim_skill.png");
+            img_dead = Image.FromFile(".\\img\\slim_dead.png");
             max_health = 100;
             real_health = 100;
             defend = 10;

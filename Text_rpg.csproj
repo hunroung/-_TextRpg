@@ -139,6 +139,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,6 +153,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\item_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\main_character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\main_character_attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\main_character_attacked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\main_character_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\main_character_defend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\main_character_skill_심판.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\slim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\slim_attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\slim_attacked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\slim_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\slim_defend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\slim_skill.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

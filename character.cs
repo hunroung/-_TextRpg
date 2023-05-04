@@ -21,12 +21,12 @@ namespace WindowsFormsApp1
 
         public int max_skill_point = 3;//사용 가능한 스킬 횟수
 
-        public Image main = Image.FromFile(".\\main_character.png");
-        public Image main_attack = Image.FromFile(".\\main_character_attack.png");
-        public Image main_attacked = Image.FromFile(".\\main_character_attacked.png");
+        public Image main = Image.FromFile(".\\img\\main_character.png");
+        public Image main_attack = Image.FromFile(".\\img\\main_character_attack.png");
+        public Image main_attacked = Image.FromFile(".\\img\\main_character_attacked.png");
         public Image main_skill;
-        public Image main_defend = Image.FromFile(".\\main_character_defend.png");
-        public Image main_dead = Image.FromFile(".\\main_character_dead.png");
+        public Image main_defend = Image.FromFile(".\\img\\main_character_defend.png");
+        public Image main_dead = Image.FromFile(".\\img\\main_character_dead.png");
 
         //아이템 사용시 적용될 효과 수치를 따로 저장 후 되돌릴 때 사용
         public int item_str = 0;
@@ -174,9 +174,10 @@ namespace WindowsFormsApp1
         {
             if (skill_point > 0)
             {
-                main_skill = Image.FromFile(".\\main_character_skill_" + skill_name + ".png");
+                
                 if (skill_name == "심판")
                 {
+                    main_skill = Image.FromFile(".\\img\\main_character_skill_" + skill_name + ".png");
                     skill_point--;
                     return Judgement();
                 }

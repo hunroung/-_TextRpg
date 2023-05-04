@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            int k = 0;
+            int k = 1;
             if (namebox.Text == "")
             {
                 MessageBox.Show("이름을 입력해주세요");

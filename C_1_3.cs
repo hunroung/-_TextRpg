@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         public C_1_3(ref character character)
         {
 
-            //slime.img = Image.FromFile(".\\slim.png");
+            
             //string name = "슬라임";
             //slime.name = name;
             ch = character;
