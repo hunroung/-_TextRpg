@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_1_3 : Form
+    public partial class C_1_3_0 : Form
     {
-        public C_1_3()
+        public C_1_3_0()
         {
             InitializeComponent();
         }
 
-        private void C_1_3_Load(object sender, EventArgs e)
+        private void C_1_3_0_Load(object sender, EventArgs e)
         {
 
         }
@@ -27,12 +29,12 @@ namespace WindowsFormsApp1
         //해당 부분 copy 필요
         public int visit = 0;
         public character ch;
-        public slime slime = new slime();
-        public C_1_3(ref character character)
+        //public slime slime = new slime();
+        public C_1_3_0(ref character character)
         {
 
-            
-            //string name = "슬라임";
+
+            string name = "슬라임";
             //slime.name = name;
             ch = character;
 
@@ -95,6 +97,7 @@ namespace WindowsFormsApp1
             }
 
             item_btn_able(ch);
+
             label2.Text = ch.skill_point.ToString();
             name.Text = character.name;
             exp.Text = character.exp_per.ToString() + '%';
@@ -178,6 +181,7 @@ namespace WindowsFormsApp1
         }
         public void move_btn_enable()
         {
+            btn_travel.Enabled = false;
             btn_down_move.Enabled = false;
             btn_left_move.Enabled = false;
             btn_right_move.Enabled = false;
@@ -188,10 +192,20 @@ namespace WindowsFormsApp1
 
         public void move_btn_able()
         {
+            btn_travel.Enabled = true;
             btn_down_move.Enabled = true;
             btn_left_move.Enabled = true;
             btn_right_move.Enabled = true;
             btn_up_move.Enabled = true;
+        }
+        private void btn_str_Click(object sender, EventArgs e)
+        {
+
+        }
+        //아이템 사용
+        private void btn_item_Click(object sender, EventArgs e)
+        {
+
         }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)
@@ -270,40 +284,18 @@ namespace WindowsFormsApp1
             }
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        private void btn_right_move_Click(object sender, EventArgs e)
+        private void btn_up_move_Click(object sender, EventArgs e)
         {
-            C_1_4 form = new C_1_4(ref ch);
-            this.Hide();
-            form.ShowDialog();
-            
-            if (ch.real_health <= 0)
-            {
-                this.Close();
-            }
-            this.Show();
-            update();
-            this.Refresh();
             
         }
 
         private void btn_left_move_Click(object sender, EventArgs e)
         {
-            this.Close();
         }
 
-        private void btn_up_move_Click(object sender, EventArgs e)
+        private void btn_down_move_Click(object sender, EventArgs e)
         {
-            C_1_3_0 _1_ = new C_1_3_0(ref ch);
-            this.Hide();
-            _1_.ShowDialog();
-
-            if (ch.real_health <= 0)
-            {
-                this.Close();
-            }
-            this.Show();
-            update();
-            this.Refresh();
+            this.Close();
         }
     }
 }

@@ -436,6 +436,7 @@
             this.btn_up_move.TabIndex = 111;
             this.btn_up_move.Text = "이동한다";
             this.btn_up_move.UseVisualStyleBackColor = true;
+            this.btn_up_move.Click += new System.EventHandler(this.btn_up_move_Click);
             // 
             // exp
             // 
