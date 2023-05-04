@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(C_1_3));
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_item_4 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btn_intel = new System.Windows.Forms.Button();
             this.btn_str = new System.Windows.Forms.Button();
             this.def = new System.Windows.Forms.Label();
@@ -69,24 +66,18 @@
             this.leb = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_item_3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_item_6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_item_5 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_item_2 = new System.Windows.Forms.Button();
             this.btn_right_move = new System.Windows.Forms.Button();
             this.btn_item_1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.npc_health = new System.Windows.Forms.Label();
             this.cmb_skill = new System.Windows.Forms.ComboBox();
             this.npc_name = new System.Windows.Forms.Label();
@@ -97,22 +88,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.item_1 = new System.Windows.Forms.Label();
-            this.picture_npc = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.picture_main = new System.Windows.Forms.PictureBox();
             this.btn_run = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picture_npc = new System.Windows.Forms.PictureBox();
+            this.picture_main = new System.Windows.Forms.PictureBox();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             this.SuspendLayout();
@@ -125,14 +124,6 @@
             this.label8.Size = new System.Drawing.Size(41, 12);
             this.label8.TabIndex = 11;
             this.label8.Text = "방어력";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(502, 114);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox10.TabIndex = 53;
-            this.pictureBox10.TabStop = false;
             // 
             // btn_item_4
             // 
@@ -151,14 +142,6 @@
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 48;
             this.label15.Text = "갯수";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(502, 20);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox9.TabIndex = 50;
-            this.pictureBox9.TabStop = false;
             // 
             // btn_intel
             // 
@@ -490,14 +473,6 @@
             this.label14.TabIndex = 45;
             this.label14.Text = "갯수";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(335, 114);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox8.TabIndex = 47;
-            this.pictureBox8.TabStop = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -525,14 +500,6 @@
             this.label13.TabIndex = 42;
             this.label13.Text = "갯수";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(335, 20);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
-            // 
             // btn_item_6
             // 
             this.btn_item_6.Location = new System.Drawing.Point(251, 156);
@@ -551,14 +518,6 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "갯수";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(173, 114);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox6.TabIndex = 41;
-            this.pictureBox6.TabStop = false;
-            // 
             // btn_item_5
             // 
             this.btn_item_5.Location = new System.Drawing.Point(86, 156);
@@ -567,14 +526,6 @@
             this.btn_item_5.TabIndex = 37;
             this.btn_item_5.Text = "사용";
             this.btn_item_5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(8, 114);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
             // 
             // btn_item_2
             // 
@@ -622,14 +573,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "갯수";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(173, 20);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -638,15 +581,6 @@
             this.label17.Size = new System.Drawing.Size(29, 12);
             this.label17.TabIndex = 109;
             this.label17.Text = "체력";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
             // 
             // npc_health
             // 
@@ -769,14 +703,6 @@
             this.item_1.TabIndex = 20;
             this.item_1.Text = "0";
             // 
-            // picture_npc
-            // 
-            this.picture_npc.Location = new System.Drawing.Point(890, 65);
-            this.picture_npc.Name = "picture_npc";
-            this.picture_npc.Size = new System.Drawing.Size(150, 176);
-            this.picture_npc.TabIndex = 91;
-            this.picture_npc.TabStop = false;
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -787,14 +713,6 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(679, 280);
             this.textBox1.TabIndex = 90;
-            // 
-            // picture_main
-            // 
-            this.picture_main.Location = new System.Drawing.Point(15, 65);
-            this.picture_main.Name = "picture_main";
-            this.picture_main.Size = new System.Drawing.Size(150, 176);
-            this.picture_main.TabIndex = 89;
-            this.picture_main.TabStop = false;
             // 
             // btn_run
             // 
@@ -822,6 +740,87 @@
             this.label2.Size = new System.Drawing.Size(11, 12);
             this.label2.TabIndex = 116;
             this.label2.Text = "0";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Location = new System.Drawing.Point(502, 114);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox10.TabIndex = 53;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(502, 20);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox9.TabIndex = 50;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(335, 114);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox8.TabIndex = 47;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(335, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(173, 114);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(8, 114);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(173, 20);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox4.TabIndex = 35;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.item_0;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
+            // 
+            // picture_npc
+            // 
+            this.picture_npc.Location = new System.Drawing.Point(890, 65);
+            this.picture_npc.Name = "picture_npc";
+            this.picture_npc.Size = new System.Drawing.Size(150, 176);
+            this.picture_npc.TabIndex = 91;
+            this.picture_npc.TabStop = false;
+            // 
+            // picture_main
+            // 
+            this.picture_main.Location = new System.Drawing.Point(15, 65);
+            this.picture_main.Name = "picture_main";
+            this.picture_main.Size = new System.Drawing.Size(150, 176);
+            this.picture_main.TabIndex = 89;
+            this.picture_main.TabStop = false;
             // 
             // C_1_3
             // 
@@ -861,18 +860,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_3";
             this.Load += new System.EventHandler(this.C_1_3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             this.ResumeLayout(false);
