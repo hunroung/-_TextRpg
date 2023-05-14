@@ -246,6 +246,7 @@
             this.btn_right_move.TabIndex = 112;
             this.btn_right_move.Text = "이동한다";
             this.btn_right_move.UseVisualStyleBackColor = true;
+            this.btn_right_move.Click += new System.EventHandler(this.btn_right_move_Click);
             // 
             // picture_npc
             // 
@@ -850,6 +851,7 @@
             this.btn_save.TabIndex = 120;
             this.btn_save.Text = "저장하기";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_close
             // 

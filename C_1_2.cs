@@ -294,6 +294,11 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            ch.save();
+        }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 }

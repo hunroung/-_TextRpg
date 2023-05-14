@@ -140,12 +140,12 @@ namespace WindowsFormsApp1
             img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
             img_skill = Image.FromFile(".\\img\\slim_skill.png");
             img_dead = Image.FromFile(".\\img\\slim_dead.png");
-            max_health = 200;
-            real_health = 200;
+            max_health = 150;
+            real_health = 150;
             defend = 5;
             damage = 20;
 
-            skill_count_static = 4;
+            skill_count_static = 3;
             skill_count = skill_count_static;
             exp = 120;
         }

@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
                     this.Hide();
                     form2.ShowDialog();
                     this.Show();
-                    if(character.real_health==0)
+                    if(character.real_health==0 || character.close == 1)
                     {
                         character= new character();
                     }
@@ -76,9 +76,11 @@ namespace WindowsFormsApp1
                 {
                     case 1:
                         C_1_0 form2 = new C_1_0(ref character);
-                        this.Hide();
                         form2.ShowDialog();
-                        this.Show();
+                        if (character.real_health == 0||character.close==1)
+                        {
+                            character = new character();
+                        }
                         break;
                 }
             }

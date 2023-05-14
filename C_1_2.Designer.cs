@@ -832,6 +832,7 @@
             this.btn_save.TabIndex = 120;
             this.btn_save.Text = "저장하기";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_close
             // 

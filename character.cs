@@ -74,6 +74,7 @@ namespace WindowsFormsApp1
                 max_exp = 2 * max_exp;
                 max_skill_point++;
                 skill_point = max_skill_point;
+                max_health += 20 * leb;
                 real_health = max_health;
             }
             exp_per = (double)exp / (double)max_exp * 100;

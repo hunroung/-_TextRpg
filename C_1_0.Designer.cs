@@ -125,8 +125,9 @@
             this.btn_travel.Name = "btn_travel";
             this.btn_travel.Size = new System.Drawing.Size(150, 23);
             this.btn_travel.TabIndex = 114;
-            this.btn_travel.Text = "탐험한다";
+            this.btn_travel.Text = "치유한다.";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.btn_travel_Click);
             // 
             // btn_down_move
             // 

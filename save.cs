@@ -82,7 +82,8 @@ namespace WindowsFormsApp1
             }
             else
             {
-                ch = characters[listBox.SelectedIndex];
+                ch.load(".\\saves\\" + characters[listBox.SelectedIndex].name+".txt");
+                this.Close();
             }
         }
     }

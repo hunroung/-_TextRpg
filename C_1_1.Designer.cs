@@ -556,6 +556,7 @@
             this.btn_item_1.TabIndex = 32;
             this.btn_item_1.Text = "사용";
             this.btn_item_1.UseVisualStyleBackColor = true;
+            this.btn_item_1.Click += new System.EventHandler(this.btn_item_1_Click);
             // 
             // label9
             // 
@@ -832,6 +833,7 @@
             this.btn_save.TabIndex = 120;
             this.btn_save.Text = "저장하기";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_close
             // 

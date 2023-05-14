@@ -4,40 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_1_3_0 : Form
+    public partial class C_1_3_1 : Form
     {
-        public C_1_3_0()
+        public C_1_3_1()
         {
             InitializeComponent();
-        }
-
-        private void C_1_3_0_Load(object sender, EventArgs e)
-        {
-            move_btn_enable();
-            textBox1.Text += "당신은 깊은 숲으로 들어왔다. \r\n";
-            this.Refresh();
-            Thread.Sleep(2000);
-            textBox1.Text += "당신은 나무 사이에서 오싹함을 느꼈다. \r\n";
-            this.Refresh();
-            Thread.Sleep(2000);
-            monster = new Goblin();
-            fight = 1;
-            setting(ch);
-            picture_npc.Image = monster.img;
-            textBox1.Text += "그러자 나무 사이에서 "+ npc_name.Text + " (이)가 나왔다! \r\n";
-            item_btn_able(ch);
-            act_btn_able();
-
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
@@ -46,12 +24,16 @@ namespace WindowsFormsApp1
         public int fight = 0;
         public NPC monster = new NPC();
         //public slime slime = new slime();
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            ch.save();
+        }
         private void btn_close_Click(object sender, EventArgs e)
         {
             ch.close = 1;
             this.Close();
         }
-        public C_1_3_0(ref character character)
+        public C_1_3_1(ref character character)
         {
 
 
@@ -81,6 +63,7 @@ namespace WindowsFormsApp1
             //따로 추가
             if (fight == 1)
             {
+                picture_npc.Image = monster.img;
                 npc_name.Text = monster.name;
                 npc_health.Text = monster.real_health.ToString();
             }
@@ -358,18 +341,28 @@ namespace WindowsFormsApp1
             }
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        private void btn_up_move_Click(object sender, EventArgs e)
+        private void C_1_3_1_Load(object sender, EventArgs e)
         {
+            move_btn_enable();
+            textBox1.Text += "당신은 조금 더 깊은 숲으로 들어왔다. \r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "당신은 나무 사이에서 오싹함을 느꼈다. \r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            monster = new Goblin();
+            monster.name="무자비한 고블린";
+            fight = 1;
+            setting(ch);
+            textBox1.Text += "그러자 나무 사이에서 " + npc_name.Text + " (이)가 나왔다! \r\n";
             
+            item_btn_able(ch);
+            act_btn_able();
         }
 
-        private void btn_left_move_Click(object sender, EventArgs e)
+        private void C_1_3_1_Load_1(object sender, EventArgs e)
         {
-        }
 
-        private void btn_down_move_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btn_attack_Click(object sender, EventArgs e)
@@ -461,7 +454,7 @@ namespace WindowsFormsApp1
             {
                 ch.skill_re();
                 ch.exp_gain(monster.exp);//변경 필요
-                ch.item_gain(0,2);//변경 필요
+                ch.item_gain(0, 2);//변경 필요
                 textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 2개 획득\r\n";//변경 필요
                 picture_npc.Image = monster.img_dead;//변경 필요
                 picture_main.Image = ch.main_attack;
@@ -855,7 +848,7 @@ namespace WindowsFormsApp1
                         }
                         else
                         {
-                            textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name +" 스킬을 사용했다\r\n";
+                            textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                             picture_npc.Image = monster.img_skill;//변경 필요
                             picture_main.Image = ch.main_attacked;
 
@@ -905,32 +898,6 @@ namespace WindowsFormsApp1
                 act_btn_able();
 
             }
-        }
-
-        private void C_1_3_0_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            ch.save();
-        }
-
-        private void btn_right_move_Click(object sender, EventArgs e)
-        {
-            C_1_3_1 _1_ = new C_1_3_1(ref ch);
-            this.Hide();
-            _1_.ShowDialog();
-
-            if (ch.real_health <= 0 || ch.close == 1)
-            {
-                this.Close();
-            }
-            this.Show();
-            update();
-            this.Refresh();
-
         }
     }
 }

@@ -310,5 +310,15 @@ namespace WindowsFormsApp1
             update();
             this.Refresh();
         }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            ch.save();
+        }
+
+        private void btn_item_1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
