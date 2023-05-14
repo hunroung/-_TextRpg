@@ -64,6 +64,10 @@ namespace WindowsFormsApp1
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(listBox.SelectedIndex == -1)
+            {
+                return;
+            }
             int i = listBox.SelectedIndex;
             chapter.Text = characters[i].chapter.ToString();
             name.Text = characters[i].name;

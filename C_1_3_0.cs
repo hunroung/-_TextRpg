@@ -658,7 +658,7 @@ namespace WindowsFormsApp1
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = monster.skill("monster.skill_name");//변경 필요
+                    int temp = monster.skill(monster.skill_name);//변경 필요
 
                     if (temp == 0)
                     {

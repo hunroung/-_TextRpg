@@ -372,6 +372,7 @@ namespace WindowsFormsApp1
         {
             ch.healed(ch.max_health);
             textBox1.Text +="체력이 모두 회복되었다.\r\n";
+            setting(ch);
         }
     }
 }

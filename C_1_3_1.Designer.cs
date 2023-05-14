@@ -347,6 +347,7 @@
             this.btn_run.TabIndex = 134;
             this.btn_run.Text = "도망친다";
             this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
             // 
             // btn_skill
             // 
@@ -356,6 +357,7 @@
             this.btn_skill.TabIndex = 133;
             this.btn_skill.Text = "스킬사용";
             this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
             // 
             // label10
             // 
@@ -428,6 +430,7 @@
             this.btn_defend.TabIndex = 132;
             this.btn_defend.Text = "방어한다";
             this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
             // 
             // btn_attack
             // 
@@ -437,6 +440,7 @@
             this.btn_attack.TabIndex = 131;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // exp
             // 
