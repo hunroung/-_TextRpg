@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
 
         public int skill_count = 2; // 스킬 사용가능한 횟수
         public string name;
+        public string skill_name;
         public Image img;
         public Image img_defend;
         public Image img_skill;
@@ -64,7 +65,7 @@ namespace WindowsFormsApp1
             return 1;
         }
 
-        public int skill(string skill_name)
+        virtual public int skill(string skill_name)
         {
             if (skill_count > 0)
             {
@@ -96,6 +97,7 @@ namespace WindowsFormsApp1
         public slime()
         {
             name = "슬라임";
+            skill_name = "깨물기";
             img = Image.FromFile(".\\img\\slim.png");
             img_attack= Image.FromFile(".\\img\\slim_attack.png");
             img_defend= Image.FromFile(".\\img\\slim_defend.png");
@@ -111,7 +113,7 @@ namespace WindowsFormsApp1
             skill_count = skill_count_static;
             exp = 80;
         }
-        public new int skill(string skill_name)
+        public override int skill(string skill_name)
         {
             if (skill_count > 0)
             {
@@ -119,6 +121,79 @@ namespace WindowsFormsApp1
                 {
                     skill_count--;
                     return 20;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class Goblin : NPC
+    {
+        public Goblin()
+        {
+            name = "고블린";
+            skill_name = "단검찌르기";
+            img = Image.FromFile(".\\img\\slim.png");
+            img_attack = Image.FromFile(".\\img\\slim_attack.png");
+            img_defend = Image.FromFile(".\\img\\slim_defend.png");
+            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
+            img_skill = Image.FromFile(".\\img\\slim_skill.png");
+            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            max_health = 200;
+            real_health = 200;
+            defend = 5;
+            damage = 20;
+
+            skill_count_static = 4;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+            
+            if (skill_count > 0)
+            {
+                if (skill_name == "단검찌르기")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class Ent : NPC
+    {
+        public Ent()
+        {
+            name = "고대 앤트";
+            skill_name="넝쿨 채찍";
+            img = Image.FromFile(".\\img\\slim.png");
+            img_attack = Image.FromFile(".\\img\\slim_attack.png");
+            img_defend = Image.FromFile(".\\img\\slim_defend.png");
+            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
+            img_skill = Image.FromFile(".\\img\\slim_skill.png");
+            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            max_health = 300;
+            real_health = 300;
+            defend = 30;
+            damage = 5;
+
+            skill_count_static = 2;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "넝쿨 채찍")
+                {
+                    skill_count--;
+                    return 35;
                 }
 
             }

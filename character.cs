@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -34,8 +35,7 @@ namespace WindowsFormsApp1
         public int item_spd = 0;
         public int item_def = 0;
 
-        public int gold = 0;
-
+        public int close = 0;
         public string name;
         public int exp = 0;
         public int max_exp = 100;
@@ -205,6 +205,85 @@ namespace WindowsFormsApp1
             item_def = 0;
         }
 
+        public void load(string path)
+        {
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                line = reader.ReadLine();
+                chapter = int.Parse(line);
+                line = reader.ReadLine();
+                this.name = line;
+                line = reader.ReadLine();
+                str = int.Parse(line);
+                line = reader.ReadLine();
+                spd = int.Parse(line);
+                line = reader.ReadLine();
+                intel = int.Parse(line);
+                line = reader.ReadLine();
+                def = int.Parse(line);
+                line = reader.ReadLine();
+                exp = int.Parse(line);
+                line = reader.ReadLine();
+                max_exp = int.Parse(line);
+                line= reader.ReadLine();
+                exp_per = double.Parse(line);
+                line = reader.ReadLine();
+                max_health = int.Parse(line);
+                line = reader.ReadLine();
+                real_health = int.Parse(line);
+                line = reader.ReadLine();
+                stat_point = int.Parse(line);
+                line = reader.ReadLine();
+                max_skill_point = int.Parse(line);
+                line = reader.ReadLine();
+                skill_count = int.Parse(line);
+                for (int i = 0; i < skill_count; i++)
+                {
+                    line = reader.ReadLine();
+                    skill[i] = line;
+                }
+                for (int i = 0; i < max_item; i++)
+                {
+                    line = reader.ReadLine();
+                    item[i] = int.Parse(line);
+                }
+                line = reader.ReadLine();
+                leb = int.Parse(line);
+            }
+        }
+
+        public void save()
+        {
+            using (StreamWriter writer = new StreamWriter(".\\saves\\"+name+".txt"))
+            {
+                writer.WriteLine(chapter);
+                writer.WriteLine(name);
+                writer.WriteLine(str);
+                writer.WriteLine(spd);
+                writer.WriteLine(intel);
+                writer.WriteLine(def);
+                writer.WriteLine(exp);
+                writer.WriteLine(max_exp);
+                writer.WriteLine(exp_per);
+                writer.WriteLine(max_health);
+                writer.WriteLine(real_health);
+                writer.WriteLine(stat_point);
+                writer.WriteLine(max_skill_point);
+                writer.WriteLine(skill_count);
+                for(int i=0;i<skill_count;i++)
+                {
+                    writer.WriteLine(skill[i]);
+                }
+                for (int i = 0; i < max_item; i++)
+                {
+                    writer.WriteLine(item[i]);
+                }
+                writer.WriteLine(leb);
+            }
+        }
+
+        /*
         public void gold_gain(int val)
         {
             gold += val;
@@ -219,5 +298,6 @@ namespace WindowsFormsApp1
             }
             return 0;
         }
-}
+        */
+    }
 }

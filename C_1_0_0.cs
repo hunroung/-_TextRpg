@@ -27,6 +27,11 @@ namespace WindowsFormsApp1
         public int visit = 0;
         public character ch;
         //public slime slime = new slime();
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            ch.close = 1;
+            this.Close();
+        }
         public C_1_0_0(ref character character)
         {
 

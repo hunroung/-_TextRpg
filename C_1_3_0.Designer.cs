@@ -102,6 +102,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btn_item_2 = new System.Windows.Forms.Button();
             this.체력 = new System.Windows.Forms.Label();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -189,6 +191,7 @@
             this.btn_travel.TabIndex = 116;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_left_move
             // 
@@ -271,6 +274,7 @@
             this.btn_run.TabIndex = 103;
             this.btn_run.Text = "도망친다";
             this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
             // 
             // btn_skill
             // 
@@ -280,6 +284,7 @@
             this.btn_skill.TabIndex = 102;
             this.btn_skill.Text = "스킬사용";
             this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
             // 
             // btn_defend
             // 
@@ -289,6 +294,7 @@
             this.btn_defend.TabIndex = 101;
             this.btn_defend.Text = "방어한다";
             this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
             // 
             // btn_attack
             // 
@@ -298,6 +304,7 @@
             this.btn_attack.TabIndex = 100;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // groupBox2
             // 
@@ -835,12 +842,34 @@
             this.체력.TabIndex = 105;
             this.체력.Text = "체력";
             // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(898, -1);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(76, 23);
+            this.btn_save.TabIndex = 120;
+            this.btn_save.Text = "저장하기";
+            this.btn_save.UseVisualStyleBackColor = true;
+            // 
+            // btn_close
+            // 
+            this.btn_close.Location = new System.Drawing.Point(972, -1);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(76, 23);
+            this.btn_close.TabIndex = 119;
+            this.btn_close.Text = "종료하기";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // C_1_3_0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1049, 616);
+            this.ControlBox = false;
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_down_move);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label2);
@@ -872,7 +901,8 @@
             this.Name = "C_1_3_0";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_3_0";
-            this.Load += new System.EventHandler(this.C_1_3_0_Load);
+            this.Load += new System.EventHandler(this.C_1_3_0_Load_1);
+            this.Shown += new System.EventHandler(this.C_1_3_0_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -968,5 +998,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btn_item_2;
         private System.Windows.Forms.Label 체력;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_close;
     }
 }
