@@ -46,6 +46,10 @@ namespace WindowsFormsApp1
         public int defense(int dam)
         {
             dam = dam - (defend+item_def);
+            if(dam<0)
+            {
+                dam = 0;
+            }
             real_health -= dam;
             if (real_health <= 0)
             {

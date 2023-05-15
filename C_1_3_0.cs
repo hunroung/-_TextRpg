@@ -67,12 +67,6 @@ namespace WindowsFormsApp1
             act_btn_enable();
             picture_main.Image = character.main;
             //스킬 옮겨 담기
-            for (int i = 0; i < character.skill_count; i++)
-            {
-                cmb_skill.Items.Add(character.skill[i]);
-            }
-
-
         }
 
         //폼 로딩시 세팅 단계
@@ -134,6 +128,14 @@ namespace WindowsFormsApp1
             else
             {
                 stat_btn_setting(true);
+            }
+            if (cmb_skill.Items.Count < ch.skill_count)
+            {
+                cmb_skill.Items.Clear();
+                for (int i = 0; i < ch.skill_count; i++)
+                {
+                    cmb_skill.Items.Add(ch.skill[i]);
+                }
             }
 
         }
@@ -360,7 +362,17 @@ namespace WindowsFormsApp1
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void btn_up_move_Click(object sender, EventArgs e)
         {
-            
+            C_1_3_2 _1_ = new C_1_3_2(ref ch);
+            this.Hide();
+            _1_.ShowDialog();
+
+            if (ch.real_health <= 0 || ch.close == 1)
+            {
+                this.Close();
+            }
+            this.Show();
+            update();
+            this.Refresh();
         }
 
         private void btn_left_move_Click(object sender, EventArgs e)

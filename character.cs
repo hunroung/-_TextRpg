@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -182,12 +183,21 @@ namespace WindowsFormsApp1
                     skill_point--;
                     return Judgement();
                 }
-                else if (skill_name == "")
+                else if (skill_name == "메테오")
                 {
-                    return 0;
+                    main_skill = Image.FromFile(".\\img\\main_character_skill_" + skill_name + ".png");
+                    skill_point--;
+                    return Meteor();
                 }
             }
             return 0;
+        }
+        public int Meteor()
+        {
+            double damage = 30;
+            damage = (double)(intel + item_intel) * 2.0 + damage;
+
+            return (int)damage;
         }
         public int Judgement()
         {
@@ -252,6 +262,7 @@ namespace WindowsFormsApp1
                 line = reader.ReadLine();
                 leb = int.Parse(line);
             }
+            skill_point = max_skill_point;
         }
 
         public void save()
@@ -282,6 +293,18 @@ namespace WindowsFormsApp1
                 }
                 writer.WriteLine(leb);
             }
+        }
+        public int skill_have(string name)
+        {
+            int i = 0;
+            for (i = 0; i < skill_count; i++)
+            {
+                if (name == skill[i])
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         /*

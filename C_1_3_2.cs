@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_1_3_1 : Form
+    public partial class C_1_3_2 : Form
     {
-        public C_1_3_1()
+        public C_1_3_2()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             ch.close = 1;
             this.Close();
         }
-        public C_1_3_1(ref character character)
+        public C_1_3_2(ref character character)
         {
 
 
@@ -48,8 +48,6 @@ namespace WindowsFormsApp1
             item_btn_enable();
             act_btn_enable();
             picture_main.Image = character.main;
-            //스킬 옮겨 담기
-
         }
 
         //폼 로딩시 세팅 단계
@@ -342,32 +340,51 @@ namespace WindowsFormsApp1
 
             }
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (monster.real_health <= 0)//변경 필요
+            {
+                picture_npc.Image = monster.img;//변경 필요
+                monster.real_health = monster.max_health;//변경 필요
+                monster.revive();//변경 필요
+                textBox1.Text = "또 다른 " + npc_name.Text + "이 나타났다.\r\n";
+                setting(ch);
+                move_btn_enable();
+                item_btn_able(ch);
+                act_btn_able();
+
+            }
+        }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        private void C_1_3_1_Load(object sender, EventArgs e)
+
+        private void C_1_3_2_Load(object sender, EventArgs e)
         {
             move_btn_enable();
-            textBox1.Text += "당신은 조금 더 깊은 숲으로 들어왔다. \r\n";
+            textBox1.Text += "당신은 깊은 숲으로 들어왔다. \r\n";
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "당신은 나무 사이에서 오싹함을 느꼈다. \r\n";
+            textBox1.Text += "당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n";
             this.Refresh();
             Thread.Sleep(2000);
-            monster = new Goblin();
-            picture_npc.Image = monster.img;
-            monster.name="무자비한 고블린";
+            monster = new Ent();
             fight = 1;
             setting(ch);
+            picture_npc.Image = monster.img;
             textBox1.Text += "그러자 나무 사이에서 " + npc_name.Text + " (이)가 나왔다! \r\n";
-            
+
             item_btn_able(ch);
             act_btn_able();
         }
 
-        private void C_1_3_1_Load_1(object sender, EventArgs e)
+        private void btn_down_move_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void C_1_3_2_Load_1(object sender, EventArgs e)
         {
 
         }
-
         private void btn_attack_Click(object sender, EventArgs e)
         {
             move_btn_enable();
@@ -388,8 +405,8 @@ namespace WindowsFormsApp1
                 {
                     ch.skill_re();
                     ch.exp_gain(monster.exp);//변경 필요
-                    ch.item_gain(0, 2);//변경 필요
-                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 2개 획득\r\n";
+                    ch.item_gain(0, 3);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";
                     picture_npc.Image = monster.img_dead;
                     picture_main.Image = ch.main_attack;
 
@@ -457,8 +474,8 @@ namespace WindowsFormsApp1
             {
                 ch.skill_re();
                 ch.exp_gain(monster.exp);//변경 필요
-                ch.item_gain(0, 2);//변경 필요
-                textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 2개 획득\r\n";//변경 필요
+                ch.item_gain(0, 3);//변경 필요
+                textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";//변경 필요
                 picture_npc.Image = monster.img_dead;//변경 필요
                 picture_main.Image = ch.main_attack;
 
@@ -518,8 +535,8 @@ namespace WindowsFormsApp1
                         ch.skill_re();
                         picture_main.Image = ch.main_skill;
                         ch.exp_gain(monster.exp);//변경 필요
-                        ch.item_gain(0, 2);//변경 필요
-                        textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 2개 획득\r\n";//변경 필요
+                        ch.item_gain(0, 3);//변경 필요
+                        textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";//변경 필요
                         picture_npc.Image = monster.img_dead;//변경 필요
 
                     }
@@ -587,8 +604,8 @@ namespace WindowsFormsApp1
                     ch.skill_re();
                     picture_main.Image = ch.main_skill;
                     ch.exp_gain(monster.exp);//변경 필요
-                    ch.item_gain(0, 2);//변경 필요
-                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 2개 획득\r\n";
+                    ch.item_gain(0, 3);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";
                     picture_npc.Image = monster.img_dead;//변경 필요
 
                 }
@@ -654,7 +671,7 @@ namespace WindowsFormsApp1
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = monster.skill("monster.skill_name");//변경 필요
+                    int temp = monster.skill(monster.skill_name);//변경 필요
 
                     if (temp == 0)
                     {
@@ -887,30 +904,19 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (monster.real_health <= 0)//변경 필요
-            {
-                picture_npc.Image = monster.img;//변경 필요
-                monster.real_health = monster.max_health;//변경 필요
-                monster.revive();//변경 필요
-                textBox1.Text = "또 다른 " + npc_name.Text + "이 나타났다.\r\n";
-                setting(ch);
-                move_btn_enable();
-                item_btn_able(ch);
-                act_btn_able();
-
-            }
-        }
-
-        private void btn_left_move_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btn_up_move_Click(object sender, EventArgs e)
         {
+            C_1_3_3 _1_ = new C_1_3_3(ref ch);
+            this.Hide();
+            _1_.ShowDialog();
 
+            if (ch.real_health <= 0 || ch.close == 1)
+            {
+                this.Close();
+            }
+            this.Show();
+            update();
+            this.Refresh();
         }
     }
 }
