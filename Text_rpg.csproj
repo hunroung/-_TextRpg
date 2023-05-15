@@ -239,9 +239,6 @@
     <None Include="img\slim_skill.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="1_3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="1_3_0.png" />
   </ItemGroup>
   <ItemGroup>
