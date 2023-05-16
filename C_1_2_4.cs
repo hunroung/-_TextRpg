@@ -11,26 +11,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_1_0_0 : Form
+    public partial class C_1_2_4 : Form
     {
-        public C_1_0_0()
+        public C_1_2_4()
         {
             InitializeComponent();
         }
 
-        private void C_1_0_0_Load(object sender, EventArgs e)
-        {
-
-        }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
         public int visit = 0;
         public character ch;
-        //public slime slime = new slime();
-        public C_1_0_0(ref character character)
+        public slime slime = new slime();
+        public C_1_2_4(ref character character)
         {
 
-            
+
             //string name = "슬라임";
             //slime.name = name;
             ch = character;
@@ -192,67 +188,6 @@ namespace WindowsFormsApp1
             btn_right_move.Enabled = true;
             btn_up_move.Enabled = true;
         }
-        private void btn_str_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_str":
-                    ch.str += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_intel":
-                    ch.intel += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_spd":
-                    ch.spd += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_def":
-                    ch.def += 1;
-                    ch.stat_use();
-                    break;
-                default:
-                    break;
-            }
-            update();
-        }
-        //아이템 사용
-        private void btn_item_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_item_1":
-                    ch.item_use(0);
-                    break;
-                case "btn_item_2":
-                    ch.item_use(1);
-                    break;
-                case "btn_item_3":
-                    ch.item_use(2);
-                    break;
-                case "btn_item_4":
-                    ch.item_use(3);
-                    break;
-                case "btn_item_5":
-                    ch.item_use(4);
-                    break;
-                case "btn_item_6":
-                    ch.item_use(5);
-                    break;
-                case "btn_item_7":
-                    ch.item_use(6);
-                    break;
-                case "btn_item_8":
-                    ch.item_use(7);
-                    break;
-                default:
-                    break;
-            }
-            update();
-        }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)
         {
@@ -329,6 +264,29 @@ namespace WindowsFormsApp1
 
             }
         }
+
+        private void btn_right_move_Click(object sender, EventArgs e)
+        {
+            C_1_2_5 form = new C_1_2_5(ref ch);
+            this.Hide();
+            form.ShowDialog();
+
+            if (ch.real_health <= 0)
+            {
+                this.Close();
+            }
+            this.Show();
+            update();
+            this.Refresh();
+
+        }
+
+        private void btn_left_move_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 }

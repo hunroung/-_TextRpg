@@ -12,11 +12,9 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public character character;
         public Form1()
         {
             InitializeComponent();
-            character= new character();
         }
 
         // 복사 필수
@@ -42,6 +40,7 @@ namespace WindowsFormsApp1
             {
                 if (k == 0)
                 {
+                    character character = new character();
                     character.name = namebox.Text;
                     Form2 form2 = new Form2(ref character);
                     this.Hide();
@@ -50,45 +49,15 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    character.skill_gain("심판");
-                    character.item_gain(0, 5);
+                    character character = new character();
                     character.name = namebox.Text;
                     C_1_0 form2 = new C_1_0(ref character);
                     this.Hide();
                     form2.ShowDialog();
                     this.Show();
-                    if(character.real_health==0 || character.close == 1)
-                    {
-                        character= new character();
-                    }
                 }
                 
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            save save = new save(ref character);
-            save.ShowDialog();
-            if(character.name!=null)
-            {
-                switch (character.chapter)
-                {
-                    case 1:
-                        C_1_0 form2 = new C_1_0(ref character);
-                        form2.ShowDialog();
-                        if (character.real_health == 0||character.close==1)
-                        {
-                            character = new character();
-                        }
-                        break;
-                }
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

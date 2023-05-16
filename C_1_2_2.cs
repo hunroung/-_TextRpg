@@ -9,28 +9,24 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp1
 {
-    public partial class C_1_0_0 : Form
+    public partial class C_1_2_2 : Form
     {
-        public C_1_0_0()
+        public C_1_2_2()
         {
             InitializeComponent();
-        }
-
-        private void C_1_0_0_Load(object sender, EventArgs e)
-        {
-
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
         public int visit = 0;
         public character ch;
-        //public slime slime = new slime();
-        public C_1_0_0(ref character character)
+        public slime slime = new slime();
+        public C_1_2_2(ref character character)
         {
 
-            
+
             //string name = "슬라임";
             //slime.name = name;
             ch = character;
@@ -182,16 +178,6 @@ namespace WindowsFormsApp1
             btn_right_move.Enabled = false;
             btn_up_move.Enabled = false;
         }
-
-
-
-        public void move_btn_able()
-        {
-            btn_down_move.Enabled = true;
-            btn_left_move.Enabled = true;
-            btn_right_move.Enabled = true;
-            btn_up_move.Enabled = true;
-        }
         private void btn_str_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -218,40 +204,14 @@ namespace WindowsFormsApp1
             }
             update();
         }
-        //아이템 사용
-        private void btn_item_Click(object sender, EventArgs e)
+
+
+        public void move_btn_able()
         {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_item_1":
-                    ch.item_use(0);
-                    break;
-                case "btn_item_2":
-                    ch.item_use(1);
-                    break;
-                case "btn_item_3":
-                    ch.item_use(2);
-                    break;
-                case "btn_item_4":
-                    ch.item_use(3);
-                    break;
-                case "btn_item_5":
-                    ch.item_use(4);
-                    break;
-                case "btn_item_6":
-                    ch.item_use(5);
-                    break;
-                case "btn_item_7":
-                    ch.item_use(6);
-                    break;
-                case "btn_item_8":
-                    ch.item_use(7);
-                    break;
-                default:
-                    break;
-            }
-            update();
+            btn_down_move.Enabled = true;
+            btn_left_move.Enabled = true;
+            btn_right_move.Enabled = true;
+            btn_up_move.Enabled = true;
         }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)
@@ -329,6 +289,80 @@ namespace WindowsFormsApp1
 
             }
         }
+
+        private void btn_left_move_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void C_1_2_2_Load(object sender, EventArgs e)
+        {
+            if (ch.wiz_visit == 0)
+            {
+            npc_name.Text = "마법사";
+            textBox1.Text += "저 멀리서 쓰러진 마법사가 보인다. 가까이 가볼까? \r\n";
+            btn_attack.Visible = false;
+            btn_defend.Visible = false;
+            move_btn_enable();
+            btn_yes.Visible = true;
+            btn_no.Visible = true;
+            picture_npc.Image = Image.FromFile(".\\img\\wiz_01.png");
+            }
+            else if (ch.wiz_visit == 1)
+            {
+                npc_name.Text = "마법사";
+                textBox1.Text += "잃어버린 제 마법서를 찾아와주시면 감사하겠습니다... \r\n\r\n";
+                textBox1.Text += "[ 현재 퀘스트를 수락한 상태입니다. ] \r\n";
+                picture_npc.Image = Image.FromFile(".\\img\\wiz_02.png");
+            }
+            else if (ch.wiz_visit == 2)
+            {
+                ch.wiz_visit = 3;
+                npc_name.Text = "마법사";
+                textBox1.Text += "잃어버린 제 마법서를 찾아와주셔서 감사합니다! \r\n";
+                textBox1.Text += "감사의 의미로 선물을 드릴게요! \r\n\r\n";
+                textBox1.Text += "[exp 300 을 획득하였습니다.] \r\n[회복 포션 3개를 획득하였습니다.] ";
+                for(int i = 0; i < 31; i++) ch.exp_gain(10);
+                ch.item_gain(0, 3);
+                picture_npc.Image = Image.FromFile(".\\img\\wiz_03.png");
+                update();
+            }
+            else if (ch.wiz_visit == 3)
+            {
+                ch.wiz_visit = 3;
+                npc_name.Text = "마법사";
+                textBox1.Text += "잃어버린 제 마법서를 찾아와주셔서 감사합니다! \r\n";
+                textBox1.Text += "이제 다시 모험을 떠날 수 있겠어요. \r\n\r\n";
+                textBox1.Text += "[ 퀘스트를 완료하셨습니다. ] \r\n";
+                picture_npc.Image = Image.FromFile(".\\img\\wiz_03.png");
+            }
+
+        }
+
+        private void btn_no_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_yes_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "\r\n으으... 구해주셔서 감사합니다. \r\n모험을 하던 도중 정체불명의 몬스터를 만나 잠시 정신을 잃게 되었습니다. \r\n";
+            textBox1.Text += "몸 상태는 쉬면 괜찮아질 것 같지만....\r\n\r\n제 소중한 마법서를 몬스터가 있는 장소에 떨어뜨리고 왔습니다. \r\n";
+            textBox1.Text += "혹시 몬스터를 물리치고 잃어버린 제 마법서를 찾아와주실 수 있을까요? 부탁드립니다. \r\n";
+            picture_npc.Image = Image.FromFile(".\\img\\wiz_02.png");
+            btn_yes.Visible = false;
+            btn_quest_yes.Visible = true;
+        }
+
+        private void btn_quest_yes_Click(object sender, EventArgs e)
+        {
+            ch.wiz_visit = 1;
+            MessageBox.Show("퀘스트를 수락하였습니다.\r\n그리고 C_1_2_3에 걸려있는 결계가 해제되었습니다.");
+            this.Close();
+        }
+
+
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 }

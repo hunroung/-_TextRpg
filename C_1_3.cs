@@ -28,11 +28,6 @@ namespace WindowsFormsApp1
         public int visit = 0;
         public character ch;
         public slime slime = new slime();
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            ch.close = 1;
-            this.Close();
-        }
         public C_1_3(ref character character)
         {
 
@@ -281,7 +276,7 @@ namespace WindowsFormsApp1
             this.Hide();
             form.ShowDialog();
             
-            if (ch.real_health <= 0 || ch.close == 1)
+            if (ch.real_health <= 0)
             {
                 this.Close();
             }
@@ -294,31 +289,6 @@ namespace WindowsFormsApp1
         private void btn_left_move_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btn_up_move_Click(object sender, EventArgs e)
-        {
-            C_1_3_0 _1_ = new C_1_3_0(ref ch);
-            this.Hide();
-            _1_.ShowDialog();
-
-            if (ch.real_health <= 0||ch.close==1)
-            {
-                this.Close();
-            }
-            this.Show();
-            update();
-            this.Refresh();
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            ch.save();
-        }
-
-        private void btn_item_1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
