@@ -20,13 +20,19 @@ namespace WindowsFormsApp1
 
         private void C_1_0_Load(object sender, EventArgs e)
         {
-
+            textBox1.Text+="이곳은 치유의 샘이다. \r\n전투의 피로를 이곳에서 회복하자.\r\n";
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
         public int visit = 0;
         public character ch;
         //public slime slime = new slime();
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            ch.close = 1;
+            this.Close();
+        }
         public C_1_0(ref character character)
         {
 
@@ -337,7 +343,7 @@ namespace WindowsFormsApp1
             this.Hide();
             form.ShowDialog();
             
-            if (ch.real_health <= 0)
+            if (ch.real_health <= 0 || ch.close == 1)
             {
                 this.Close();
             }
@@ -349,12 +355,24 @@ namespace WindowsFormsApp1
 
         private void btn_left_move_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void btn_up_move_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            ch.save();
+        }
+
+        private void btn_travel_Click(object sender, EventArgs e)
+        {
+            ch.healed(ch.max_health);
+            textBox1.Text +="체력이 모두 회복되었다.\r\n";
+            setting(ch);
         }
     }
 }
