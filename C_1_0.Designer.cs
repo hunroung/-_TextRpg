@@ -103,8 +103,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -125,9 +123,8 @@
             this.btn_travel.Name = "btn_travel";
             this.btn_travel.Size = new System.Drawing.Size(150, 23);
             this.btn_travel.TabIndex = 114;
-            this.btn_travel.Text = "치유한다.";
+            this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
-            this.btn_travel.Click += new System.EventHandler(this.btn_travel_Click);
             // 
             // btn_down_move
             // 
@@ -839,35 +836,12 @@
             this.label2.TabIndex = 116;
             this.label2.Text = "0";
             // 
-            // btn_close
-            // 
-            this.btn_close.Location = new System.Drawing.Point(972, -1);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(76, 23);
-            this.btn_close.TabIndex = 117;
-            this.btn_close.Text = "종료하기";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(898, -1);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(76, 23);
-            this.btn_save.TabIndex = 118;
-            this.btn_save.Text = "저장하기";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
             // C_1_0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1049, 616);
-            this.ControlBox = false;
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_travel);
@@ -995,7 +969,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_close;
-        private System.Windows.Forms.Button btn_save;
     }
 }

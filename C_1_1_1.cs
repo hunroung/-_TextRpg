@@ -2,38 +2,34 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_1_3 : Form
+    public partial class C_1_1_1 : Form
     {
-        public C_1_3()
+        public C_1_1_1()
         {
             InitializeComponent();
         }
 
-        private void C_1_3_Load(object sender, EventArgs e)
-        {
-
-        }
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
-        //해당 부분 copy 필요
         public int visit = 0;
         public character ch;
         public slime slime = new slime();
-        public C_1_3(ref character character)
+        public whale whale = new whale();
+        public C_1_1_1(ref character character)
         {
 
-            
-            //string name = "슬라임";
-            //slime.name = name;
+
+            string name = "매우 큰 고래";
+            whale.name = name;
             ch = character;
 
             InitializeComponent();
@@ -43,7 +39,7 @@ namespace WindowsFormsApp1
             item_btn_enable();
             act_btn_enable();
             picture_main.Image = character.main;
-            //picture_npc.Image = slime.img;
+            picture_npc.Image = slime.img;
             //스킬 옮겨 담기
             for (int i = 0; i < character.skill_count; i++)
             {
@@ -58,8 +54,8 @@ namespace WindowsFormsApp1
         {
             //따로 추가
 
-            //npc_name.Text = slime.name;
-            //npc_health.Text = slime.real_health.ToString();
+            npc_name.Text = whale.name;
+            npc_health.Text = whale.real_health.ToString();
             //따로 추가
             if (character.item_str > 0)
             {
@@ -269,13 +265,17 @@ namespace WindowsFormsApp1
 
             }
         }
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        private void btn_right_move_Click(object sender, EventArgs e)
+        private void C_1_1_1_Load(object sender, EventArgs e)
         {
-            C_1_4 form = new C_1_4(ref ch);
+
+        }
+
+        private void btn_down_move_Click(object sender, EventArgs e)
+        {
+            C_1_1_0 form = new C_1_1_0(ref ch);
             this.Hide();
             form.ShowDialog();
-            
+
             if (ch.real_health <= 0)
             {
                 this.Close();
@@ -283,12 +283,6 @@ namespace WindowsFormsApp1
             this.Show();
             update();
             this.Refresh();
-            
-        }
-
-        private void btn_left_move_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

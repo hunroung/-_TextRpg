@@ -22,22 +22,17 @@ namespace WindowsFormsApp1
         {
 
         }
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
-        //해당 부분 copy 필요
+
         public int visit = 0;
         public character ch;
+       // public shark shark = new shark();
         //public slime slime = new slime();
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            ch.close = 1;
-            this.Close();
-        }
         public C_1_0_0(ref character character)
         {
 
             
-            //string name = "슬라임";
-            //slime.name = name;
+            //string name = "해적상어";
+            //shark.name = name;
             ch = character;
 
             InitializeComponent();
@@ -47,7 +42,7 @@ namespace WindowsFormsApp1
             item_btn_enable();
             act_btn_enable();
             picture_main.Image = character.main;
-            //picture_npc.Image = slime.img;
+           // picture_npc.Image = slime.img;
             //스킬 옮겨 담기
             for (int i = 0; i < character.skill_count; i++)
             {
@@ -62,8 +57,8 @@ namespace WindowsFormsApp1
         {
             //따로 추가
 
-            //npc_name.Text = slime.name;
-            //npc_health.Text = slime.real_health.ToString();
+            //npc_name.Text = shark.name;
+            //npc_health.Text = shark.real_health.ToString();
             //따로 추가
             if (character.item_str > 0)
             {
@@ -334,16 +329,5 @@ namespace WindowsFormsApp1
 
             }
         }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            ch.save();
-        }
-
-        private void btn_item_1_Click(object sender, EventArgs e)
-        {
-
-        }
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 }

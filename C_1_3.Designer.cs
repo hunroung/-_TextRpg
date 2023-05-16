@@ -92,8 +92,6 @@
             this.btn_run = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -438,7 +436,6 @@
             this.btn_up_move.TabIndex = 111;
             this.btn_up_move.Text = "이동한다";
             this.btn_up_move.UseVisualStyleBackColor = true;
-            this.btn_up_move.Click += new System.EventHandler(this.btn_up_move_Click);
             // 
             // exp
             // 
@@ -557,7 +554,6 @@
             this.btn_item_1.TabIndex = 32;
             this.btn_item_1.Text = "사용";
             this.btn_item_1.UseVisualStyleBackColor = true;
-            this.btn_item_1.Click += new System.EventHandler(this.btn_item_1_Click);
             // 
             // label9
             // 
@@ -745,26 +741,6 @@
             this.label2.TabIndex = 116;
             this.label2.Text = "0";
             // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(898, -1);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(76, 23);
-            this.btn_save.TabIndex = 120;
-            this.btn_save.Text = "저장하기";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Location = new System.Drawing.Point(972, -1);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(76, 23);
-            this.btn_close.TabIndex = 119;
-            this.btn_close.Text = "종료하기";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // pictureBox10
             // 
             this.pictureBox10.Location = new System.Drawing.Point(502, 114);
@@ -852,9 +828,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1049, 616);
-            this.ControlBox = false;
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_skill);
@@ -982,7 +955,5 @@
         private System.Windows.Forms.Button btn_run;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Button btn_close;
     }
 }

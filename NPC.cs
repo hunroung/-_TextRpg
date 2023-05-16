@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
 
         public int skill_count = 2; // 스킬 사용가능한 횟수
         public string name;
-        public string skill_name;
         public Image img;
         public Image img_defend;
         public Image img_skill;
@@ -46,10 +45,6 @@ namespace WindowsFormsApp1
         public int defense(int dam)
         {
             dam = dam - (defend+item_def);
-            if(dam<0)
-            {
-                dam = 0;
-            }
             real_health -= dam;
             if (real_health <= 0)
             {
@@ -69,7 +64,7 @@ namespace WindowsFormsApp1
             return 1;
         }
 
-        virtual public int skill(string skill_name)
+        public int skill(string skill_name)
         {
             if (skill_count > 0)
             {
@@ -101,7 +96,6 @@ namespace WindowsFormsApp1
         public slime()
         {
             name = "슬라임";
-            skill_name = "깨물기";
             img = Image.FromFile(".\\img\\slim.png");
             img_attack= Image.FromFile(".\\img\\slim_attack.png");
             img_defend= Image.FromFile(".\\img\\slim_defend.png");
@@ -117,7 +111,7 @@ namespace WindowsFormsApp1
             skill_count = skill_count_static;
             exp = 80;
         }
-        public override int skill(string skill_name)
+        public new int skill(string skill_name)
         {
             if (skill_count > 0)
             {
@@ -132,36 +126,34 @@ namespace WindowsFormsApp1
         }
     }
 
-    public class Goblin : NPC
+    public class shark : NPC
     {
-        public Goblin()
+        public shark()
         {
-            name = "고블린";
-            skill_name = "단검찌르기";
+            name = "해적상어";
             img = Image.FromFile(".\\img\\slim.png");
             img_attack = Image.FromFile(".\\img\\slim_attack.png");
             img_defend = Image.FromFile(".\\img\\slim_defend.png");
             img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
             img_skill = Image.FromFile(".\\img\\slim_skill.png");
             img_dead = Image.FromFile(".\\img\\slim_dead.png");
-            max_health = 150;
-            real_health = 150;
+            max_health = 200;
+            real_health = 200;
             defend = 5;
             damage = 20;
 
-            skill_count_static = 3;
+            skill_count_static = 2;
             skill_count = skill_count_static;
-            exp = 120;
+            exp = 110;
         }
-        public override int skill(string skill_name)
+        public new int skill(string skill_name)
         {
-            
             if (skill_count > 0)
             {
-                if (skill_name == "단검찌르기")
+                if (skill_name == "이빨물기")
                 {
                     skill_count--;
-                    return 35;
+                    return 30;
                 }
 
             }
@@ -169,12 +161,46 @@ namespace WindowsFormsApp1
         }
     }
 
-    public class Ent : NPC
+    public class eel : NPC
     {
-        public Ent()
+        public eel()
         {
-            name = "고대 앤트";
-            skill_name="넝쿨 채찍";
+            name = "전기 뱀장어";
+            img = Image.FromFile(".\\img\\slim.png");
+            img_attack = Image.FromFile(".\\img\\slim_attack.png");
+            img_defend = Image.FromFile(".\\img\\slim_defend.png");
+            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
+            img_skill = Image.FromFile(".\\img\\slim_skill.png");
+            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            max_health = 70;
+            real_health = 70;
+            defend = 10;
+            damage = 15;
+
+            skill_count_static = 2;
+            skill_count = skill_count_static;
+            exp = 70;
+        }
+        public new int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "100만 볼트")
+                {
+                    skill_count--;
+                    return 20;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class whale : NPC
+    {
+        public whale()
+        {
+            name = "매우 큰 고래";
             img = Image.FromFile(".\\img\\slim.png");
             img_attack = Image.FromFile(".\\img\\slim_attack.png");
             img_defend = Image.FromFile(".\\img\\slim_defend.png");
@@ -188,16 +214,16 @@ namespace WindowsFormsApp1
 
             skill_count_static = 2;
             skill_count = skill_count_static;
-            exp = 120;
+            exp = 100;
         }
-        public override int skill(string skill_name)
+        public new int skill(string skill_name)
         {
             if (skill_count > 0)
             {
-                if (skill_name == "넝쿨 채찍")
+                if (skill_name == "날아 오르기")
                 {
                     skill_count--;
-                    return 35;
+                    return 30;
                 }
 
             }
