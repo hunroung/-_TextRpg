@@ -300,6 +300,7 @@
             this.btn_attack.TabIndex = 163;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // groupBox2
             // 

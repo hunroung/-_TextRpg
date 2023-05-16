@@ -409,5 +409,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btn_attack_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
