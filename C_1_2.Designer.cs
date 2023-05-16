@@ -87,6 +87,13 @@
             this.name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.item_1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_run = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -94,16 +101,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.item_1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_run = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.picture_npc = new System.Windows.Forms.PictureBox();
             this.picture_main = new System.Windows.Forms.PictureBox();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -135,6 +135,7 @@
             this.btn_item_4.TabIndex = 49;
             this.btn_item_4.Text = "사용";
             this.btn_item_4.UseVisualStyleBackColor = true;
+            this.btn_item_4.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label15
             // 
@@ -153,6 +154,7 @@
             this.btn_intel.TabIndex = 17;
             this.btn_intel.Text = "^";
             this.btn_intel.UseVisualStyleBackColor = true;
+            this.btn_intel.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_str
             // 
@@ -162,6 +164,7 @@
             this.btn_str.TabIndex = 16;
             this.btn_str.Text = "^";
             this.btn_str.UseVisualStyleBackColor = true;
+            this.btn_str.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // def
             // 
@@ -198,6 +201,7 @@
             this.btn_skill.TabIndex = 100;
             this.btn_skill.Text = "스킬사용";
             this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
             // 
             // btn_defend
             // 
@@ -207,6 +211,7 @@
             this.btn_defend.TabIndex = 99;
             this.btn_defend.Text = "방어한다";
             this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
             // 
             // btn_attack
             // 
@@ -216,6 +221,7 @@
             this.btn_attack.TabIndex = 98;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // groupBox2
             // 
@@ -266,6 +272,7 @@
             this.btn_def.TabIndex = 19;
             this.btn_def.Text = "^";
             this.btn_def.UseVisualStyleBackColor = true;
+            this.btn_def.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_spd
             // 
@@ -275,6 +282,7 @@
             this.btn_spd.TabIndex = 18;
             this.btn_spd.Text = "^";
             this.btn_spd.UseVisualStyleBackColor = true;
+            this.btn_spd.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // str
             // 
@@ -383,6 +391,7 @@
             this.btn_item_8.TabIndex = 52;
             this.btn_item_8.Text = "사용";
             this.btn_item_8.UseVisualStyleBackColor = true;
+            this.btn_item_8.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label16
             // 
@@ -401,6 +410,7 @@
             this.btn_item_7.TabIndex = 46;
             this.btn_item_7.Text = "사용";
             this.btn_item_7.UseVisualStyleBackColor = true;
+            this.btn_item_7.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_travel
             // 
@@ -410,6 +420,7 @@
             this.btn_travel.TabIndex = 114;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_down_move
             // 
@@ -419,6 +430,7 @@
             this.btn_down_move.TabIndex = 113;
             this.btn_down_move.Text = "이동한다";
             this.btn_down_move.UseVisualStyleBackColor = true;
+            this.btn_down_move.Click += new System.EventHandler(this.btn_down_move_Click);
             // 
             // btn_left_move
             // 
@@ -438,6 +450,7 @@
             this.btn_up_move.TabIndex = 111;
             this.btn_up_move.Text = "이동한다";
             this.btn_up_move.UseVisualStyleBackColor = true;
+            this.btn_up_move.Click += new System.EventHandler(this.btn_up_move_Click);
             // 
             // exp
             // 
@@ -492,6 +505,7 @@
             this.btn_item_3.TabIndex = 43;
             this.btn_item_3.Text = "사용";
             this.btn_item_3.UseVisualStyleBackColor = true;
+            this.btn_item_3.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label13
             // 
@@ -510,6 +524,7 @@
             this.btn_item_6.TabIndex = 40;
             this.btn_item_6.Text = "사용";
             this.btn_item_6.UseVisualStyleBackColor = true;
+            this.btn_item_6.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label12
             // 
@@ -528,6 +543,7 @@
             this.btn_item_5.TabIndex = 37;
             this.btn_item_5.Text = "사용";
             this.btn_item_5.UseVisualStyleBackColor = true;
+            this.btn_item_5.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_item_2
             // 
@@ -537,6 +553,7 @@
             this.btn_item_2.TabIndex = 34;
             this.btn_item_2.Text = "사용";
             this.btn_item_2.UseVisualStyleBackColor = true;
+            this.btn_item_2.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_right_move
             // 
@@ -556,6 +573,7 @@
             this.btn_item_1.TabIndex = 32;
             this.btn_item_1.Text = "사용";
             this.btn_item_1.UseVisualStyleBackColor = true;
+            this.btn_item_1.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label9
             // 
@@ -612,6 +630,7 @@
             // groupBox3
             // 
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_2;
             this.groupBox3.Location = new System.Drawing.Point(687, 392);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(353, 204);
@@ -696,6 +715,74 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "아이템 박스";
             // 
+            // item_1
+            // 
+            this.item_1.AutoSize = true;
+            this.item_1.Location = new System.Drawing.Point(121, 32);
+            this.item_1.Name = "item_1";
+            this.item_1.Size = new System.Drawing.Size(11, 12);
+            this.item_1.TabIndex = 20;
+            this.item_1.Text = "0";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(188, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(679, 280);
+            this.textBox1.TabIndex = 90;
+            // 
+            // btn_run
+            // 
+            this.btn_run.Location = new System.Drawing.Point(890, 363);
+            this.btn_run.Name = "btn_run";
+            this.btn_run.Size = new System.Drawing.Size(150, 23);
+            this.btn_run.TabIndex = 101;
+            this.btn_run.Text = "도망친다";
+            this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(855, 327);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 12);
+            this.label18.TabIndex = 115;
+            this.label18.Text = "스킬";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(865, 343);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 12);
+            this.label2.TabIndex = 116;
+            this.label2.Text = "0";
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(898, -1);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(76, 23);
+            this.btn_save.TabIndex = 120;
+            this.btn_save.Text = "저장하기";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Location = new System.Drawing.Point(972, -1);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(76, 23);
+            this.btn_close.TabIndex = 119;
+            this.btn_close.Text = "종료하기";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // pictureBox10
             // 
             this.pictureBox10.Location = new System.Drawing.Point(502, 114);
@@ -752,15 +839,6 @@
             this.pictureBox4.TabIndex = 35;
             this.pictureBox4.TabStop = false;
             // 
-            // item_1
-            // 
-            this.item_1.AutoSize = true;
-            this.item_1.Location = new System.Drawing.Point(121, 32);
-            this.item_1.Name = "item_1";
-            this.item_1.Size = new System.Drawing.Size(11, 12);
-            this.item_1.TabIndex = 20;
-            this.item_1.Text = "0";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.item_0;
@@ -769,44 +847,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(72, 65);
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(188, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(679, 280);
-            this.textBox1.TabIndex = 90;
-            // 
-            // btn_run
-            // 
-            this.btn_run.Location = new System.Drawing.Point(890, 363);
-            this.btn_run.Name = "btn_run";
-            this.btn_run.Size = new System.Drawing.Size(150, 23);
-            this.btn_run.TabIndex = 101;
-            this.btn_run.Text = "도망친다";
-            this.btn_run.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(855, 327);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 12);
-            this.label18.TabIndex = 115;
-            this.label18.Text = "스킬";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(865, 343);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 12);
-            this.label2.TabIndex = 116;
-            this.label2.Text = "0";
             // 
             // picture_npc
             // 
@@ -823,26 +863,6 @@
             this.picture_main.Size = new System.Drawing.Size(150, 176);
             this.picture_main.TabIndex = 89;
             this.picture_main.TabStop = false;
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(898, -1);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(76, 23);
-            this.btn_save.TabIndex = 120;
-            this.btn_save.Text = "저장하기";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Location = new System.Drawing.Point(972, -1);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(76, 23);
-            this.btn_close.TabIndex = 119;
-            this.btn_close.Text = "종료하기";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // C_1_2
             // 
@@ -884,7 +904,8 @@
             this.Name = "C_1_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_2";
-            this.Load += new System.EventHandler(this.C_1_2_Load);
+            this.Load += new System.EventHandler(this.C_1_2_Load_1);
+            this.Shown += new System.EventHandler(this.C_1_2_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

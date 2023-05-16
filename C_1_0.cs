@@ -20,7 +20,22 @@ namespace WindowsFormsApp1
 
         private void C_1_0_Load(object sender, EventArgs e)
         {
+            move_btn_enable();
+            textBox1.Text += "당신은 우거진 숲 속에서 깨어났다.\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "주위에는 나무들과 풀밭이 보이고 새들의 지저귐이 들려온다..\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "당신은 이곳이 어디인지, 어떻게 여기에 왔는지 기억하지 못한다.\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "어디로 가야할지 막막하지만 당신은 마음이 향하는 곳으로 걷는다.\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
             textBox1.Text+="이곳은 치유의 샘이다. \r\n전투의 피로를 이곳에서 회복하자.\r\n";
+            move_btn_able();
+            
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
@@ -184,6 +199,7 @@ namespace WindowsFormsApp1
         }
         public void move_btn_enable()
         {
+            btn_travel.Enabled = false;
             btn_down_move.Enabled = false;
             btn_left_move.Enabled = false;
             btn_right_move.Enabled = false;
@@ -194,6 +210,7 @@ namespace WindowsFormsApp1
 
         public void move_btn_able()
         {
+            btn_travel.Enabled = true;
             btn_down_move.Enabled = true;
             btn_left_move.Enabled = true;
             btn_right_move.Enabled = true;
@@ -373,6 +390,11 @@ namespace WindowsFormsApp1
             ch.healed(ch.max_health);
             textBox1.Text +="체력이 모두 회복되었다.\r\n";
             setting(ch);
+        }
+
+        private void C_1_0_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -55,6 +55,8 @@ namespace WindowsFormsApp1
         public int spd = 5;
         public int def = 5;
 
+        public int wiz_visit = 0;
+
         public int chapter = 1;
         public int chapter_value = 1;
 

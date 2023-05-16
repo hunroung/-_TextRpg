@@ -11,31 +11,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_1_0_0 : Form
+    public partial class C_1_2_4 : Form
     {
-        public C_1_0_0()
+        public C_1_2_4()
         {
             InitializeComponent();
         }
 
-        private void C_1_0_0_Load(object sender, EventArgs e)
-        {
-
-        }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
         public int visit = 0;
         public character ch;
         //public slime slime = new slime();
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            ch.close = 1;
-            this.Close();
-        }
-        public C_1_0_0(ref character character)
+        public C_1_2_4(ref character character)
         {
 
-            
+
             //string name = "슬라임";
             //slime.name = name;
             ch = character;
@@ -49,21 +40,19 @@ namespace WindowsFormsApp1
             picture_main.Image = character.main;
             //picture_npc.Image = slime.img;
             //스킬 옮겨 담기
-            for (int i = 0; i < character.skill_count; i++)
-            {
-                cmb_skill.Items.Add(character.skill[i]);
-            }
-
-
         }
 
         //폼 로딩시 세팅 단계
+        public int fight = 0;
+        public NPC monster = new NPC();
         public void setting(character character)
         {
             //따로 추가
-
-            //npc_name.Text = slime.name;
-            //npc_health.Text = slime.real_health.ToString();
+            if (fight == 1)
+            {
+                npc_name.Text = monster.name;
+                npc_health.Text = monster.real_health.ToString();
+            }
             //따로 추가
             if (character.item_str > 0)
             {
@@ -99,6 +88,7 @@ namespace WindowsFormsApp1
             }
 
             item_btn_able(ch);
+
             label2.Text = ch.skill_point.ToString();
             name.Text = character.name;
             exp.Text = character.exp_per.ToString() + '%';
@@ -113,6 +103,14 @@ namespace WindowsFormsApp1
             else
             {
                 stat_btn_setting(true);
+            }
+            if (cmb_skill.Items.Count < ch.skill_count)
+            {
+                cmb_skill.Items.Clear();
+                for (int i = 0; i < ch.skill_count; i++)
+                {
+                    cmb_skill.Items.Add(ch.skill[i]);
+                }
             }
 
         }
@@ -182,6 +180,7 @@ namespace WindowsFormsApp1
         }
         public void move_btn_enable()
         {
+            btn_travel.Enabled = false;
             btn_down_move.Enabled = false;
             btn_left_move.Enabled = false;
             btn_right_move.Enabled = false;
@@ -192,71 +191,11 @@ namespace WindowsFormsApp1
 
         public void move_btn_able()
         {
+            btn_travel.Enabled = true;
             btn_down_move.Enabled = true;
             btn_left_move.Enabled = true;
             btn_right_move.Enabled = true;
             btn_up_move.Enabled = true;
-        }
-        private void btn_str_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_str":
-                    ch.str += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_intel":
-                    ch.intel += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_spd":
-                    ch.spd += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_def":
-                    ch.def += 1;
-                    ch.stat_use();
-                    break;
-                default:
-                    break;
-            }
-            update();
-        }
-        //아이템 사용
-        private void btn_item_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_item_1":
-                    ch.item_use(0);
-                    break;
-                case "btn_item_2":
-                    ch.item_use(1);
-                    break;
-                case "btn_item_3":
-                    ch.item_use(2);
-                    break;
-                case "btn_item_4":
-                    ch.item_use(3);
-                    break;
-                case "btn_item_5":
-                    ch.item_use(4);
-                    break;
-                case "btn_item_6":
-                    ch.item_use(5);
-                    break;
-                case "btn_item_7":
-                    ch.item_use(6);
-                    break;
-                case "btn_item_8":
-                    ch.item_use(7);
-                    break;
-                default:
-                    break;
-            }
-            update();
         }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)
@@ -335,15 +274,43 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void btn_right_move_Click(object sender, EventArgs e)
+        {
+            C_1_2_5 form = new C_1_2_5(ref ch);
+            this.Hide();
+            form.ShowDialog();
+
+            if (ch.real_health <= 0 || ch.close == 1)
+            {
+                this.Close();
+            }
+            this.Show();
+            update();
+            this.Refresh();
+
+        }
+
+        private void btn_left_move_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void C_1_2_4_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_save_Click(object sender, EventArgs e)
         {
             ch.save();
         }
-
-        private void btn_item_1_Click(object sender, EventArgs e)
+        private void btn_close_Click(object sender, EventArgs e)
         {
-
+            ch.close = 1;
+            this.Close();
         }
+
+
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 }

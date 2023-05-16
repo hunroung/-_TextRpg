@@ -33,26 +33,6 @@ namespace WindowsFormsApp1
             ch.close = 1;
             this.Close();
         }
-        public C_1_3_3(ref character character)
-        {
-
-
-            //string name = "슬라임";
-            //slime.name = name;
-            ch = character;
-
-            InitializeComponent();
-
-
-            setting(character);
-            item_btn_enable();
-            act_btn_enable();
-            picture_main.Image = character.main;
-            //스킬 옮겨 담기
-
-        }
-
-        //폼 로딩시 세팅 단계
         public void setting(character character)
         {
             //따로 추가
@@ -112,16 +92,37 @@ namespace WindowsFormsApp1
             {
                 stat_btn_setting(true);
             }
-            if(cmb_skill.Items.Count<ch.skill_count)
+            if (cmb_skill.Items.Count < ch.skill_count)
             {
                 cmb_skill.Items.Clear();
-                for(int i =0;i<ch.skill_count;i++)
+                for (int i = 0; i < ch.skill_count; i++)
                 {
                     cmb_skill.Items.Add(ch.skill[i]);
                 }
             }
 
         }
+        public C_1_3_3(ref character character)
+        {
+
+
+            //string name = "슬라임";
+            //slime.name = name;
+            ch = character;
+
+            InitializeComponent();
+
+
+            setting(character);
+            item_btn_enable();
+            act_btn_enable();
+            picture_main.Image = character.main;
+            //스킬 옮겨 담기
+
+        }
+
+        //폼 로딩시 세팅 단계
+        
         //공격, 방어, 스킬, 도망 버튼 비활성화
         public void act_btn_enable()
         {
@@ -379,6 +380,14 @@ namespace WindowsFormsApp1
                 move_btn_able();
 
             }
+            else
+            {
+                move_btn_enable();
+                textBox1.Text = "당신은 이미 이곳에서 할일을 다했다.\r\n";
+                this.Refresh();
+                Thread.Sleep(2000);
+                move_btn_able();
+            }
         }
 
         private void btn_down_move_Click(object sender, EventArgs e)
@@ -392,6 +401,11 @@ namespace WindowsFormsApp1
         }
 
         private void C_1_3_3_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_travel_Click(object sender, EventArgs e)
         {
 
         }

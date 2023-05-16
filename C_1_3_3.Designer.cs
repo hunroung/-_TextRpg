@@ -208,6 +208,7 @@
             this.btn_travel.TabIndex = 179;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.btn_travel_Click);
             // 
             // btn_up_move
             // 

@@ -148,6 +148,9 @@
   <data name="slim_defend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\slim_defend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1_3_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\1_3_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1_3_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\1_3_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,7 +169,43 @@
   <data name="main_character_attacked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\main_character_attacked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1_3_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\1_3_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_1_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_1_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_2_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_2_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\1_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

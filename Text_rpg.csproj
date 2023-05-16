@@ -59,23 +59,71 @@
     <Compile Include="C_1_0.Designer.cs">
       <DependentUpon>C_1_0.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_1_0_0.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_1_0_0.Designer.cs">
-      <DependentUpon>C_1_0_0.cs</DependentUpon>
-    </Compile>
     <Compile Include="C_1_1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_1_1.Designer.cs">
       <DependentUpon>C_1_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_1_1_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_1_0.Designer.cs">
+      <DependentUpon>C_1_1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_1_1.Designer.cs">
+      <DependentUpon>C_1_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_1_2.Designer.cs">
+      <DependentUpon>C_1_1_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_1_2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_1_2.Designer.cs">
       <DependentUpon>C_1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_2_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_2_0.Designer.cs">
+      <DependentUpon>C_1_2_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_2_1.Designer.cs">
+      <DependentUpon>C_1_2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_2_2.Designer.cs">
+      <DependentUpon>C_1_2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_2_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_2_3.Designer.cs">
+      <DependentUpon>C_1_2_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_2_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_2_4.Designer.cs">
+      <DependentUpon>C_1_2_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_1_2_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_1_2_5.Designer.cs">
+      <DependentUpon>C_1_2_5.cs</DependentUpon>
     </Compile>
     <Compile Include="C_1_3.cs">
       <SubType>Form</SubType>
@@ -140,14 +188,38 @@
     <EmbeddedResource Include="C_1_0.resx">
       <DependentUpon>C_1_0.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="C_1_0_0.resx">
-      <DependentUpon>C_1_0_0.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="C_1_1.resx">
       <DependentUpon>C_1_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_1_1_0.resx">
+      <DependentUpon>C_1_1_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_1_1.resx">
+      <DependentUpon>C_1_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_1_2.resx">
+      <DependentUpon>C_1_1_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_1_2.resx">
       <DependentUpon>C_1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_2_0.resx">
+      <DependentUpon>C_1_2_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_2_1.resx">
+      <DependentUpon>C_1_2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_2_2.resx">
+      <DependentUpon>C_1_2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_2_3.resx">
+      <DependentUpon>C_1_2_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_2_4.resx">
+      <DependentUpon>C_1_2_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_1_2_5.resx">
+      <DependentUpon>C_1_2_5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_1_3.resx">
       <DependentUpon>C_1_3.cs</DependentUpon>
@@ -249,6 +321,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="1_3_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_2_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_3_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1_3_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
