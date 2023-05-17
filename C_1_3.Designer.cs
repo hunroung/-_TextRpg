@@ -902,6 +902,7 @@
             this.Name = "C_1_3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_3";
+            this.Load += new System.EventHandler(this.C_1_3_Load_2);
             this.Shown += new System.EventHandler(this.C_1_3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();

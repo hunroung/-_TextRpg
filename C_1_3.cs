@@ -29,13 +29,13 @@ namespace WindowsFormsApp1
             textBox1.Text = "식은땀을 흘리며 숲을 걸어가던 당신은 갑작스런 기척을 느꼈다.\r\n";
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text = "신비로운 푸른 빛이 숲의 어둠에서 부드럽게 흘러나오고, 흔들리는 나뭇가지의 소리와 함께 푸른 그림자의 형체가 서서히 드러났다.\r\n";
+            textBox1.Text += "신비로운 푸른 빛이 숲의 어둠에서 부드럽게 흘러나오고,\r\n 흔들리는 나뭇가지의 소리와 함께 푸른 그림자의 형체가 서서히 드러났다.\r\n";
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text = "맑고 투명한 유령 모습을 한 푸른 그림자는 당신을 보며 비틀린 웃음을 짓는다.\r\n";
+            textBox1.Text += "맑고 투명한 유령 모습을 한 푸른 그림자는 당신을 보며 비틀린 웃음을 짓는다.\r\n";
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text = "그 눈동자가 푸른 불꽃처럼 빛난다.\r\n";
+            textBox1.Text += "그 눈동자가 푸른 불꽃처럼 빛난다.\r\n";
             this.Refresh();
             Thread.Sleep(2000);
             monster = new blue_shadow();
@@ -948,6 +948,11 @@ namespace WindowsFormsApp1
         private void btn_left_move_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void C_1_3_Load_2(object sender, EventArgs e)
+        {
+
         }
     }
 
