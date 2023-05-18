@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -82,6 +83,11 @@ namespace WindowsFormsApp1
                             character = new character();
                         }
                         break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                
                 }
             }
         }
