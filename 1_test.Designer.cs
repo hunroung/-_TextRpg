@@ -795,6 +795,7 @@
             this.btn_right_move.TabIndex = 84;
             this.btn_right_move.Text = "이동한다";
             this.btn_right_move.UseVisualStyleBackColor = true;
+            this.btn_right_move.Click += new System.EventHandler(this.btn_right_move_Click);
             // 
             // btn_travel
             // 
@@ -868,6 +869,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1049, 616);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label18);

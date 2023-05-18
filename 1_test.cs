@@ -927,5 +927,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btn_right_move_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
