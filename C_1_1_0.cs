@@ -22,8 +22,8 @@ namespace WindowsFormsApp1
 
         public int visit = 0;
         public character ch;
-        public shark shark = new shark();
-        public slime slime = new slime();
+        public whale shark = new whale();
+        //public slime slime = new slime();
         public C_1_1_0(ref character character)
         {
 
@@ -693,7 +693,7 @@ namespace WindowsFormsApp1
             move_btn_enable();
             act_btn_enable();
             item_btn_enable();
-            if (ch.spd > slime.spd)
+            if (ch.spd > shark.spd)
             {
                 Random rand = new Random();
                 int k = rand.Next(10);
