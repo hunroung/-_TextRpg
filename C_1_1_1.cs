@@ -293,5 +293,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void picture_main_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
