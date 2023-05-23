@@ -309,7 +309,17 @@ namespace WindowsFormsApp1
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void btn_right_move_Click(object sender, EventArgs e)
         {
+            C_1_4 form = new C_1_4(ref ch);
+            this.Hide();
+            form.ShowDialog();
 
+            if (ch.real_health <= 0 || ch.close == 1)
+            {
+                this.Close();
+            }
+            this.Show();
+            update();
+            this.Refresh();
         }
 
         private void btn_left_move_Click(object sender, EventArgs e)

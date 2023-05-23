@@ -102,12 +102,12 @@ namespace WindowsFormsApp1
         {
             name = "슬라임";
             skill_name = "깨물기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack= Image.FromFile(".\\img\\slim_attack.png");
-            img_defend= Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked=Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill= Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack= Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend= Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked=Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill= Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
             max_health = 100;
             real_health = 100;
             defend = 10;
@@ -138,12 +138,12 @@ namespace WindowsFormsApp1
         {
             name = "고블린";
             skill_name = "단검찌르기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
             max_health = 150;
             real_health = 150;
             defend = 5;
@@ -175,12 +175,12 @@ namespace WindowsFormsApp1
         {
             name = "고대 앤트";
             skill_name = "넝쿨 채찍";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
             max_health = 300;
             real_health = 300;
             defend = 30;
@@ -210,12 +210,12 @@ namespace WindowsFormsApp1
             {
                 name = "붉은 슬라임";
                 skill_name = "가시 찌르기";
-                img = Image.FromFile(".\\img\\red_slim.PNG");
-                img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-                img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-                img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-                img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-                img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+                img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\red_slim.PNG");
+                img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\red_slim_attack.PNG");
+                img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\red_slim_defend.PNG");
+                img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\red_slim_attacked.PNG");
+                img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\red_slim_skill.PNG");
+                img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\red_slim_dead.PNG");
                 max_health = 100;
                 real_health = 100;
                 defend = 12;
@@ -246,12 +246,12 @@ namespace WindowsFormsApp1
             {
                 name = "푸른 그림자";
                 skill_name = "투과";
-                img = Image.FromFile(".\\img\\blue_shadow.PNG");
-                img_attack = Image.FromFile(".\\img\\blue_shadow_attack.PNG");
-                img_defend = Image.FromFile(".\\img\\blue_shadow_defend.PNG");
-                img_attacked = Image.FromFile(".\\img\\blue_shadow_attacked.PNG");
-                img_skill = Image.FromFile(".\\img\\blue_shadow_skill.PNG");
-                img_dead = Image.FromFile(".\\img\\blue_shadow_dead.PNG");
+                img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\blue_shadow.PNG");
+                img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\blue_shadow_attack.PNG");
+                img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\blue_shadow_defend.PNG");
+                img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\blue_shadow_attacked.PNG");
+                img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\blue_shadow_skill.PNG");
+                img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\blue_shadow_dead.PNG");
                 max_health = 200;
                 real_health = 200;
                 defend = 5;
@@ -281,12 +281,12 @@ namespace WindowsFormsApp1
         {
             name = "해적상어";
             skill_name = "이빨물기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
             max_health = 200;
             real_health = 200;
             defend = 5;
@@ -317,12 +317,12 @@ namespace WindowsFormsApp1
         {
             name = "전기 뱀장어";
             skill_name = "100만 볼트";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
             max_health = 70;
             real_health = 70;
             defend = 10;
@@ -353,12 +353,12 @@ namespace WindowsFormsApp1
         {
             name = "매우 큰 고래";
             skill_name = "날아 오르기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
             max_health = 300;
             real_health = 300;
             defend = 30;
@@ -376,6 +376,222 @@ namespace WindowsFormsApp1
                 {
                     skill_count--;
                     return 30;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class  Mist_Fairy: NPC
+    {
+        public Mist_Fairy()
+        {
+            name = "안개 요정";
+            skill_name = "안개 소용돌이";
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
+            max_health = 150;
+            real_health = 150;
+            defend = 10;
+            damage = 20;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "안개 소용돌이")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class Crocodile_Spirit : NPC
+    {
+        public Crocodile_Spirit()
+        {
+            name = "악어 신령";
+            skill_name = "비열한 이빨";
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
+            max_health = 150;
+            real_health = 150;
+            defend = 20;
+            damage = 30;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "비열한 이빨")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class Turtle_God : NPC
+    {
+        public Turtle_God()
+        {
+            name = "거북 신선";
+            skill_name = "심연의 저주";
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
+            max_health = 150;
+            real_health = 150;
+            defend = 35;
+            damage = 20;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "심연의 저주")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class Fire_Guardian : NPC
+    {
+        public Fire_Guardian()
+        {
+            name = "불 수호자";
+            skill_name = "방화";
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
+            max_health = 150;
+            real_health = 150;
+            defend = 35;
+            damage = 20;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "방화")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class Temple_Assassin : NPC
+    {
+        public Temple_Assassin()
+        {
+            name = "사원의 암살자";
+            skill_name = "사악한 비수";
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
+            max_health = 150;
+            real_health = 150;
+            defend = 35;
+            damage = 20;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "사악한 비수")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class Temple_Knight : NPC
+    {
+        public Temple_Knight()
+        {
+            name = "사원의 기사";
+            skill_name = "불 가르기";
+            img = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim.png");
+            img_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attack.png");
+            img_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_defend.png");
+            img_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_attacked.png");
+            img_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_skill.png");
+            img_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\slim_dead.png");
+            max_health = 150;
+            real_health = 150;
+            defend = 35;
+            damage = 20;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "불 가르기")
+                {
+                    skill_count--;
+                    return 35;
                 }
 
             }

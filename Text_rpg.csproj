@@ -299,6 +299,36 @@
     <EmbeddedResource Include="C_1_4.resx">
       <DependentUpon>C_1_4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_2_0.resx">
+      <DependentUpon>C_2_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_1.resx">
+      <DependentUpon>C_2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2.resx">
+      <DependentUpon>C_2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3.resx">
+      <DependentUpon>C_2_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_4.resx">
+      <DependentUpon>C_2_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_0.resx">
+      <DependentUpon>C_3_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1.resx">
+      <DependentUpon>C_3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_2.resx">
+      <DependentUpon>C_3_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_3.resx">
+      <DependentUpon>C_3_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_4.resx">
+      <DependentUpon>C_3_4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +462,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\1_3_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\blue_shadow.PNG" />
+    <Content Include="img\blue_shadow_attack.PNG" />
+    <Content Include="img\blue_shadow_attacked.PNG" />
+    <Content Include="img\blue_shadow_dead.PNG" />
+    <Content Include="img\blue_shadow_defend.PNG" />
+    <Content Include="img\blue_shadow_skill.PNG" />
+    <Content Include="img\goblin.PNG" />
+    <Content Include="img\goblin_attack.PNG" />
+    <Content Include="img\goblin_attacked.PNG" />
+    <Content Include="img\goblin_dead.PNG" />
+    <Content Include="img\goblin_defense.PNG" />
+    <Content Include="img\goblin_skill.PNG" />
+    <Content Include="img\main_character_skill_메테오.png" />
+    <Content Include="img\red_slim.PNG" />
+    <Content Include="img\red_slim_attack.PNG" />
+    <Content Include="img\red_slim_attacked.PNG" />
+    <Content Include="img\red_slim_dead.PNG" />
+    <Content Include="img\red_slim_defend.PNG" />
+    <Content Include="img\red_slim_skill.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
