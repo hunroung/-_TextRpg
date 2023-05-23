@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
 
         public int visit = 0;
         public character ch;
-        public slime slime = new slime();
+       // public slime slime = new slime();
         public eel eel = new eel();
         public C_1_1_2(ref character character)
         {
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             item_btn_enable();
             act_btn_enable();
             picture_main.Image = character.main;
-            picture_npc.Image = slime.img;
+            picture_npc.Image = eel.img;
             //스킬 옮겨 담기
         }
 
@@ -287,6 +287,522 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btn_attack_Click(object sender, EventArgs e)
+        {
+            move_btn_enable();
+            act_btn_enable();
+            item_btn_enable();
+            Random rand = new Random();
+            int k = rand.Next(3);
+            if (k == 1)
+            {
+                if (eel.defense(ch.attack()) == 1)//변경 필요
+                {
+                    picture_main.Image = ch.main_attack;
+                    picture_npc.Image = eel.img_defend;//변경 필요
+                    textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
+
+                }
+                else
+                {
+                    ch.skill_re();
+                    ch.exp_gain(eel.exp);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + eel.exp.ToString() + " 획득\r\n";
+                    picture_npc.Image = eel.img_dead;
+                    picture_main.Image = ch.main_attack;
+
+                }
+            }
+
+            else if (eel.damaged(ch.attack()) == 1)//변경 필요
+            {
+                picture_main.Image = ch.main_attack;
+                picture_npc.Image = eel.img_attacked;//변경 필요
+                update(); //
+                this.Refresh(); // 줄 여러번에 나워서 출력하기 위한 도구 
+                switch (k)
+                {
+                    case 0://슬라임도 공격을 선택한 경우
+
+                        textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
+
+                        if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                        {
+                            picture_main.Image = ch.main_attacked;
+                            picture_npc.Image = eel.img_attack;//변경 필요
+                            textBox1.Text += "당신은 죽었다\r\n";
+                            picture_npc.Image = eel.img;//변경 필요
+
+                        }
+                        else
+                        {
+                            picture_main.Image = ch.main_attacked;
+                            picture_npc.Image = eel.img_attack;//변경 필요
+                        }
+                        break;
+                    case 2: //슬라임이 스킬을 사용한 경우
+
+                        int temp = eel.skill("이빨물기");//변경 필요
+
+                        if (temp == 0)
+                        {
+                            textBox1.Text += npc_name.Text + "이 스킬을 사용에 실패했다\r\n";
+                        }
+                        else if (ch.damaged(temp) != 1)//변경 필요
+                        {
+                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            picture_main.Image = ch.main_dead;
+                            picture_npc.Image = eel.img_skill;//변경 필요
+                            update();
+                            this.Refresh();
+
+                            textBox1.Text += "당신은 죽었다\r\n";
+                            picture_npc.Image = eel.img;//변경 필요
+                        }
+                        else
+                        {
+                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            picture_main.Image = ch.main_attacked;
+                            picture_npc.Image = eel.img_skill;//변경 필요
+
+                        }
+                        break;
+
+                }
+
+            }
+            else
+            {
+                ch.skill_re();
+                ch.exp_gain(eel.exp);//변경 필요
+                textBox1.Text += npc_name.Text + "이 죽었다. exp : " + eel.exp.ToString() + " 획득\r\n";//변경 필요
+                picture_npc.Image = eel.img_dead;//변경 필요
+                picture_main.Image = ch.main_attack;
+
+            }
+            update();
+            this.Refresh();
+            if (ch.real_health <= 0)
+            {
+                MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
+                this.Close();
+            }
+            if (eel.real_health > 0)//변경 필요
+            {
+                picture_main.Image = ch.main;
+                picture_npc.Image = eel.img;//변경 필요
+                item_btn_able(ch);
+                act_btn_able();
+            }
+            else
+            {
+                picture_main.Image = ch.main;
+                picture_npc.Image = eel.img_dead;//변경 필요
+                //btn_up_move.Text = "다시 싸운다";
+                move_btn_able();
+            }
+            eel.item_clear();//변경 필요
+            ch.item_clear();
+            update();
+
+
+        }
+        private void btn_skill_Click(object sender, EventArgs e)
+        {
+            if (ch.skill_point <= 0)
+            {
+                MessageBox.Show("스킬포인트가 부족합니다.");
+            }
+            else if (cmb_skill.SelectedIndex >= 0 && cmb_skill.Items[cmb_skill.SelectedIndex].ToString() != "")
+            {
+                move_btn_enable();
+                act_btn_enable();
+                item_btn_enable();
+                Random rand = new Random();
+                int k = rand.Next(3);
+
+                if (k == 1)
+                {
+                    if (eel.defense(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
+                    {
+                        picture_main.Image = ch.main_skill;
+                        picture_npc.Image = eel.img_defend;//변경 필요
+                        textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
+
+                    }
+                    else
+                    {
+                        ch.skill_re();
+                        picture_main.Image = ch.main_skill;
+                        ch.exp_gain(eel.exp);//변경 필요
+                        textBox1.Text += npc_name.Text + "이 죽었다. exp : " + eel.exp.ToString() + " 획득\r\n";//변경 필요
+                        picture_npc.Image = eel.img_dead;//변경 필요
+
+                    }
+                }
+
+                else if (eel.damaged(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
+                {
+                    picture_main.Image = ch.main_skill;
+                    picture_npc.Image = eel.img_attacked;//변경 필요
+                    update();
+                    this.Refresh();
+                    switch (k)
+                    {
+                        case 0://슬라임도 공격을 선택한 경우
+
+                            textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
+
+                            if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                            {
+                                picture_main.Image = ch.main_dead;
+                                picture_npc.Image = eel.img_attack;//변경 필요
+                                textBox1.Text += "당신은 죽었다\r\n";
+                                picture_npc.Image = eel.img;//변경 필요
+
+                            }
+                            else
+                            {
+                                picture_npc.Image = eel.img_attack;//변경 필요
+                                picture_main.Image = ch.main_attacked;
+                            }
+                            break;
+                        case 2: //슬라임이 스킬을 사용한 경우
+
+                            int temp = eel.skill("깨물기");//변경 필요
+
+                            if (temp == 0)
+                            {
+                                textBox1.Text += npc_name.Text + "이 스킬을 사용에 실패했다\r\n";
+                            }
+                            else if (ch.damaged(temp) != 1)
+                            {
+                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                                picture_main.Image = ch.main_dead;
+                                picture_npc.Image = eel.img_skill;//변경 필요
+                                update();
+                                this.Refresh();
+
+                                textBox1.Text += "당신은 죽었다\r\n";
+                                picture_npc.Image = eel.img;//변경 필요
+
+                            }
+                            else
+                            {
+                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                                picture_npc.Image = eel.img_skill;//변경 필요
+                                picture_main.Image = ch.main_attacked;
+
+                            }
+                            break;
+
+                    }
+                }
+                else
+                {
+                    ch.skill_re();
+                    picture_main.Image = ch.main_skill;
+                    ch.exp_gain(eel.exp);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : 80 획득\r\n";
+                    picture_npc.Image = eel.img_dead;//변경 필요
+
+                }
+                update();
+                this.Refresh();
+                if (ch.real_health <= 0)
+                {
+                    MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
+                    this.Close();
+                }
+                if (eel.real_health > 0)//변경 필요
+                {
+                    picture_main.Image = ch.main;
+                    picture_npc.Image = eel.img;//변경 필요
+                    item_btn_able(ch);
+                    act_btn_able();
+                }
+                else
+                {
+                    picture_main.Image = ch.main;
+                    picture_npc.Image = eel.img_dead;//변경 필요
+                    //btn_up_move.Text = "다시 싸운다";
+                    move_btn_able();
+                }
+                eel.item_clear();//변경 필요
+                ch.item_clear();
+                update();
+
+            }
+        }
+
+        private void btn_defend_Click(object sender, EventArgs e)
+        {
+            move_btn_enable();
+            act_btn_enable();
+            item_btn_enable();
+            Random rand = new Random();
+            int k = rand.Next(3);
+            switch (k)
+            {
+                case 0://슬라임이 공격을 선택한 경우
+
+                    textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
+
+                    if (ch.defense(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                    {
+                        picture_main.Image = ch.main_dead;
+                        picture_npc.Image = eel.img_attack;//변경 필요
+                        textBox1.Text += "당신은 죽었다\r\n";
+                        picture_npc.Image = eel.img;//변경 필요
+
+                    }
+                    else
+                    {
+                        picture_npc.Image = eel.img_attack;//변경 필요
+                        picture_main.Image = ch.main_defend;
+                    }
+                    break;
+                case 1://서로 방어한 경우
+                    textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
+                    picture_main.Image = ch.main_defend;
+                    picture_npc.Image = eel.img_defend;//변경 필요
+                    break;
+                case 2: //슬라임이 스킬을 사용한 경우
+
+                    int temp = eel.skill("깨물기");//변경 필요
+
+                    if (temp == 0)
+                    {
+                        picture_main.Image = ch.main_defend;
+                        textBox1.Text += npc_name.Text + "이 스킬을 사용에 실패했다\r\n";
+                    }
+                    else if (ch.defense(temp) != 1)
+                    {
+                        textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                        picture_main.Image = ch.main_defend;
+                        picture_npc.Image = eel.img_skill;//변경 필요
+                        update();
+                        this.Refresh();
+
+                        textBox1.Text += "당신은 죽었다\r\n";
+                        picture_npc.Image = eel.img;//변경 필요
+                        picture_main.Image = ch.main_dead;
+                    }
+                    else
+                    {
+                        textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                        picture_npc.Image = eel.img_skill;//변경 필요
+                        picture_main.Image = ch.main_defend;
+
+                    }
+                    break;
+
+            }
+            update();
+            this.Refresh();
+            if (ch.real_health <= 0)
+            {
+                MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
+                this.Close();
+            }
+            if (eel.real_health > 0)//변경 필요
+            {
+                picture_main.Image = ch.main;
+                picture_npc.Image = eel.img;//변경 필요
+                item_btn_able(ch);
+                act_btn_able();
+            }
+            else
+            {
+                picture_main.Image = ch.main;
+                picture_npc.Image = eel.img_dead;//변경 필요
+                //btn_up_move.Text = "다시 싸운다";
+                move_btn_able();
+            }
+            eel.item_clear();//변경 필요
+            ch.item_clear();
+            update();
+        }
+
+        private void btn_run_Click(object sender, EventArgs e)
+        {
+            move_btn_enable();
+            act_btn_enable();
+            item_btn_enable();
+            if (ch.spd > eel.spd)
+            {
+                Random rand = new Random();
+                int k = rand.Next(10);
+                if (k > 2)
+                {
+                    ch.skill_re();
+                    textBox1.Text += "당신은 도망쳤다.\r\n";
+                    this.Close();
+                }
+                else
+                {
+                    textBox1.Text += "당신은 도망치려 했으나 실패했다.\r\n";
+                    k = rand.Next(2);
+                    switch (k)
+                    {
+                        case 0://슬라임이 공격을 선택한 경우
+
+                            textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
+
+                            if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                            {
+                                picture_main.Image = ch.main_dead;
+                                picture_npc.Image = eel.img_attack;//변경 필요
+                                textBox1.Text += "당신은 죽었다\r\n";
+                                picture_npc.Image = eel.img;//변경 필요
+
+                            }
+                            else
+                            {
+                                picture_npc.Image = eel.img_attack;//변경 필요
+                                picture_main.Image = ch.main_attacked;
+                            }
+                            break;
+                        case 1: //슬라임이 스킬을 사용한 경우
+
+                            int temp = eel.skill("깨물기");//변경 필요
+
+                            if (temp == 0)
+                            {
+                                textBox1.Text += npc_name.Text + "이 스킬을 사용에 실패했다\r\n";
+                            }
+                            else if (ch.damaged(temp) != 1)
+                            {
+                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                                picture_main.Image = ch.main_dead;
+                                picture_npc.Image = eel.img_skill;//변경 필요
+                                update();
+                                this.Refresh();
+
+                                textBox1.Text += "당신은 죽었다\r\n";
+                                picture_npc.Image = eel.img;//변경 필요
+
+                            }
+                            else
+                            {
+                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                                picture_npc.Image = eel.img_skill;//변경 필요
+                                picture_main.Image = ch.main_attacked;
+
+                            }
+                            break;
+
+                    }
+                    update();
+                    this.Refresh();
+                    if (ch.real_health <= 0)
+                    {
+                        MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
+                        this.Close();
+                    }
+                    if (eel.real_health > 0)//변경 필요
+                    {
+                        picture_main.Image = ch.main;
+                        picture_npc.Image = eel.img;//변경 필요
+                        item_btn_able(ch);
+                        act_btn_able();
+                    }
+                    else
+                    {
+                        picture_main.Image = ch.main;
+                        picture_npc.Image = eel.img_dead;//변경 필요
+                        //btn_up_move.Text = "다시 싸운다";
+                        move_btn_able();
+                    }
+                    eel.item_clear();//변경 필요
+                    ch.item_clear();
+                    update();
+                }
+            }
+            else
+            {
+                Random rand = new Random();
+                int k = rand.Next(3);
+                textBox1.Text += "당신은 너무 느려 도망칠 수 없다.\r\n";
+                switch (k)
+                {
+                    case 0://슬라임이 공격을 선택한 경우
+
+                        textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
+
+                        if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                        {
+                            picture_main.Image = ch.main_dead;
+                            picture_npc.Image = eel.img_attack;//변경 필요
+                            textBox1.Text += "당신은 죽었다\r\n";
+                            picture_npc.Image = eel.img;//변경 필요
+
+                        }
+                        else
+                        {
+                            picture_npc.Image = eel.img_attack;//변경 필요
+                            picture_main.Image = ch.main_attacked;
+                        }
+                        break;
+                    case 2: //슬라임이 스킬을 사용한 경우
+
+                        int temp = eel.skill("깨물기");//변경 필요
+
+                        if (temp == 0)
+                        {
+                            textBox1.Text += npc_name.Text + "이 스킬을 사용에 실패했다\r\n";
+                        }
+                        else if (ch.damaged(temp) != 1)
+                        {
+                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            picture_main.Image = ch.main_dead;
+                            picture_npc.Image = eel.img_skill;//변경 필요
+                            update();
+                            this.Refresh();
+
+                            textBox1.Text += "당신은 죽었다\r\n";
+                            picture_npc.Image = eel.img;//변경 필요
+
+                        }
+                        else
+                        {
+                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            picture_npc.Image = eel.img_skill;//변경 필요
+                            picture_main.Image = ch.main_attacked;
+
+                        }
+                        break;
+
+                }
+                update();
+                this.Refresh();
+                if (ch.real_health <= 0)
+                {
+                    MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
+                    this.Close();
+
+                }
+                if (eel.real_health > 0)//변경 필요
+                {
+                    picture_main.Image = ch.main;
+                    picture_npc.Image = eel.img;//변경 필요
+                    item_btn_able(ch);
+                    act_btn_able();
+                }
+                else
+                {
+                    picture_main.Image = ch.main;
+                    picture_npc.Image = eel.img_dead;//변경 필요
+                    //btn_travel.Text = "다시 싸운다";
+                    move_btn_able();
+                }
+                eel.item_clear();//변경 필요
+                ch.item_clear();
+                update();
+            }
+        }
+
 
         private void btn_left_move_Click(object sender, EventArgs e)
         {

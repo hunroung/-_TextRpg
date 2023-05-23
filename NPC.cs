@@ -275,9 +275,9 @@ namespace WindowsFormsApp1
                 return 0;
             }
         }
-    public class whale : NPC
+    public class shark : NPC
     {
-        public whale()
+        public shark()
         {
             name = "해적상어";
             skill_name = "이빨물기";
@@ -340,6 +340,42 @@ namespace WindowsFormsApp1
                 {
                     skill_count--;
                     return 20;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class whale : NPC
+    {
+        public whale()
+        {
+            name = "매우 큰 고래";
+            skill_name = "날아 오르기";
+            img = Image.FromFile(".\\img\\slim.png");
+            img_attack = Image.FromFile(".\\img\\slim_attack.png");
+            img_defend = Image.FromFile(".\\img\\slim_defend.png");
+            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
+            img_skill = Image.FromFile(".\\img\\slim_skill.png");
+            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            max_health = 300;
+            real_health = 300;
+            defend = 30;
+            damage = 5;
+
+            skill_count_static = 2;
+            skill_count = skill_count_static;
+            exp = 100;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "날아 오르기")
+                {
+                    skill_count--;
+                    return 30;
                 }
 
             }

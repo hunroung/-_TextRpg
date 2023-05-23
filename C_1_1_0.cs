@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
 
         public int visit = 0;
         public character ch;
-        public whale shark = new whale();
+        public shark shark = new shark();
         //public slime slime = new slime();
         public C_1_1_0(ref character character)
         {
