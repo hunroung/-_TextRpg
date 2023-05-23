@@ -342,7 +342,7 @@ namespace WindowsFormsApp1
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = whale.skill("이빨물기");//변경 필요
+                        int temp = whale.skill("날아 오르기");//변경 필요
 
                         if (temp == 0)
                         {
@@ -469,7 +469,7 @@ namespace WindowsFormsApp1
                             break;
                         case 2: //슬라임이 스킬을 사용한 경우
 
-                            int temp = whale.skill("깨물기");//변경 필요
+                            int temp = whale.skill("날아 오르기");//변경 필요
 
                             if (temp == 0)
                             {
@@ -569,7 +569,7 @@ namespace WindowsFormsApp1
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = whale.skill("깨물기");//변경 필요
+                    int temp = whale.skill("날아 오르기");//변경 필요
 
                     if (temp == 0)
                     {
@@ -665,7 +665,7 @@ namespace WindowsFormsApp1
                             break;
                         case 1: //슬라임이 스킬을 사용한 경우
 
-                            int temp = whale.skill("깨물기");//변경 필요
+                            int temp = whale.skill("날아 오르기");//변경 필요
 
                             if (temp == 0)
                             {

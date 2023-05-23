@@ -533,7 +533,7 @@ namespace WindowsFormsApp1
                             break;
                         case 2: //슬라임이 스킬을 사용한 경우
 
-                            int temp = shark.skill("깨물기");//변경 필요
+                            int temp = shark.skill("이빨물기");//변경 필요
 
                             if (temp == 0)
                             {
@@ -567,7 +567,7 @@ namespace WindowsFormsApp1
                     ch.skill_re();
                     picture_main.Image = ch.main_skill;
                     ch.exp_gain(shark.exp);//변경 필요
-                    textBox1.Text += npc_name.Text + "이 죽었다. exp : 80 획득\r\n";
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : 110 획득\r\n";
                     picture_npc.Image = shark.img_dead;//변경 필요
 
                 }
@@ -633,7 +633,7 @@ namespace WindowsFormsApp1
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = shark.skill("깨물기");//변경 필요
+                    int temp = shark.skill("이빨물기");//변경 필요
 
                     if (temp == 0)
                     {
@@ -729,7 +729,7 @@ namespace WindowsFormsApp1
                             break;
                         case 1: //슬라임이 스킬을 사용한 경우
 
-                            int temp = shark.skill("깨물기");//변경 필요
+                            int temp = shark.skill("이빨물기");//변경 필요
 
                             if (temp == 0)
                             {
@@ -810,7 +810,7 @@ namespace WindowsFormsApp1
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = shark.skill("깨물기");//변경 필요
+                        int temp = shark.skill("이빨물기");//변경 필요
 
                         if (temp == 0)
                         {

@@ -343,7 +343,7 @@ namespace WindowsFormsApp1
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = eel.skill("이빨물기");//변경 필요
+                        int temp = eel.skill("100만 볼트");//변경 필요
 
                         if (temp == 0)
                         {
@@ -470,7 +470,7 @@ namespace WindowsFormsApp1
                             break;
                         case 2: //슬라임이 스킬을 사용한 경우
 
-                            int temp = eel.skill("깨물기");//변경 필요
+                            int temp = eel.skill("100만 볼트");//변경 필요
 
                             if (temp == 0)
                             {
@@ -570,7 +570,7 @@ namespace WindowsFormsApp1
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = eel.skill("깨물기");//변경 필요
+                    int temp = eel.skill("100만 볼트");//변경 필요
 
                     if (temp == 0)
                     {
@@ -666,7 +666,7 @@ namespace WindowsFormsApp1
                             break;
                         case 1: //슬라임이 스킬을 사용한 경우
 
-                            int temp = eel.skill("깨물기");//변경 필요
+                            int temp = eel.skill("100만 볼트");//변경 필요
 
                             if (temp == 0)
                             {
@@ -747,7 +747,7 @@ namespace WindowsFormsApp1
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = eel.skill("깨물기");//변경 필요
+                        int temp = eel.skill("100만 볼트");//변경 필요
 
                         if (temp == 0)
                         {
