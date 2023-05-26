@@ -20,6 +20,30 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
+        private void C_1_1_2_Load(object sender, EventArgs e)
+        {
+            move_btn_enable();
+            textBox1.Text += "당신은 뻘쪽으로 이동했다.\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "뻘에 발이 묶여 움직일 수 없을 때 바닷가가 찌릿함을 느낀다..\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "맛있게 생긴 녀석이 다가온다!\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+
+            monster = new shark();
+            fight = 1;
+            setting(ch);
+            picture_npc.Image = monster.img;
+            textBox1.Text += npc_name.Text + " (이)가 나왔다! \r\n";
+
+            item_btn_able(ch);
+            act_btn_able();
+        }
+
         public int visit = 0;
         public character ch;
        // public slime slime = new slime();
@@ -283,10 +307,7 @@ namespace WindowsFormsApp1
 
             }
         }
-        private void C_1_1_2_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btn_attack_Click(object sender, EventArgs e)
         {
