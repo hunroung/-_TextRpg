@@ -470,6 +470,12 @@
     <Content Include="img\blue_shadow_dead.PNG" />
     <Content Include="img\blue_shadow_defend.PNG" />
     <Content Include="img\blue_shadow_skill.PNG" />
+    <Content Include="img\Crocodile_Spirit.PNG" />
+    <Content Include="img\Crocodile_Spirit_attack.PNG" />
+    <Content Include="img\Crocodile_Spirit_attacked.PNG" />
+    <Content Include="img\Crocodile_Spirit_dead.PNG" />
+    <Content Include="img\Crocodile_Spirit_defend.PNG" />
+    <Content Include="img\Crocodile_Spirit_skill.PNG" />
     <Content Include="img\goblin.PNG" />
     <Content Include="img\goblin_attack.PNG" />
     <Content Include="img\goblin_attacked.PNG" />
@@ -477,12 +483,24 @@
     <Content Include="img\goblin_defense.PNG" />
     <Content Include="img\goblin_skill.PNG" />
     <Content Include="img\main_character_skill_메테오.png" />
+    <Content Include="img\Mist_Fairy.PNG" />
+    <Content Include="img\Mist_Fairy_attack.PNG" />
+    <Content Include="img\Mist_Fairy_attacked.PNG" />
+    <Content Include="img\Mist_Fairy_dead.PNG" />
+    <Content Include="img\Mist_Fairy_defend.PNG" />
+    <Content Include="img\Mist_Fairy_skill.PNG" />
     <Content Include="img\red_slim.PNG" />
     <Content Include="img\red_slim_attack.PNG" />
     <Content Include="img\red_slim_attacked.PNG" />
     <Content Include="img\red_slim_dead.PNG" />
     <Content Include="img\red_slim_defend.PNG" />
     <Content Include="img\red_slim_skill.PNG" />
+    <Content Include="img\Turtle_God.PNG" />
+    <Content Include="img\Turtle_God_attack.PNG" />
+    <Content Include="img\Turtle_God_attacked.PNG" />
+    <Content Include="img\Turtle_God_dead.PNG" />
+    <Content Include="img\Turtle_God_defend.PNG" />
+    <Content Include="img\Turtle_God_skill.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
