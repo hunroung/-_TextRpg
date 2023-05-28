@@ -305,7 +305,7 @@ namespace WindowsFormsApp1
 
         private void C_1_2_0_Load(object sender, EventArgs e)
         {
-
+          
         }
 
 

@@ -382,4 +382,76 @@ namespace WindowsFormsApp1
             return 0;
         }
     }
+
+    public class ice_ghost : NPC
+    {
+        public ice_ghost()
+        {
+            name = "얼음 유령";
+            skill_name = "고드름";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 60;
+            real_health = 60;
+            defend = 10;
+            damage = 20;
+
+            skill_count_static = 2;
+            skill_count = skill_count_static;
+            exp = 150;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "고드름")
+                {
+                    skill_count--;
+                    return 25;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class fire_ghost : NPC
+    {
+        public fire_ghost()
+        {
+            name = "화염 유령";
+            skill_name = "파이어볼";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 80;
+            real_health = 80;
+            defend = 5;
+            damage = 25;
+
+            skill_count_static = 1;
+            skill_count = skill_count_static;
+            exp = 200;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "파이어볼")
+                {
+                    skill_count--;
+                    return 40;
+                }
+
+            }
+            return 0;
+        }
+    }
 }

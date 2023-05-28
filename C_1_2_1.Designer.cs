@@ -46,21 +46,29 @@
             this.item_3 = new System.Windows.Forms.Label();
             this.item_2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_item_4 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btn_item_7 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_item_3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_item_6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_item_5 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_item_2 = new System.Windows.Forms.Button();
             this.btn_item_1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.item_1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cmb_skill = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_travel = new System.Windows.Forms.Button();
@@ -95,18 +103,8 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.picture_main = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.picture_npc = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -115,6 +113,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,6 +208,7 @@
             this.btn_item_8.TabIndex = 52;
             this.btn_item_8.Text = "사용";
             this.btn_item_8.UseVisualStyleBackColor = true;
+            this.btn_item_8.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // npc_name
             // 
@@ -314,6 +315,14 @@
             this.label16.TabIndex = 51;
             this.label16.Text = "갯수";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Location = new System.Drawing.Point(502, 114);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox10.TabIndex = 53;
+            this.pictureBox10.TabStop = false;
+            // 
             // btn_item_4
             // 
             this.btn_item_4.Location = new System.Drawing.Point(580, 62);
@@ -322,6 +331,7 @@
             this.btn_item_4.TabIndex = 49;
             this.btn_item_4.Text = "사용";
             this.btn_item_4.UseVisualStyleBackColor = true;
+            this.btn_item_4.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label15
             // 
@@ -332,6 +342,14 @@
             this.label15.TabIndex = 48;
             this.label15.Text = "갯수";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(502, 20);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox9.TabIndex = 50;
+            this.pictureBox9.TabStop = false;
+            // 
             // btn_item_7
             // 
             this.btn_item_7.Location = new System.Drawing.Point(413, 156);
@@ -340,6 +358,7 @@
             this.btn_item_7.TabIndex = 46;
             this.btn_item_7.Text = "사용";
             this.btn_item_7.UseVisualStyleBackColor = true;
+            this.btn_item_7.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label14
             // 
@@ -350,6 +369,14 @@
             this.label14.TabIndex = 45;
             this.label14.Text = "갯수";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(335, 114);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox8.TabIndex = 47;
+            this.pictureBox8.TabStop = false;
+            // 
             // btn_item_3
             // 
             this.btn_item_3.Location = new System.Drawing.Point(413, 62);
@@ -358,6 +385,7 @@
             this.btn_item_3.TabIndex = 43;
             this.btn_item_3.Text = "사용";
             this.btn_item_3.UseVisualStyleBackColor = true;
+            this.btn_item_3.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label13
             // 
@@ -368,6 +396,14 @@
             this.label13.TabIndex = 42;
             this.label13.Text = "갯수";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(335, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
             // btn_item_6
             // 
             this.btn_item_6.Location = new System.Drawing.Point(251, 156);
@@ -376,6 +412,7 @@
             this.btn_item_6.TabIndex = 40;
             this.btn_item_6.Text = "사용";
             this.btn_item_6.UseVisualStyleBackColor = true;
+            this.btn_item_6.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label12
             // 
@@ -386,6 +423,14 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "갯수";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(173, 114);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
+            // 
             // btn_item_5
             // 
             this.btn_item_5.Location = new System.Drawing.Point(86, 156);
@@ -394,6 +439,7 @@
             this.btn_item_5.TabIndex = 37;
             this.btn_item_5.Text = "사용";
             this.btn_item_5.UseVisualStyleBackColor = true;
+            this.btn_item_5.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label10
             // 
@@ -404,6 +450,14 @@
             this.label10.TabIndex = 36;
             this.label10.Text = "갯수";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(8, 114);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
+            // 
             // btn_item_2
             // 
             this.btn_item_2.Location = new System.Drawing.Point(251, 62);
@@ -412,6 +466,7 @@
             this.btn_item_2.TabIndex = 34;
             this.btn_item_2.Text = "사용";
             this.btn_item_2.UseVisualStyleBackColor = true;
+            this.btn_item_2.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_item_1
             // 
@@ -421,6 +476,7 @@
             this.btn_item_1.TabIndex = 32;
             this.btn_item_1.Text = "사용";
             this.btn_item_1.UseVisualStyleBackColor = true;
+            this.btn_item_1.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label9
             // 
@@ -440,6 +496,14 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "갯수";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(173, 20);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox4.TabIndex = 35;
+            this.pictureBox4.TabStop = false;
+            // 
             // item_1
             // 
             this.item_1.AutoSize = true;
@@ -448,6 +512,15 @@
             this.item_1.Size = new System.Drawing.Size(11, 12);
             this.item_1.TabIndex = 20;
             this.item_1.Text = "0";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.item_0;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
             // 
             // cmb_skill
             // 
@@ -513,6 +586,7 @@
             this.btn_skill.TabIndex = 156;
             this.btn_skill.Text = "스킬사용";
             this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
             // 
             // btn_defend
             // 
@@ -522,6 +596,7 @@
             this.btn_defend.TabIndex = 155;
             this.btn_defend.Text = "방어한다";
             this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
             // 
             // btn_attack
             // 
@@ -531,6 +606,7 @@
             this.btn_attack.TabIndex = 154;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // groupBox2
             // 
@@ -581,6 +657,7 @@
             this.btn_def.TabIndex = 19;
             this.btn_def.Text = "^";
             this.btn_def.UseVisualStyleBackColor = true;
+            this.btn_def.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_spd
             // 
@@ -590,6 +667,7 @@
             this.btn_spd.TabIndex = 18;
             this.btn_spd.Text = "^";
             this.btn_spd.UseVisualStyleBackColor = true;
+            this.btn_spd.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_intel
             // 
@@ -599,6 +677,7 @@
             this.btn_intel.TabIndex = 17;
             this.btn_intel.Text = "^";
             this.btn_intel.UseVisualStyleBackColor = true;
+            this.btn_intel.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_str
             // 
@@ -608,6 +687,7 @@
             this.btn_str.TabIndex = 16;
             this.btn_str.Text = "^";
             this.btn_str.UseVisualStyleBackColor = true;
+            this.btn_str.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // def
             // 
@@ -743,6 +823,7 @@
             this.btn_run.TabIndex = 157;
             this.btn_run.Text = "도망친다";
             this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
             // 
             // btn_save
             // 
@@ -771,71 +852,6 @@
             this.picture_main.Size = new System.Drawing.Size(150, 176);
             this.picture_main.TabIndex = 145;
             this.picture_main.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(502, 114);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox10.TabIndex = 53;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(502, 20);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox9.TabIndex = 50;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(335, 114);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox8.TabIndex = 47;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(335, 20);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(173, 114);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox6.TabIndex = 41;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(8, 114);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(173, 20);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.item_0;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
             // 
             // picture_npc
             // 
@@ -888,9 +904,6 @@
             this.Load += new System.EventHandler(this.C_1_2_1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -899,6 +912,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
