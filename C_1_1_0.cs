@@ -20,10 +20,32 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void C_1_1_0_Load(object sender, EventArgs e)
+        {
+            move_btn_enable();
+            textBox1.Text += "당신은 바다마을에 입성했다.\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "바닷가를 떠돌던 중 저 멀리 낯선 지느러미가 보인다.\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.Text += "가만히 보던 중 그 지느러미가 점점 나에게 빠르게 다가온다!\r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+
+            monster = new shark();
+            fight = 1;
+            setting(ch);
+            picture_npc.Image = monster.img;
+            textBox1.Text += npc_name.Text + " (이)가 나왔다! \r\n";
+
+            item_btn_able(ch);
+            act_btn_able();
+        }
+
         public int visit = 0;
         public character ch;
         public shark shark = new shark();
-        public slime slime = new slime();
         public C_1_1_0(ref character character)
         {
 
@@ -39,7 +61,7 @@ namespace WindowsFormsApp1
             item_btn_enable();
             act_btn_enable();
             picture_main.Image = character.main;
-            picture_npc.Image = slime.img;
+            picture_npc.Image = shark.img;
             //스킬 옮겨 담기
         }
         private void btn_save_Click(object sender, EventArgs e)
@@ -346,10 +368,7 @@ namespace WindowsFormsApp1
         }
 
 
-        private void C_1_1_0_Load(object sender, EventArgs e)
-        {
-
-        }
+       
         // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void btn_attack_Click(object sender, EventArgs e)
         {
@@ -372,7 +391,7 @@ namespace WindowsFormsApp1
                     ch.skill_re();
                     ch.exp_gain(shark.exp);//변경 필요
                     textBox1.Text += npc_name.Text + "이 죽었다. exp : " + shark.exp.ToString() + " 획득\r\n";
-                    picture_npc.Image = slime.img_dead;
+                    picture_npc.Image = shark.img_dead;
                     picture_main.Image = ch.main_attack;
 
                 }
@@ -381,7 +400,7 @@ namespace WindowsFormsApp1
             else if (shark.damaged(ch.attack()) == 1)//변경 필요
             {
                 picture_main.Image = ch.main_attack;
-                picture_npc.Image = slime.img_attacked;//변경 필요
+                picture_npc.Image = shark.img_attacked;//변경 필요
                 update(); //
                 this.Refresh(); // 줄 여러번에 나워서 출력하기 위한 도구 
                 switch (k)
@@ -393,15 +412,15 @@ namespace WindowsFormsApp1
                         if (ch.damaged(shark.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
                         {
                             picture_main.Image = ch.main_attacked;
-                            picture_npc.Image = slime.img_attack;//변경 필요
+                            picture_npc.Image = shark.img_attack;//변경 필요
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = slime.img;//변경 필요
+                            picture_npc.Image = shark.img;//변경 필요
 
                         }
                         else
                         {
                             picture_main.Image = ch.main_attacked;
-                            picture_npc.Image = slime.img_attack;//변경 필요
+                            picture_npc.Image = shark.img_attack;//변경 필요
                         }
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
@@ -416,18 +435,18 @@ namespace WindowsFormsApp1
                         {
                             textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
                             picture_main.Image = ch.main_dead;
-                            picture_npc.Image = slime.img_skill;//변경 필요
+                            picture_npc.Image = shark.img_skill;//변경 필요
                             update();
                             this.Refresh();
 
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = slime.img;//변경 필요
+                            picture_npc.Image = shark.img;//변경 필요
                         }
                         else
                         {
                             textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
                             picture_main.Image = ch.main_attacked;
-                            picture_npc.Image = slime.img_skill;//변경 필요
+                            picture_npc.Image = shark.img_skill;//변경 필요
 
                         }
                         break;
@@ -440,7 +459,7 @@ namespace WindowsFormsApp1
                 ch.skill_re();
                 ch.exp_gain(shark.exp);//변경 필요
                 textBox1.Text += npc_name.Text + "이 죽었다. exp : " + shark.exp.ToString() + " 획득\r\n";//변경 필요
-                picture_npc.Image = slime.img_dead;//변경 필요
+                picture_npc.Image = shark.img_dead;//변경 필요
                 picture_main.Image = ch.main_attack;
 
             }
@@ -454,14 +473,14 @@ namespace WindowsFormsApp1
             if (shark.real_health > 0)//변경 필요
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = slime.img;//변경 필요
+                picture_npc.Image = shark.img;//변경 필요
                 item_btn_able(ch);
                 act_btn_able();
             }
             else
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = slime.img_dead;//변경 필요
+                picture_npc.Image = shark.img_dead;//변경 필요
                 //btn_up_move.Text = "다시 싸운다";
                 move_btn_able();
             }
@@ -490,7 +509,7 @@ namespace WindowsFormsApp1
                     if (shark.defense(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
                     {
                         picture_main.Image = ch.main_skill;
-                        picture_npc.Image = slime.img_defend;//변경 필요
+                        picture_npc.Image = shark.img_defend;//변경 필요
                         textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
 
                     }
@@ -500,15 +519,15 @@ namespace WindowsFormsApp1
                         picture_main.Image = ch.main_skill;
                         ch.exp_gain(shark.exp);//변경 필요
                         textBox1.Text += npc_name.Text + "이 죽었다. exp : " + shark.exp.ToString() + " 획득\r\n";//변경 필요
-                        picture_npc.Image = slime.img_dead;//변경 필요
+                        picture_npc.Image = shark.img_dead;//변경 필요
 
                     }
                 }
 
-                else if (slime.damaged(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
+                else if (shark.damaged(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
                 {
                     picture_main.Image = ch.main_skill;
-                    picture_npc.Image = slime.img_attacked;//변경 필요
+                    picture_npc.Image = shark.img_attacked;//변경 필요
                     update();
                     this.Refresh();
                     switch (k)
@@ -517,23 +536,23 @@ namespace WindowsFormsApp1
 
                             textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                            if (ch.damaged(slime.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                            if (ch.damaged(shark.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
                             {
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = slime.img_attack;//변경 필요
+                                picture_npc.Image = shark.img_attack;//변경 필요
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = slime.img;//변경 필요
+                                picture_npc.Image = shark.img;//변경 필요
 
                             }
                             else
                             {
-                                picture_npc.Image = slime.img_attack;//변경 필요
+                                picture_npc.Image = shark.img_attack;//변경 필요
                                 picture_main.Image = ch.main_attacked;
                             }
                             break;
                         case 2: //슬라임이 스킬을 사용한 경우
 
-                            int temp = slime.skill("깨물기");//변경 필요
+                            int temp = shark.skill("이빨물기");//변경 필요
 
                             if (temp == 0)
                             {
@@ -543,18 +562,18 @@ namespace WindowsFormsApp1
                             {
                                 textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = slime.img_skill;//변경 필요
+                                picture_npc.Image = shark.img_skill;//변경 필요
                                 update();
                                 this.Refresh();
 
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = slime.img;//변경 필요
+                                picture_npc.Image = shark.img;//변경 필요
 
                             }
                             else
                             {
                                 textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                                picture_npc.Image = slime.img_skill;//변경 필요
+                                picture_npc.Image = shark.img_skill;//변경 필요
                                 picture_main.Image = ch.main_attacked;
 
                             }
@@ -566,9 +585,9 @@ namespace WindowsFormsApp1
                 {
                     ch.skill_re();
                     picture_main.Image = ch.main_skill;
-                    ch.exp_gain(slime.exp);//변경 필요
-                    textBox1.Text += npc_name.Text + "이 죽었다. exp : 80 획득\r\n";
-                    picture_npc.Image = slime.img_dead;//변경 필요
+                    ch.exp_gain(shark.exp);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : 110 획득\r\n";
+                    picture_npc.Image = shark.img_dead;//변경 필요
 
                 }
                 update();
@@ -578,21 +597,21 @@ namespace WindowsFormsApp1
                     MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                     this.Close();
                 }
-                if (slime.real_health > 0)//변경 필요
+                if (shark.real_health > 0)//변경 필요
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = slime.img;//변경 필요
+                    picture_npc.Image = shark.img;//변경 필요
                     item_btn_able(ch);
                     act_btn_able();
                 }
                 else
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = slime.img_dead;//변경 필요
+                    picture_npc.Image = shark.img_dead;//변경 필요
                     //btn_up_move.Text = "다시 싸운다";
                     move_btn_able();
                 }
-                slime.item_clear();//변경 필요
+                shark.item_clear();//변경 필요
                 ch.item_clear();
                 update();
 
@@ -612,28 +631,28 @@ namespace WindowsFormsApp1
 
                     textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                    if (ch.defense(slime.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                    if (ch.defense(shark.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
                     {
                         picture_main.Image = ch.main_dead;
-                        picture_npc.Image = slime.img_attack;//변경 필요
+                        picture_npc.Image = shark.img_attack;//변경 필요
                         textBox1.Text += "당신은 죽었다\r\n";
-                        picture_npc.Image = slime.img;//변경 필요
+                        picture_npc.Image = shark.img;//변경 필요
 
                     }
                     else
                     {
-                        picture_npc.Image = slime.img_attack;//변경 필요
+                        picture_npc.Image = shark.img_attack;//변경 필요
                         picture_main.Image = ch.main_defend;
                     }
                     break;
                 case 1://서로 방어한 경우
                     textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
                     picture_main.Image = ch.main_defend;
-                    picture_npc.Image = slime.img_defend;//변경 필요
+                    picture_npc.Image = shark.img_defend;//변경 필요
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = slime.skill("깨물기");//변경 필요
+                    int temp = shark.skill("이빨물기");//변경 필요
 
                     if (temp == 0)
                     {
@@ -644,18 +663,18 @@ namespace WindowsFormsApp1
                     {
                         textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
                         picture_main.Image = ch.main_defend;
-                        picture_npc.Image = slime.img_skill;//변경 필요
+                        picture_npc.Image = shark.img_skill;//변경 필요
                         update();
                         this.Refresh();
 
                         textBox1.Text += "당신은 죽었다\r\n";
-                        picture_npc.Image = slime.img;//변경 필요
+                        picture_npc.Image = shark.img;//변경 필요
                         picture_main.Image = ch.main_dead;
                     }
                     else
                     {
                         textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                        picture_npc.Image = slime.img_skill;//변경 필요
+                        picture_npc.Image = shark.img_skill;//변경 필요
                         picture_main.Image = ch.main_defend;
 
                     }
@@ -669,21 +688,21 @@ namespace WindowsFormsApp1
                 MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                 this.Close();
             }
-            if (slime.real_health > 0)//변경 필요
+            if (shark.real_health > 0)//변경 필요
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = slime.img;//변경 필요
+                picture_npc.Image = shark.img;//변경 필요
                 item_btn_able(ch);
                 act_btn_able();
             }
             else
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = slime.img_dead;//변경 필요
+                picture_npc.Image = shark.img_dead;//변경 필요
                 //btn_up_move.Text = "다시 싸운다";
                 move_btn_able();
             }
-            slime.item_clear();//변경 필요
+            shark.item_clear();//변경 필요
             ch.item_clear();
             update();
         }
@@ -693,7 +712,7 @@ namespace WindowsFormsApp1
             move_btn_enable();
             act_btn_enable();
             item_btn_enable();
-            if (ch.spd > slime.spd)
+            if (ch.spd > shark.spd)
             {
                 Random rand = new Random();
                 int k = rand.Next(10);
@@ -713,23 +732,23 @@ namespace WindowsFormsApp1
 
                             textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                            if (ch.damaged(slime.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                            if (ch.damaged(shark.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
                             {
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = slime.img_attack;//변경 필요
+                                picture_npc.Image = shark.img_attack;//변경 필요
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = slime.img;//변경 필요
+                                picture_npc.Image = shark.img;//변경 필요
 
                             }
                             else
                             {
-                                picture_npc.Image = slime.img_attack;//변경 필요
+                                picture_npc.Image = shark.img_attack;//변경 필요
                                 picture_main.Image = ch.main_attacked;
                             }
                             break;
                         case 1: //슬라임이 스킬을 사용한 경우
 
-                            int temp = slime.skill("깨물기");//변경 필요
+                            int temp = shark.skill("이빨물기");//변경 필요
 
                             if (temp == 0)
                             {
@@ -739,18 +758,18 @@ namespace WindowsFormsApp1
                             {
                                 textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = slime.img_skill;//변경 필요
+                                picture_npc.Image = shark.img_skill;//변경 필요
                                 update();
                                 this.Refresh();
 
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = slime.img;//변경 필요
+                                picture_npc.Image = shark.img;//변경 필요
 
                             }
                             else
                             {
                                 textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                                picture_npc.Image = slime.img_skill;//변경 필요
+                                picture_npc.Image = shark.img_skill;//변경 필요
                                 picture_main.Image = ch.main_attacked;
 
                             }
@@ -764,21 +783,21 @@ namespace WindowsFormsApp1
                         MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                         this.Close();
                     }
-                    if (slime.real_health > 0)//변경 필요
+                    if (shark.real_health > 0)//변경 필요
                     {
                         picture_main.Image = ch.main;
-                        picture_npc.Image = slime.img;//변경 필요
+                        picture_npc.Image = shark.img;//변경 필요
                         item_btn_able(ch);
                         act_btn_able();
                     }
                     else
                     {
                         picture_main.Image = ch.main;
-                        picture_npc.Image = slime.img_dead;//변경 필요
+                        picture_npc.Image = shark.img_dead;//변경 필요
                         //btn_up_move.Text = "다시 싸운다";
                         move_btn_able();
                     }
-                    slime.item_clear();//변경 필요
+                    shark.item_clear();//변경 필요
                     ch.item_clear();
                     update();
                 }
@@ -794,23 +813,23 @@ namespace WindowsFormsApp1
 
                         textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                        if (ch.damaged(slime.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                        if (ch.damaged(shark.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
                         {
                             picture_main.Image = ch.main_dead;
-                            picture_npc.Image = slime.img_attack;//변경 필요
+                            picture_npc.Image = shark.img_attack;//변경 필요
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = slime.img;//변경 필요
+                            picture_npc.Image = shark.img;//변경 필요
 
                         }
                         else
                         {
-                            picture_npc.Image = slime.img_attack;//변경 필요
+                            picture_npc.Image = shark.img_attack;//변경 필요
                             picture_main.Image = ch.main_attacked;
                         }
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = slime.skill("깨물기");//변경 필요
+                        int temp = shark.skill("이빨물기");//변경 필요
 
                         if (temp == 0)
                         {
@@ -820,18 +839,18 @@ namespace WindowsFormsApp1
                         {
                             textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
                             picture_main.Image = ch.main_dead;
-                            picture_npc.Image = slime.img_skill;//변경 필요
+                            picture_npc.Image = shark.img_skill;//변경 필요
                             update();
                             this.Refresh();
 
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = slime.img;//변경 필요
+                            picture_npc.Image = shark.img;//변경 필요
 
                         }
                         else
                         {
                             textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                            picture_npc.Image = slime.img_skill;//변경 필요
+                            picture_npc.Image = shark.img_skill;//변경 필요
                             picture_main.Image = ch.main_attacked;
 
                         }
@@ -846,21 +865,21 @@ namespace WindowsFormsApp1
                     this.Close();
 
                 }
-                if (slime.real_health > 0)//변경 필요
+                if (shark.real_health > 0)//변경 필요
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = slime.img;//변경 필요
+                    picture_npc.Image = shark.img;//변경 필요
                     item_btn_able(ch);
                     act_btn_able();
                 }
                 else
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = slime.img_dead;//변경 필요
+                    picture_npc.Image = shark.img_dead;//변경 필요
                     //btn_travel.Text = "다시 싸운다";
                     move_btn_able();
                 }
-                slime.item_clear();//변경 필요
+                shark.item_clear();//변경 필요
                 ch.item_clear();
                 update();
             }

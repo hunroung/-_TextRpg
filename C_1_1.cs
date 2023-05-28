@@ -861,11 +861,6 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void C_1_1_Load_1(object sender, EventArgs e)
-        {
-
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (monster.real_health <= 0)//변경 필요
@@ -941,6 +936,11 @@ namespace WindowsFormsApp1
                     break;
             }
             update();
+        }
+
+        private void C_1_1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
