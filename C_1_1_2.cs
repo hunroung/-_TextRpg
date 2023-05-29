@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             this.Refresh();
             Thread.Sleep(2000);
 
-            monster = new shark();
+            monster = new eel();
             fight = 1;
             setting(ch);
             picture_npc.Image = monster.img;
@@ -46,14 +46,10 @@ namespace WindowsFormsApp1
 
         public int visit = 0;
         public character ch;
-       // public slime slime = new slime();
-        public eel eel = new eel();
         public C_1_1_2(ref character character)
         {
-
-
             string name = "전기 뱀장어";
-            eel.name = name;
+            monster.name = name;
             ch = character;
 
             InitializeComponent();
@@ -63,7 +59,7 @@ namespace WindowsFormsApp1
             item_btn_enable();
             act_btn_enable();
             picture_main.Image = character.main;
-            picture_npc.Image = eel.img;
+            picture_npc.Image = monster.img;
             //스킬 옮겨 담기
         }
 
@@ -231,6 +227,67 @@ namespace WindowsFormsApp1
             btn_right_move.Enabled = true;
             btn_up_move.Enabled = true;
         }
+        private void btn_str_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            switch (button.Name.ToString())
+            {
+                case "btn_str":
+                    ch.str += 1;
+                    ch.stat_use();
+                    break;
+                case "btn_intel":
+                    ch.intel += 1;
+                    ch.stat_use();
+                    break;
+                case "btn_spd":
+                    ch.spd += 1;
+                    ch.stat_use();
+                    break;
+                case "btn_def":
+                    ch.def += 1;
+                    ch.stat_use();
+                    break;
+                default:
+                    break;
+            }
+            update();
+        }
+        //아이템 사용
+        private void btn_item_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            switch (button.Name.ToString())
+            {
+                case "btn_item_1":
+                    ch.item_use(0);
+                    break;
+                case "btn_item_2":
+                    ch.item_use(1);
+                    break;
+                case "btn_item_3":
+                    ch.item_use(2);
+                    break;
+                case "btn_item_4":
+                    ch.item_use(3);
+                    break;
+                case "btn_item_5":
+                    ch.item_use(4);
+                    break;
+                case "btn_item_6":
+                    ch.item_use(5);
+                    break;
+                case "btn_item_7":
+                    ch.item_use(6);
+                    break;
+                case "btn_item_8":
+                    ch.item_use(7);
+                    break;
+                default:
+                    break;
+            }
+            update();
+        }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)
         {
@@ -307,7 +364,32 @@ namespace WindowsFormsApp1
 
             }
         }
-       
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@전투 시스템@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private void _1_test_Load(object sender, EventArgs e)
+        {
+            move_btn_enable(); //필수
+
+            //@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@
+            textBox1.Text += "당신은 깊은 숲으로 들어왔다. \r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            //@@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@@
+            textBox1.Text += "당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n";
+            this.Refresh();
+            Thread.Sleep(2000);
+            //@@@@@@@@@@@@@@@@@@@@몬스터 등장@@@@@@@@@@@@@@@@@@
+            monster = new slime();
+            fight = 1;
+            setting(ch);
+            picture_npc.Image = monster.img;
+            textBox1.Text += "그러자 나무 사이에서 " + npc_name.Text + " (이)가 나왔다! \r\n";
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+            item_btn_able(ch); // 필수
+            act_btn_able(); // 필수
+        }
 
         private void btn_attack_Click(object sender, EventArgs e)
         {
@@ -318,74 +400,75 @@ namespace WindowsFormsApp1
             int k = rand.Next(3);
             if (k == 1)
             {
-                if (eel.defense(ch.attack()) == 1)//변경 필요
+                if (monster.defense(ch.attack()) == 1)
                 {
                     picture_main.Image = ch.main_attack;
-                    picture_npc.Image = eel.img_defend;//변경 필요
+                    picture_npc.Image = monster.img_defend;
                     textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
 
                 }
                 else
                 {
                     ch.skill_re();
-                    ch.exp_gain(eel.exp);//변경 필요
-                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + eel.exp.ToString() + " 획득\r\n";
-                    picture_npc.Image = eel.img_dead;
+                    ch.exp_gain(monster.exp);
+                    ch.item_gain(0, 3);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";//변경 필요
+                    picture_npc.Image = monster.img_dead;
                     picture_main.Image = ch.main_attack;
 
                 }
             }
 
-            else if (eel.damaged(ch.attack()) == 1)//변경 필요
+            else if (monster.damaged(ch.attack()) == 1)
             {
                 picture_main.Image = ch.main_attack;
-                picture_npc.Image = eel.img_attacked;//변경 필요
-                update(); //
-                this.Refresh(); // 줄 여러번에 나워서 출력하기 위한 도구 
+                picture_npc.Image = monster.img_attacked;
+                update();
+                this.Refresh();
                 switch (k)
                 {
                     case 0://슬라임도 공격을 선택한 경우
 
                         textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                        if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                        if (ch.damaged(monster.attack()) != 1)// 슬라임 공격으로 사망
                         {
                             picture_main.Image = ch.main_attacked;
-                            picture_npc.Image = eel.img_attack;//변경 필요
+                            picture_npc.Image = monster.img_attack;
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = eel.img;//변경 필요
+                            picture_npc.Image = monster.img;
 
                         }
                         else
                         {
                             picture_main.Image = ch.main_attacked;
-                            picture_npc.Image = eel.img_attack;//변경 필요
+                            picture_npc.Image = monster.img_attack;
                         }
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = eel.skill("100만 볼트");//변경 필요
+                        int temp = monster.skill(monster.skill_name);
 
                         if (temp == 0)
                         {
                             textBox1.Text += npc_name.Text + "이 스킬을 사용에 실패했다\r\n";
                         }
-                        else if (ch.damaged(temp) != 1)//변경 필요
+                        else if (ch.damaged(temp) != 1)
                         {
-                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                             picture_main.Image = ch.main_dead;
-                            picture_npc.Image = eel.img_skill;//변경 필요
+                            picture_npc.Image = monster.img_skill;
                             update();
                             this.Refresh();
 
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = eel.img;//변경 필요
+                            picture_npc.Image = monster.img;
                         }
                         else
                         {
-                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                             picture_main.Image = ch.main_attacked;
-                            picture_npc.Image = eel.img_skill;//변경 필요
+                            picture_npc.Image = monster.img_skill;
 
                         }
                         break;
@@ -396,9 +479,10 @@ namespace WindowsFormsApp1
             else
             {
                 ch.skill_re();
-                ch.exp_gain(eel.exp);//변경 필요
-                textBox1.Text += npc_name.Text + "이 죽었다. exp : " + eel.exp.ToString() + " 획득\r\n";//변경 필요
-                picture_npc.Image = eel.img_dead;//변경 필요
+                ch.exp_gain(monster.exp);
+                ch.item_gain(0, 3);//변경 필요
+                textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";//변경 필요
+                picture_npc.Image = monster.img_dead;
                 picture_main.Image = ch.main_attack;
 
             }
@@ -409,26 +493,26 @@ namespace WindowsFormsApp1
                 MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                 this.Close();
             }
-            if (eel.real_health > 0)//변경 필요
+            if (monster.real_health > 0)
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = eel.img;//변경 필요
+                picture_npc.Image = monster.img;
                 item_btn_able(ch);
                 act_btn_able();
             }
             else
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = eel.img_dead;//변경 필요
+                picture_npc.Image = monster.img_dead;
                 //btn_up_move.Text = "다시 싸운다";
                 move_btn_able();
             }
-            eel.item_clear();//변경 필요
+            monster.item_clear();
             ch.item_clear();
             update();
 
-
         }
+
         private void btn_skill_Click(object sender, EventArgs e)
         {
             if (ch.skill_point <= 0)
@@ -445,10 +529,10 @@ namespace WindowsFormsApp1
 
                 if (k == 1)
                 {
-                    if (eel.defense(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
+                    if (monster.defense(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)
                     {
                         picture_main.Image = ch.main_skill;
-                        picture_npc.Image = eel.img_defend;//변경 필요
+                        picture_npc.Image = monster.img_defend;
                         textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
 
                     }
@@ -456,17 +540,18 @@ namespace WindowsFormsApp1
                     {
                         ch.skill_re();
                         picture_main.Image = ch.main_skill;
-                        ch.exp_gain(eel.exp);//변경 필요
-                        textBox1.Text += npc_name.Text + "이 죽었다. exp : " + eel.exp.ToString() + " 획득\r\n";//변경 필요
-                        picture_npc.Image = eel.img_dead;//변경 필요
+                        ch.exp_gain(monster.exp);
+                        ch.item_gain(0, 3);//변경 필요
+                        textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";//변경 필요
+                        picture_npc.Image = monster.img_dead;
 
                     }
                 }
 
-                else if (eel.damaged(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)//변경 필요
+                else if (monster.damaged(ch.skill_use(cmb_skill.Items[cmb_skill.SelectedIndex].ToString())) == 1)
                 {
                     picture_main.Image = ch.main_skill;
-                    picture_npc.Image = eel.img_attacked;//변경 필요
+                    picture_npc.Image = monster.img_attacked;
                     update();
                     this.Refresh();
                     switch (k)
@@ -475,23 +560,23 @@ namespace WindowsFormsApp1
 
                             textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                            if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                            if (ch.damaged(monster.attack()) != 1)// 슬라임 공격으로 사망 
                             {
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = eel.img_attack;//변경 필요
+                                picture_npc.Image = monster.img_attack;
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = eel.img;//변경 필요
+                                picture_npc.Image = monster.img;
 
                             }
                             else
                             {
-                                picture_npc.Image = eel.img_attack;//변경 필요
+                                picture_npc.Image = monster.img_attack;
                                 picture_main.Image = ch.main_attacked;
                             }
                             break;
                         case 2: //슬라임이 스킬을 사용한 경우
 
-                            int temp = eel.skill("100만 볼트");//변경 필요
+                            int temp = monster.skill(monster.skill_name);
 
                             if (temp == 0)
                             {
@@ -499,20 +584,20 @@ namespace WindowsFormsApp1
                             }
                             else if (ch.damaged(temp) != 1)
                             {
-                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                                textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = eel.img_skill;//변경 필요
+                                picture_npc.Image = monster.img_skill;
                                 update();
                                 this.Refresh();
 
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = eel.img;//변경 필요
+                                picture_npc.Image = monster.img;
 
                             }
                             else
                             {
-                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                                picture_npc.Image = eel.img_skill;//변경 필요
+                                textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
+                                picture_npc.Image = monster.img_skill;
                                 picture_main.Image = ch.main_attacked;
 
                             }
@@ -524,9 +609,10 @@ namespace WindowsFormsApp1
                 {
                     ch.skill_re();
                     picture_main.Image = ch.main_skill;
-                    ch.exp_gain(eel.exp);//변경 필요
-                    textBox1.Text += npc_name.Text + "이 죽었다. exp : 80 획득\r\n";
-                    picture_npc.Image = eel.img_dead;//변경 필요
+                    ch.exp_gain(monster.exp);
+                    ch.item_gain(0, 3);//변경 필요
+                    textBox1.Text += npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n";//변경 필요
+                    picture_npc.Image = monster.img_dead;
 
                 }
                 update();
@@ -536,21 +622,21 @@ namespace WindowsFormsApp1
                     MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                     this.Close();
                 }
-                if (eel.real_health > 0)//변경 필요
+                if (monster.real_health > 0)
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = eel.img;//변경 필요
+                    picture_npc.Image = monster.img;
                     item_btn_able(ch);
                     act_btn_able();
                 }
                 else
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = eel.img_dead;//변경 필요
+                    picture_npc.Image = monster.img_dead;
                     //btn_up_move.Text = "다시 싸운다";
                     move_btn_able();
                 }
-                eel.item_clear();//변경 필요
+                monster.item_clear();
                 ch.item_clear();
                 update();
 
@@ -570,28 +656,28 @@ namespace WindowsFormsApp1
 
                     textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                    if (ch.defense(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                    if (ch.defense(monster.attack()) != 1)// 슬라임 공격으로 사망
                     {
                         picture_main.Image = ch.main_dead;
-                        picture_npc.Image = eel.img_attack;//변경 필요
+                        picture_npc.Image = monster.img_attack;
                         textBox1.Text += "당신은 죽었다\r\n";
-                        picture_npc.Image = eel.img;//변경 필요
+                        picture_npc.Image = monster.img;
 
                     }
                     else
                     {
-                        picture_npc.Image = eel.img_attack;//변경 필요
+                        picture_npc.Image = monster.img_attack;
                         picture_main.Image = ch.main_defend;
                     }
                     break;
                 case 1://서로 방어한 경우
                     textBox1.Text += npc_name.Text + "이 방어를 선택했다\r\n";
                     picture_main.Image = ch.main_defend;
-                    picture_npc.Image = eel.img_defend;//변경 필요
+                    picture_npc.Image = monster.img_defend;
                     break;
                 case 2: //슬라임이 스킬을 사용한 경우
 
-                    int temp = eel.skill("100만 볼트");//변경 필요
+                    int temp = monster.skill(monster.skill_name);
 
                     if (temp == 0)
                     {
@@ -600,20 +686,20 @@ namespace WindowsFormsApp1
                     }
                     else if (ch.defense(temp) != 1)
                     {
-                        textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                        textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                         picture_main.Image = ch.main_defend;
-                        picture_npc.Image = eel.img_skill;//변경 필요
+                        picture_npc.Image = monster.img_skill;
                         update();
                         this.Refresh();
 
                         textBox1.Text += "당신은 죽었다\r\n";
-                        picture_npc.Image = eel.img;//변경 필요
+                        picture_npc.Image = monster.img;
                         picture_main.Image = ch.main_dead;
                     }
                     else
                     {
-                        textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                        picture_npc.Image = eel.img_skill;//변경 필요
+                        textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
+                        picture_npc.Image = monster.img_skill;
                         picture_main.Image = ch.main_defend;
 
                     }
@@ -627,21 +713,21 @@ namespace WindowsFormsApp1
                 MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                 this.Close();
             }
-            if (eel.real_health > 0)//변경 필요
+            if (monster.real_health > 0)
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = eel.img;//변경 필요
+                picture_npc.Image = monster.img;
                 item_btn_able(ch);
                 act_btn_able();
             }
             else
             {
                 picture_main.Image = ch.main;
-                picture_npc.Image = eel.img_dead;//변경 필요
+                picture_npc.Image = monster.img_dead;
                 //btn_up_move.Text = "다시 싸운다";
                 move_btn_able();
             }
-            eel.item_clear();//변경 필요
+            monster.item_clear();//변경 필요
             ch.item_clear();
             update();
         }
@@ -651,7 +737,7 @@ namespace WindowsFormsApp1
             move_btn_enable();
             act_btn_enable();
             item_btn_enable();
-            if (ch.spd > eel.spd)
+            if (ch.spd > monster.spd)
             {
                 Random rand = new Random();
                 int k = rand.Next(10);
@@ -671,23 +757,23 @@ namespace WindowsFormsApp1
 
                             textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                            if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                            if (ch.damaged(monster.attack()) != 1)
                             {
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = eel.img_attack;//변경 필요
+                                picture_npc.Image = monster.img_attack;
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = eel.img;//변경 필요
+                                picture_npc.Image = monster.img;
 
                             }
                             else
                             {
-                                picture_npc.Image = eel.img_attack;//변경 필요
+                                picture_npc.Image = monster.img_attack;
                                 picture_main.Image = ch.main_attacked;
                             }
                             break;
                         case 1: //슬라임이 스킬을 사용한 경우
 
-                            int temp = eel.skill("100만 볼트");//변경 필요
+                            int temp = monster.skill(monster.skill_name);
 
                             if (temp == 0)
                             {
@@ -695,20 +781,20 @@ namespace WindowsFormsApp1
                             }
                             else if (ch.damaged(temp) != 1)
                             {
-                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                                textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                                 picture_main.Image = ch.main_dead;
-                                picture_npc.Image = eel.img_skill;//변경 필요
+                                picture_npc.Image = monster.img_skill;
                                 update();
                                 this.Refresh();
 
                                 textBox1.Text += "당신은 죽었다\r\n";
-                                picture_npc.Image = eel.img;//변경 필요
+                                picture_npc.Image = monster.img;
 
                             }
                             else
                             {
-                                textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                                picture_npc.Image = eel.img_skill;//변경 필요
+                                textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
+                                picture_npc.Image = monster.img_skill;
                                 picture_main.Image = ch.main_attacked;
 
                             }
@@ -722,21 +808,21 @@ namespace WindowsFormsApp1
                         MessageBox.Show("당신은 " + npc_name.Text + "에 패배하였습니다.");
                         this.Close();
                     }
-                    if (eel.real_health > 0)//변경 필요
+                    if (monster.real_health > 0)
                     {
                         picture_main.Image = ch.main;
-                        picture_npc.Image = eel.img;//변경 필요
+                        picture_npc.Image = monster.img;
                         item_btn_able(ch);
                         act_btn_able();
                     }
                     else
                     {
                         picture_main.Image = ch.main;
-                        picture_npc.Image = eel.img_dead;//변경 필요
+                        picture_npc.Image = monster.img_dead;
                         //btn_up_move.Text = "다시 싸운다";
                         move_btn_able();
                     }
-                    eel.item_clear();//변경 필요
+                    monster.item_clear();
                     ch.item_clear();
                     update();
                 }
@@ -752,23 +838,23 @@ namespace WindowsFormsApp1
 
                         textBox1.Text += npc_name.Text + "이 공격을 선택했다\r\n";
 
-                        if (ch.damaged(eel.attack()) != 1)// 슬라임 공격으로 사망 //변경 필요
+                        if (ch.damaged(monster.attack()) != 1)
                         {
                             picture_main.Image = ch.main_dead;
-                            picture_npc.Image = eel.img_attack;//변경 필요
+                            picture_npc.Image = monster.img_attack;
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = eel.img;//변경 필요
+                            picture_npc.Image = monster.img;
 
                         }
                         else
                         {
-                            picture_npc.Image = eel.img_attack;//변경 필요
+                            picture_npc.Image = monster.img_attack;
                             picture_main.Image = ch.main_attacked;
                         }
                         break;
                     case 2: //슬라임이 스킬을 사용한 경우
 
-                        int temp = eel.skill("100만 볼트");//변경 필요
+                        int temp = monster.skill(monster.skill_name);
 
                         if (temp == 0)
                         {
@@ -776,20 +862,20 @@ namespace WindowsFormsApp1
                         }
                         else if (ch.damaged(temp) != 1)
                         {
-                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
+                            textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
                             picture_main.Image = ch.main_dead;
-                            picture_npc.Image = eel.img_skill;//변경 필요
+                            picture_npc.Image = monster.img_skill;
                             update();
                             this.Refresh();
 
                             textBox1.Text += "당신은 죽었다\r\n";
-                            picture_npc.Image = eel.img;//변경 필요
+                            picture_npc.Image = monster.img;
 
                         }
                         else
                         {
-                            textBox1.Text += npc_name.Text + "이 스킬을 사용했다\r\n";
-                            picture_npc.Image = eel.img_skill;//변경 필요
+                            textBox1.Text += npc_name.Text + "이(가) " + monster.skill_name + " 스킬을 사용했다\r\n";
+                            picture_npc.Image = monster.img_skill;
                             picture_main.Image = ch.main_attacked;
 
                         }
@@ -804,30 +890,51 @@ namespace WindowsFormsApp1
                     this.Close();
 
                 }
-                if (eel.real_health > 0)//변경 필요
+                if (monster.real_health > 0)
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = eel.img;//변경 필요
+                    picture_npc.Image = monster.img;
                     item_btn_able(ch);
                     act_btn_able();
                 }
                 else
                 {
                     picture_main.Image = ch.main;
-                    picture_npc.Image = eel.img_dead;//변경 필요
+                    picture_npc.Image = monster.img_dead;
                     //btn_travel.Text = "다시 싸운다";
                     move_btn_able();
                 }
-                eel.item_clear();//변경 필요
+                monster.item_clear();
                 ch.item_clear();
                 update();
             }
         }
 
 
+
         private void btn_left_move_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void C_1_1_2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (monster.real_health <= 0)
+            {
+                picture_npc.Image = monster.img;
+                monster.real_health = monster.max_health;
+                monster.revive();
+                textBox1.Text = "또 다른 " + npc_name.Text + "이 나타났다.\r\n"; // 대사 변경 선택 사항
+                setting(ch);
+                move_btn_enable();
+                item_btn_able(ch);
+                act_btn_able();
+
+            }
         }
     }
 }

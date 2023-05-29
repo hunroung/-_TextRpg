@@ -365,6 +365,7 @@
             this.btn_travel.TabIndex = 142;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_down_move
             // 
@@ -901,6 +902,7 @@
             this.Name = "C_1_2_4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_2_4";
+            this.Load += new System.EventHandler(this.C_1_2_4_Load_1);
             this.Shown += new System.EventHandler(this.C_1_2_4_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -138,12 +138,12 @@ namespace WindowsFormsApp1
         {
             name = "고블린";
             skill_name = "단검찌르기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile(".\\img\\goblin.png");
+            img_attack = Image.FromFile(".\\img\\goblin_attack.png");
+            img_defend = Image.FromFile(".\\img\\goblin_defend.png");
+            img_attacked = Image.FromFile(".\\img\\goblin_attacked.png");
+            img_skill = Image.FromFile(".\\img\\goblin_skill.png");
+            img_dead = Image.FromFile(".\\img\\goblin_dead.png");
             max_health = 150;
             real_health = 150;
             defend = 5;
@@ -281,12 +281,12 @@ namespace WindowsFormsApp1
         {
             name = "해적상어";
             skill_name = "이빨물기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile(".\\img\\shark.png");
+            img_attack = Image.FromFile(".\\img\\shark_attack.png");
+            img_defend = Image.FromFile(".\\img\\shark_defend.png");
+            img_attacked = Image.FromFile(".\\img\\shark_attacked.png");
+            img_skill = Image.FromFile(".\\img\\shark_skill.png");
+            img_dead = Image.FromFile(".\\img\\shark_dead.png");
             max_health = 200;
             real_health = 200;
             defend = 5;
@@ -317,12 +317,12 @@ namespace WindowsFormsApp1
         {
             name = "전기 뱀장어";
             skill_name = "100만 볼트";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile(".\\img\\eel.png");
+            img_attack = Image.FromFile(".\\img\\eel_attack.png");
+            img_defend = Image.FromFile(".\\img\\eel_defend.png");
+            img_attacked = Image.FromFile(".\\img\\eel_attacked.png");
+            img_skill = Image.FromFile(".\\img\\eel_skill.png");
+            img_dead = Image.FromFile(".\\img\\eel_dead.png");
             max_health = 70;
             real_health = 70;
             defend = 10;
@@ -353,12 +353,12 @@ namespace WindowsFormsApp1
         {
             name = "매우 큰 고래";
             skill_name = "날아 오르기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".g\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile(".\\img\\whale.png");
+            img_attack = Image.FromFile(".\\img\\whale_attack.png");
+            img_defend = Image.FromFile(".\\img\\whale_defend.png");
+            img_attacked = Image.FromFile(".\\img\\whale_attacked.png");
+            img_skill = Image.FromFile(".\\img\\whale_skill.png");
+            img_dead = Image.FromFile(".\\img\\whale_dead.png");
             max_health = 300;
             real_health = 300;
             defend = 30;

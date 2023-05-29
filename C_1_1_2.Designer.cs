@@ -153,6 +153,7 @@
             this.btn_item_2.TabIndex = 34;
             this.btn_item_2.Text = "사용";
             this.btn_item_2.UseVisualStyleBackColor = true;
+            this.btn_item_2.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_item_1
             // 
@@ -162,6 +163,7 @@
             this.btn_item_1.TabIndex = 32;
             this.btn_item_1.Text = "사용";
             this.btn_item_1.UseVisualStyleBackColor = true;
+            this.btn_item_1.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label9
             // 
@@ -180,6 +182,7 @@
             this.btn_skill.TabIndex = 128;
             this.btn_skill.Text = "스킬사용";
             this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
             // 
             // btn_defend
             // 
@@ -189,6 +192,7 @@
             this.btn_defend.TabIndex = 127;
             this.btn_defend.Text = "방어한다";
             this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
             // 
             // btn_attack
             // 
@@ -198,6 +202,7 @@
             this.btn_attack.TabIndex = 126;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // groupBox2
             // 
@@ -248,6 +253,7 @@
             this.btn_def.TabIndex = 19;
             this.btn_def.Text = "^";
             this.btn_def.UseVisualStyleBackColor = true;
+            this.btn_def.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_spd
             // 
@@ -257,6 +263,7 @@
             this.btn_spd.TabIndex = 18;
             this.btn_spd.Text = "^";
             this.btn_spd.UseVisualStyleBackColor = true;
+            this.btn_spd.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_intel
             // 
@@ -266,6 +273,7 @@
             this.btn_intel.TabIndex = 17;
             this.btn_intel.Text = "^";
             this.btn_intel.UseVisualStyleBackColor = true;
+            this.btn_intel.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_str
             // 
@@ -275,6 +283,7 @@
             this.btn_str.TabIndex = 16;
             this.btn_str.Text = "^";
             this.btn_str.UseVisualStyleBackColor = true;
+            this.btn_str.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // def
             // 
@@ -356,6 +365,7 @@
             this.btn_travel.TabIndex = 142;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_down_move
             // 
@@ -402,6 +412,7 @@
             this.btn_item_6.TabIndex = 40;
             this.btn_item_6.Text = "사용";
             this.btn_item_6.UseVisualStyleBackColor = true;
+            this.btn_item_6.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_item_5
             // 
@@ -411,6 +422,7 @@
             this.btn_item_5.TabIndex = 37;
             this.btn_item_5.Text = "사용";
             this.btn_item_5.UseVisualStyleBackColor = true;
+            this.btn_item_5.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label4
             // 
@@ -641,6 +653,7 @@
             this.btn_item_8.TabIndex = 52;
             this.btn_item_8.Text = "사용";
             this.btn_item_8.UseVisualStyleBackColor = true;
+            this.btn_item_8.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label16
             // 
@@ -667,6 +680,7 @@
             this.btn_item_4.TabIndex = 49;
             this.btn_item_4.Text = "사용";
             this.btn_item_4.UseVisualStyleBackColor = true;
+            this.btn_item_4.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label15
             // 
@@ -693,6 +707,7 @@
             this.btn_item_7.TabIndex = 46;
             this.btn_item_7.Text = "사용";
             this.btn_item_7.UseVisualStyleBackColor = true;
+            this.btn_item_7.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label14
             // 
@@ -719,6 +734,7 @@
             this.btn_item_3.TabIndex = 43;
             this.btn_item_3.Text = "사용";
             this.btn_item_3.UseVisualStyleBackColor = true;
+            this.btn_item_3.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label13
             // 
@@ -807,6 +823,7 @@
             this.btn_run.TabIndex = 129;
             this.btn_run.Text = "도망친다";
             this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
             // 
             // btn_save
             // 
@@ -885,6 +902,7 @@
             this.Name = "C_1_1_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_1_2";
+            this.Load += new System.EventHandler(this.C_1_1_2_Load_1);
             this.Shown += new System.EventHandler(this.C_1_1_2_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
