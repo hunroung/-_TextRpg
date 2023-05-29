@@ -181,13 +181,13 @@ namespace WindowsFormsApp1
                 
                 if (skill_name == "심판")
                 {
-                    main_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character_skill_" + skill_name + ".png");
+                    main_skill = Image.FromFile(".\\img\\main_character_skill_" + skill_name + ".png");
                     skill_point--;
                     return Judgement();
                 }
                 else if (skill_name == "메테오")
                 {
-                    main_skill = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character_skill_" + skill_name + ".png");
+                    main_skill = Image.FromFile(".\\img\\main_character_skill_" + skill_name + ".png");
                     skill_point--;
                     return Meteor();
                 }
