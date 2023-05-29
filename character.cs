@@ -23,12 +23,12 @@ namespace WindowsFormsApp1
 
         public int max_skill_point = 3;//사용 가능한 스킬 횟수
 
-        public Image main = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character.png");
-        public Image main_attack = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character_attack.png");
-        public Image main_attacked = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character_attacked.png");
+        public Image main = Image.FromFile(".\\img\\main_character.png");
+        public Image main_attack = Image.FromFile(".\\img\\main_character_attack.png");
+        public Image main_attacked = Image.FromFile(".\\img\\main_character_attacked.png");
         public Image main_skill;
-        public Image main_defend = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character_defend.png");
-        public Image main_dead = Image.FromFile("C:\\Users\\LWJ\\source\\repos\\hunroung\\KW_TextRpg\\img\\main_character_dead.png");
+        public Image main_defend = Image.FromFile(".\\img\\main_character_defend.png");
+        public Image main_dead = Image.FromFile(".\\img\\main_character_dead.png");
 
         //아이템 사용시 적용될 효과 수치를 따로 저장 후 되돌릴 때 사용
         public int item_str = 0;
