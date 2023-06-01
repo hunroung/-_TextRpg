@@ -322,7 +322,7 @@ namespace WindowsFormsApp1
             if (ch.wiz_visit == 0)
             {
             npc_name.Text = "마법사";
-            textBox1.Text += "저 멀리서 쓰러진 마법사가 보인다. 가까이 가볼까? \r\n";
+            textBox1.AppendText("저 멀리서 쓰러진 마법사가 보인다. 가까이 가볼까? \r\n");
             btn_attack.Visible = false;
             btn_defend.Visible = false;
             move_btn_enable();
@@ -333,17 +333,17 @@ namespace WindowsFormsApp1
             else if (ch.wiz_visit == 1)
             {
                 npc_name.Text = "마법사";
-                textBox1.Text += "잃어버린 제 마법서를 찾아와주시면 감사하겠습니다... \r\n\r\n";
-                textBox1.Text += "[ 현재 퀘스트를 수락한 상태입니다. ] \r\n";
+                textBox1.AppendText("잃어버린 제 마법서를 찾아와주시면 감사하겠습니다... \r\n\r\n");
+                textBox1.AppendText("[ 현재 퀘스트를 수락한 상태입니다. ] \r\n");
                 picture_npc.Image = Image.FromFile(".\\img\\wiz_02.png");
             }
             else if (ch.wiz_visit == 2)
             {
                 ch.wiz_visit = 3;
                 npc_name.Text = "마법사";
-                textBox1.Text += "잃어버린 제 마법서를 찾아와주셔서 감사합니다! \r\n";
-                textBox1.Text += "감사의 의미로 선물을 드릴게요! \r\n\r\n";
-                textBox1.Text += "[exp 300 을 획득하였습니다.] \r\n[회복 포션 3개를 획득하였습니다.] ";
+                textBox1.AppendText("잃어버린 제 마법서를 찾아와주셔서 감사합니다! \r\n");
+                textBox1.AppendText("감사의 의미로 선물을 드릴게요! \r\n\r\n");
+                textBox1.AppendText("[exp 300 을 획득하였습니다.] \r\n[회복 포션 3개를 획득하였습니다.] ");
                 for(int i = 0; i < 31; i++) ch.exp_gain(10);
                 ch.item_gain(0, 3);
                 picture_npc.Image = Image.FromFile(".\\img\\wiz_03.png");
@@ -353,9 +353,9 @@ namespace WindowsFormsApp1
             {
                 ch.wiz_visit = 3;
                 npc_name.Text = "마법사";
-                textBox1.Text += "잃어버린 제 마법서를 찾아와주셔서 감사합니다! \r\n";
-                textBox1.Text += "이제 다시 모험을 떠날 수 있겠어요. \r\n\r\n";
-                textBox1.Text += "[ 퀘스트를 완료하셨습니다. ] \r\n";
+                textBox1.AppendText("잃어버린 제 마법서를 찾아와주셔서 감사합니다! \r\n");
+                textBox1.AppendText("이제 다시 모험을 떠날 수 있겠어요. \r\n\r\n");
+                textBox1.AppendText("[ 퀘스트를 완료하셨습니다. ] \r\n");
                 picture_npc.Image = Image.FromFile(".\\img\\wiz_03.png");
             }
 
@@ -371,19 +371,19 @@ namespace WindowsFormsApp1
             btn_yes.Enabled = false;
             btn_no.Enabled = false;
             picture_npc.Image = Image.FromFile(".\\img\\wiz_02.png");
-            textBox1.Text += "\r\n으으... 구해주셔서 감사합니다. \r\n";
+            textBox1.AppendText("\r\n으으... 구해주셔서 감사합니다. \r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "모험을 하던 도중 정체불명의 몬스터를 만나 잠시 정신을 잃게 되었습니다. \r\n";
+            textBox1.AppendText("모험을 하던 도중 정체불명의 몬스터를 만나 잠시 정신을 잃게 되었습니다. \r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "몸 상태는 쉬면 괜찮아질 것 같지만.... \r\n";
+            textBox1.AppendText("몸 상태는 쉬면 괜찮아질 것 같지만.... \r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "제 소중한 마법서를 몬스터가 있는 장소에 떨어뜨리고 왔습니다. \r\n";
+            textBox1.AppendText("제 소중한 마법서를 몬스터가 있는 장소에 떨어뜨리고 왔습니다. \r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "혹시 몬스터를 물리치고 잃어버린 제 마법서를 찾아와주실 수 있을까요? 부탁드립니다. \r\n";
+            textBox1.AppendText("혹시 몬스터를 물리치고 잃어버린 제 마법서를 찾아와주실 수 있을까요? 부탁드립니다. \r\n");
             this.Refresh();
             Thread.Sleep(2000);
             /*
@@ -401,6 +401,11 @@ namespace WindowsFormsApp1
             ch.wiz_visit = 1;
             MessageBox.Show("퀘스트를 수락하였습니다.\r\n그리고 C_1_2_3에 걸려있는 결계가 해제되었습니다.");
             this.Close();
+        }
+
+        private void C_1_2_2_Load_1(object sender, EventArgs e)
+        {
+
         }
 
 

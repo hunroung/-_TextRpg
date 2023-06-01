@@ -310,8 +310,8 @@ namespace WindowsFormsApp1
             if(ch.wiz_visit == 1)
             {
                 picture_npc.Image = Image.FromFile(".\\img\\wiz_book.png");
-                textBox1.Text += "마법사가 잃어버린 책을 발견했다. \r\n";
-                textBox1.Text += "마법사에게로 돌아가 잃어버린 책을 건네주자. \r\n";
+                textBox1.AppendText("마법사가 잃어버린 책을 발견했다. \r\n");
+                textBox1.AppendText("마법사에게로 돌아가 잃어버린 책을 건네주자. \r\n");
                 ch.wiz_visit = 2;
             }
 

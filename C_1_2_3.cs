@@ -288,7 +288,7 @@ namespace WindowsFormsApp1
 
             if (ch.wiz_visit == 0)
             {
-                textBox1.Text += "누군가 마법으로 결계를 설치해놨다. \r\n먼저, 결계를 풀지 않으면 다음 맵으로 이동할 수 없다.\r\n\r\n";
+                textBox1.AppendText("누군가 마법으로 결계를 설치해놨다. \r\n먼저, 결계를 풀지 않으면 다음 맵으로 이동할 수 없다.\r\n\r\n");
             }
             else
             {
@@ -320,7 +320,7 @@ namespace WindowsFormsApp1
             else
             {
                 picture_npc.Image = Image.FromFile(".\\img\\magic_unlock.png");
-                textBox1.Text += "결계가 풀린 상태가 되었다.\r\n다음 맵으로 이동할 수 있을 것 같다.\r\n";
+                textBox1.AppendText("결계가 풀린 상태가 되었다.\r\n다음 맵으로 이동할 수 있을 것 같다.\r\n");
             }
         }
 

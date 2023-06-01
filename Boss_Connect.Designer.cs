@@ -59,7 +59,7 @@
             this.Name = "Boss_Connect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boss_Connect";
-            this.Load += new System.EventHandler(this.Boss_Connect_Load);
+            this.Shown += new System.EventHandler(this.Boss_Connect_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
