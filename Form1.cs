@@ -85,6 +85,13 @@ namespace WindowsFormsApp1
                         }
                         break;
                     case 2:
+                        C_1_4 form = new C_1_4(ref character);
+                        this.Hide();
+                        form.ShowDialog();
+                        this.Show();
+                        if (character.real_health <= 0 || character.close == 1)
+                        {
+                        }
                         break;
                     case 3:
                         break;

@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
     {
         TcpClient m_client_;
         NetworkStream m_stream_;
-        NPC boss_;
+        public NPC boss_;
         int boss_type_;
         public Boss_Connect()
         {
@@ -94,6 +94,14 @@ namespace WindowsFormsApp1
                 }
             }
             progressBar1.Value = 100;
+            Boss b = new Boss(boss_);
+            b.ShowDialog();
+            this.Close();
+        }
+
+        private void Boss_Connect_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

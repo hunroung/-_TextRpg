@@ -855,23 +855,7 @@ namespace WindowsFormsApp1
         {
 
             //@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@
-            textBox1.AppendText( "당신은 깊은 숲으로 들어왔다. \r\n");
-            this.Refresh();
-            Thread.Sleep(2000);
-            //@@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@@
-            textBox1.AppendText("당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n");
-            this.Refresh();
-            Thread.Sleep(2000);
-            //@@@@@@@@@@@@@@@@@@@@몬스터 등장@@@@@@@@@@@@@@@@@@
-            monster = new slime();
-            fight = 1;
-            setting(ch);
-            picture_npc.Image = monster.img;
-            textBox1.AppendText ( "그러자 나무 사이에서 " + npc_name.Text + " (이)가 나왔다! \r\n");
-            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-            item_btn_able(ch); // 필수
-            act_btn_able(); // 필수
+            
         }
 
         private void C_1_4_Load_1(object sender, EventArgs e)
@@ -880,8 +864,16 @@ namespace WindowsFormsApp1
             Boss_Connect call_server=new Boss_Connect(ref m_client,ref monster,ref m_stream,1);
             
             call_server.ShowDialog();
+            monster = call_server.boss_;
+            picture_npc.Image = monster.img;
+            fight = 1;
+            textBox1.AppendText("이런! 보스 몬스터 " + monster.name + " 이(가) 나타났다!!\r\n");
+
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+            item_btn_able(ch); // 필수
+            act_btn_able(); // 필수
             update();
-            this.Refresh();
         }
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@전투 시스템@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

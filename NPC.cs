@@ -676,12 +676,12 @@ namespace WindowsFormsApp1
         {
             name = "반달가슴 곰";
             skill_name = "곰은 사람을 찢어!!";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile(".\\img\\Boss_Bear.png");
+            img_attack = Image.FromFile(".\\img\\Boss_Bear_attack.png");
+            img_defend = Image.FromFile(".\\img\\Boss_Bear_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Boss_Bear_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Boss_Bear_skill.png");
+            img_dead = Image.FromFile(".\\img\\Boss_Bear_dead.png");
             max_health = 500;
             real_health = 500;
             defend = 40;
