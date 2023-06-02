@@ -21,25 +21,25 @@ namespace WindowsFormsApp1
         private void C_3_0_Load(object sender, EventArgs e)
         {
             move_btn_enable();
-            textBox1.Text += "당신은 자욱한 안개 속에서 신비로운 생명체들을 지나 다리의 끝에 도달한다.\r\n";
+            textBox1.AppendText ( "당신은 자욱한 안개 속에서 신비로운 생명체들을 지나 다리의 끝에 도달한다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "섬에 다가갈수록 신비로운 사원의 모습이 뚜렷해진다.\r\n";
+            textBox1.AppendText ( "섬에 다가갈수록 신비로운 사원의 모습이 뚜렷해진다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "황금과 옥으로 장식된 아치형 문은 당신이 다가서자 자연스럽게 열린다.\r\n";
+            textBox1.AppendText ( "황금과 옥으로 장식된 아치형 문은 당신이 다가서자 자연스럽게 열린다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "사원 안으로 들어선 순간, 신성한 분위기와 함께 머리가 맑아지는 향이 당신을 맞이한다.\r\n";
+            textBox1.AppendText ( "사원 안으로 들어선 순간, 신성한 분위기와 함께 머리가 맑아지는 향이 당신을 맞이한다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "길게 이어진 회랑 양쪽에는 아름답게 조각된 강철 기둥들이 빛을 받아 빛난다.\r\n";
+            textBox1.AppendText ( "길게 이어진 회랑 양쪽에는 아름답게 조각된 강철 기둥들이 빛을 받아 빛난다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "회랑 가운데에 위치한 신성한 불은 단단한 대리석 화로 안에 피워져 있다.\r\n";
+            textBox1.AppendText ( "회랑 가운데에 위치한 신성한 불은 단단한 대리석 화로 안에 피워져 있다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.Text += "영원을 상징하는 신성한 불이 당신을 영원하게 만든다.\r\n";
+            textBox1.AppendText ( "영원을 상징하는 신성한 불이 당신을 영원하게 만든다.\r\n");
             move_btn_able();
         }
         public int visit = 0;
@@ -393,7 +393,7 @@ namespace WindowsFormsApp1
         private void btn_travel_Click(object sender, EventArgs e)
         {
             ch.healed(ch.max_health);
-            textBox1.Text += "체력이 모두 회복되었다.\r\n";
+            textBox1.AppendText ( "체력이 모두 회복되었다.\r\n");
             setting(ch);
         }
 

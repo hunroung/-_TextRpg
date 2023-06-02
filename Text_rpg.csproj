@@ -480,7 +480,7 @@
     <Content Include="img\goblin_attack.PNG" />
     <Content Include="img\goblin_attacked.PNG" />
     <Content Include="img\goblin_dead.PNG" />
-    <Content Include="img\goblin_defense.PNG" />
+    <Content Include="img\goblin_defend.PNG" />
     <Content Include="img\goblin_skill.PNG" />
     <Content Include="img\main_character_skill_메테오.png" />
     <Content Include="img\Mist_Fairy.PNG" />
