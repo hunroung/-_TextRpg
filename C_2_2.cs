@@ -19,20 +19,33 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
 
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void C_2_2_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText ( "무언가 호수에서 나와 다리 저편에 올라탄다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "가까이 다가서니 그것은 천천히 일어선다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "그것은 두 다리로 선 악어다!\r\n");
 
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new Crocodile_Spirit();
             fight = 1;
             setting(ch);
@@ -198,9 +211,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -902,6 +915,11 @@ namespace WindowsFormsApp1
         }
         //아이템 사용
         private void btn_item_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void C_2_2_Load_2(object sender, EventArgs e)
         {
 
         }

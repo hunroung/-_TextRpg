@@ -23,16 +23,16 @@ namespace WindowsFormsApp1
             move_btn_enable();
             textBox1.AppendText("당신은 우거진 숲 속에서 깨어났다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("주위에는 나무들과 풀밭이 보이고 새들의 지저귐이 들려온다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("당신은 이곳이 어디인지, 어떻게 여기에 왔는지 기억하지 못한다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("어디로 가야할지 막막하지만 당신은 마음이 향하는 곳으로 걷는다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("이곳은 치유의 샘이다. \r\n전투의 피로를 이곳에서 회복하자.\r\n");
             move_btn_able();
             
@@ -42,7 +42,20 @@ namespace WindowsFormsApp1
         public int visit = 0;
         public character ch;
         //public slime slime = new slime();
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
 
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void btn_close_Click(object sender, EventArgs e)
         {
             ch.close = 1;
@@ -193,9 +206,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {

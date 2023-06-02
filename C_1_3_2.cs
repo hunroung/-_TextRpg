@@ -177,12 +177,26 @@ namespace WindowsFormsApp1
             btn_item_7.Enabled = false;
             btn_item_8.Enabled = false;
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -362,10 +376,10 @@ namespace WindowsFormsApp1
             move_btn_enable();
             textBox1.AppendText("당신은 깊은 숲으로 들어왔다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new Ent();
             fight = 1;
             setting(ch);

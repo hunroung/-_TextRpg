@@ -24,11 +24,11 @@ namespace WindowsFormsApp1
             move_btn_enable();
             textBox1.AppendText ( "삐걱이는 나무다리를 건너는 당신의 앞에 무언가 안개 속에서 나타났다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay (2000);
             textBox1.AppendText ( "안개와 같은 날개를 지닌 요정은 어쩐지 당신의 앞길을 막고 싶은듯 하다.\r\n");
 
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new Mist_Fairy();
             fight = 1;
             setting(ch);
@@ -194,9 +194,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -650,7 +650,20 @@ namespace WindowsFormsApp1
             ch.item_clear();
             update();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
 
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void btn_run_Click(object sender, EventArgs e)
         {
             move_btn_enable();
@@ -940,6 +953,11 @@ namespace WindowsFormsApp1
                     break;
             }
             update();
+        }
+
+        private void C_2_1_Load_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

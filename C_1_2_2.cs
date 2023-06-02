@@ -180,12 +180,26 @@ namespace WindowsFormsApp1
             btn_item_7.Enabled = false;
             btn_item_8.Enabled = false;
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         private void btn_str_Click(object sender, EventArgs e)
         {
@@ -373,19 +387,19 @@ namespace WindowsFormsApp1
             picture_npc.Image = Image.FromFile(".\\img\\wiz_02.png");
             textBox1.AppendText("\r\n으으... 구해주셔서 감사합니다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("모험을 하던 도중 정체불명의 몬스터를 만나 잠시 정신을 잃게 되었습니다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("몸 상태는 쉬면 괜찮아질 것 같지만.... \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("제 소중한 마법서를 몬스터가 있는 장소에 떨어뜨리고 왔습니다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("혹시 몬스터를 물리치고 잃어버린 제 마법서를 찾아와주실 수 있을까요? 부탁드립니다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             /*
             textBox1.Text += "\r\n으으... 구해주셔서 감사합니다. \r\n모험을 하던 도중 정체불명의 몬스터를 만나 잠시 정신을 잃게 되었습니다. \r\n";
             textBox1.Text += "몸 상태는 쉬면 괜찮아질 것 같지만....\r\n\r\n제 소중한 마법서를 몬스터가 있는 장소에 떨어뜨리고 왔습니다. \r\n";

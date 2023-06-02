@@ -242,7 +242,7 @@
             this.groupBox3.Size = new System.Drawing.Size(353, 204);
             this.groupBox3.TabIndex = 53;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "지도?";
+            this.groupBox3.Text = "지도";
             // 
             // real_health
             // 

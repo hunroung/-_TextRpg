@@ -181,11 +181,25 @@ namespace WindowsFormsApp1
             btn_item_8.Enabled = false;
         }
         //업데이트 용
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -367,13 +381,13 @@ namespace WindowsFormsApp1
                 move_btn_enable();
                 textBox1.AppendText ( "당신은 고난과 역경을 이겨내고 가장 깊은 숲에 도달하였다.\r\n");
                 this.Refresh();
-                Thread.Sleep(2000);
+                Delay(2000);
                 textBox1.AppendText("당신은 눈 앞에 빛나는 수정을 발견하였다.\r\n");
                 this.Refresh();
-                Thread.Sleep(2000);
+                Delay(2000);
                 textBox1.AppendText("당신이 수정을 만지자 수정이 더 환하게 빛이나며 불 덩어리가 되었다.\r\n");
                 this.Refresh();
-                Thread.Sleep(2000);
+                Delay(2000);
                 textBox1.AppendText("스킬 메테오 획득.\r\n");
                 ch.skill_gain("메테오");
                 setting(ch);
@@ -385,7 +399,7 @@ namespace WindowsFormsApp1
                 move_btn_enable();
                 textBox1.AppendText("당신은 이미 이곳에서 할일을 다했다.\r\n");
                 this.Refresh();
-                Thread.Sleep(2000);
+                Delay(2000);
                 move_btn_able();
             }
         }

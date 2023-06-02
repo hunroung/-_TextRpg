@@ -84,17 +84,59 @@ namespace WindowsFormsApp1
                         {
                             character = new character();
                         }
+                        else if(character.chapter==2)
+                        {
+                            C_2_0 form3 = new C_2_0(ref character);
+                            this.Hide();
+                            form3.ShowDialog();
+                            this.Show();
+                            if (character.real_health <= 0 || character.close == 1)
+                            {
+                                character = new character();
+                            }
+                        }
                         break;
                     case 2:
-                        C_1_4 form = new C_1_4(ref character);
+                        C_2_0 form = new C_2_0(ref character);
                         this.Hide();
                         form.ShowDialog();
                         this.Show();
                         if (character.real_health <= 0 || character.close == 1)
                         {
+                            character = new character();
+                        }
+                        else if(character.chapter==3)
+                        {
+                            C_3_0 form3 = new C_3_0(ref character);
+                            this.Hide();
+                            form3.ShowDialog();
+                            this.Show();
+                            if (character.real_health <= 0 || character.close == 1)
+                            {
+                                character = new character();
+                            }
                         }
                         break;
                     case 3:
+                        C_3_0 form4 = new C_3_0(ref character);
+                        this.Hide();
+                        form4.ShowDialog();
+                        this.Show();
+                        if (character.real_health <= 0 || character.close == 1)
+                        {
+                            character = new character();
+                        }
+                        else if (character.chapter == 3)
+                        {
+                            C_3_0 form5 = new C_3_0(ref character);
+                            this.Hide();
+                            form5.ShowDialog();
+                            this.Show();
+                            if (character.real_health <= 0 || character.close == 1)
+                            {
+                                character = new character();
+                            }
+                        }
                         break;
                 
                 }

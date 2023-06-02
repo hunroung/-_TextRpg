@@ -19,19 +19,33 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void C_2_3_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText ( "갑작스레 호수의 표면이 출렁인다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "오색의 빛을 내뿜는 등껍질이 물 위로 떠오른다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "작은 눈을 부라리는 거북의 머리도 물 위로 떠오른다.\r\n");
 
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new Turtle_God();
             fight = 1;
             setting(ch);
@@ -197,9 +211,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {

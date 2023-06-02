@@ -26,13 +26,13 @@ namespace WindowsFormsApp1
             move_btn_enable();
             textBox1.AppendText("당신은 바다마을에 입성했다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("바닷가를 떠돌던 중 저 멀리 낯선 지느러미가 보인다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("가만히 보던 중 그 지느러미가 점점 나에게 빠르게 다가온다!\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
 
             monster = new shark();
             fight = 1;
@@ -201,9 +201,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -366,6 +366,20 @@ namespace WindowsFormsApp1
 
         // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@전투 시스템@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void _1_test_Load(object sender, EventArgs e)
         {
             move_btn_enable(); //필수
@@ -373,11 +387,11 @@ namespace WindowsFormsApp1
             //@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@
             textBox1.Text += "당신은 깊은 숲으로 들어왔다. \r\n";
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             //@@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@@
             textBox1.Text += "당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n";
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             //@@@@@@@@@@@@@@@@@@@@몬스터 등장@@@@@@@@@@@@@@@@@@
             monster = new slime();
             fight = 1;

@@ -19,20 +19,33 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
 
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
 
         private void C_1_1_2_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText("당신은 뻘쪽으로 이동했다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("뻘에 발이 묶여 움직일 수 없을 때 바닷가가 찌릿함을 느낀다..\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("맛있게 생긴 녀석이 다가온다!\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
 
             monster = new eel();
             fight = 1;
@@ -204,9 +217,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -374,11 +387,11 @@ namespace WindowsFormsApp1
             //@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@
             textBox1.AppendText("당신은 깊은 숲으로 들어왔다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             //@@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@@
             textBox1.AppendText("당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             //@@@@@@@@@@@@@@@@@@@@몬스터 등장@@@@@@@@@@@@@@@@@@
             monster = new slime();
             fight = 1;

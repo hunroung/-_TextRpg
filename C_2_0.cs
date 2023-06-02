@@ -17,28 +17,41 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
 
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void C_2_0_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText ( "당신은 숲에서 나와 대호수로 발을 디딘다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "안개에 감싸인 대호수의 신비로움이 당신의 눈을 사로잡는다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "호수의 가장자리에는 작은 다리가 안개 속으로 이어진다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "그 안개 뒤편에 숨겨진 존재들과 비밀에 대한 막연한 예감이 든다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "그에 당신은 가슴이 두근거림을 느낀다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "호수에서 흘러나오는 기운은 마치 생명력을 담은 숨결처럼 느껴진다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "그 기운이 당신의 몸과 마음을 감싸며 피로를 회복시킨다.\r\n");
             move_btn_able();
         }
@@ -198,9 +211,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {

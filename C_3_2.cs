@@ -19,19 +19,33 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void C_3_2_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText ( "지하로 내려가는 계단에서 어쩐지 당신은 위화감을 느낀다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "당신은 위화감이 느껴지는 방향을 가만히 응시한다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText ( "그러자 대리석 기둥 뒤에서 양손에 단검을 든 사람이 걸어나온다.\r\n");
 
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new Temple_Assassin();
             fight = 1;
             setting(ch);
@@ -197,9 +211,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {

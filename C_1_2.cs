@@ -22,22 +22,36 @@ namespace WindowsFormsApp1
         //public slime slime = new slime();
         public int fight = 0;
         public NPC monster = new NPC();
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void C_1_2_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText("이후 길을 걷던 당신은 숲 속에서 적대적인 슬라임과 마주쳤다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay (2000);
             textBox1.AppendText("그것은 보통의 슬라임과는 달리 붉은색으로 빛나며, 공격적인 태도를 보인다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("그것은 몸 주변에 날카로운 가시들을 가지고 있다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("그것이 활발하게 움직이며 당신을 향해 공격적으로 다가온다.\r\n");
             
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new red_slime();
             fight = 1;
             setting(ch);
@@ -205,9 +219,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {

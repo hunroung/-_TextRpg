@@ -25,11 +25,11 @@ namespace WindowsFormsApp1
             move_btn_enable();
             textBox1.AppendText("길을 걷던 당신은 야생의 슬라임을 밟았다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("작고 푸른빛이 나는 몸을 한 그것은 그리 위협적으로 보이진 않는다.\r\n");
             
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new slime();
             fight = 1;
             setting(ch);
@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
             act_btn_able();
 
         }
+
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
         public int visit = 0;
@@ -197,9 +198,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -297,6 +298,20 @@ namespace WindowsFormsApp1
             }
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void btn_right_move_Click(object sender, EventArgs e)
         {
             C_1_2 form = new C_1_2(ref ch);

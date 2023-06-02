@@ -181,11 +181,25 @@ namespace WindowsFormsApp1
             btn_item_8.Enabled = false;
         }
         //업데이트 용
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -318,10 +332,10 @@ namespace WindowsFormsApp1
                 btn_no.Enabled = false;
                 textBox1.AppendText ( "던전을 탐색하던 도중 자욱한 연기 사이에서 비밀 상점이 나타났다. \r\n");
                 this.Refresh();
-                Thread.Sleep(2000);
+                Delay(2000);
                 textBox1.AppendText("한 번 둘러볼까? \r\n\r\n");
                 this.Refresh();
-                Thread.Sleep(2000);
+                Delay(2000);
                 btn_yes.Enabled = true;
                 btn_no.Enabled = true;
             }
@@ -342,10 +356,10 @@ namespace WindowsFormsApp1
             btn_shopout.Enabled = false;
             textBox1.AppendText("비밀 상점에서는 던전을 탐험하는데 도움이 되는 아이템들이 많았다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("소지하고 있는 코인으로 다양한 아이템을 구매할 수 있어 보인다.\r\n\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             btn_shop_item1.Enabled = true;
             btn_shop_item2.Enabled = true;
             btn_shop_item3.Enabled = true;
@@ -409,10 +423,10 @@ namespace WindowsFormsApp1
         {
             textBox1.AppendText("비밀 상점을 뒤로한 채 당신은 던전을 탐험하기로 결정했다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("곧이어, 비밀 상점은 자욱한 연기에 가려져 흔적도 없이 사라졌다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             btn_yes.Visible = false;
             btn_no.Visible = false;
             btn_attack.Visible = true;
@@ -425,10 +439,10 @@ namespace WindowsFormsApp1
         {
             textBox1.AppendText("비밀 상점에서 나온 당신은 다시 던전을 탐험하기로 결정했다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("곧이어, 비밀 상점은 자욱한 연기에 가려져 흔적도 없이 사라졌다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             btn_yes.Visible = false;
             btn_no.Visible = false;
             btn_shop_item1.Visible = false;

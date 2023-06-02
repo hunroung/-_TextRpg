@@ -22,22 +22,35 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
 
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
         private void C_1_3_Load(object sender, EventArgs e)
         {
             move_btn_enable();
             textBox1.AppendText ("식은땀을 흘리며 숲을 걸어가던 당신은 갑작스런 기척을 느꼈다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("신비로운 푸른 빛이 숲의 어둠에서 부드럽게 흘러나오고,\r\n 흔들리는 나뭇가지의 소리와 함께 푸른 그림자의 형체가 서서히 드러났다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("맑고 투명한 유령 모습을 한 푸른 그림자는 당신을 보며 비틀린 웃음을 짓는다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             textBox1.AppendText("그 눈동자가 푸른 불꽃처럼 빛난다.\r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             monster = new blue_shadow();
             fight = 1;
             setting(ch);
@@ -207,9 +220,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
