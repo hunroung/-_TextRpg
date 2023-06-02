@@ -22,13 +22,13 @@ namespace WindowsFormsApp1
         private void C_2_3_Load(object sender, EventArgs e)
         {
             move_btn_enable();
-            textBox1.AppendText ( "갑작스레 호수의 표면이 출렁인다.\r\n";
+            textBox1.AppendText ( "갑작스레 호수의 표면이 출렁인다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.AppendText ( "오색의 빛을 내뿜는 등껍질이 물 위로 떠오른다.\r\n";
+            textBox1.AppendText ( "오색의 빛을 내뿜는 등껍질이 물 위로 떠오른다.\r\n");
             this.Refresh();
             Thread.Sleep(2000);
-            textBox1.AppendText ( "작은 눈을 부라리는 거북의 머리도 물 위로 떠오른다.\r\n";
+            textBox1.AppendText ( "작은 눈을 부라리는 거북의 머리도 물 위로 떠오른다.\r\n");
 
             this.Refresh();
             Thread.Sleep(2000);
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             fight = 1;
             setting(ch);
             picture_npc.Image = monster.img;
-            textBox1.AppendText ( npc_name.Text + " (이)가 나왔다! \r\n";
+            textBox1.AppendText ( npc_name.Text + " (이)가 나왔다! \r\n");
 
             item_btn_able(ch);
             act_btn_able();
