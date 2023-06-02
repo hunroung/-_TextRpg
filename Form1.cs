@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
                 {
                     character.skill_gain("심판");
                     character.item_gain(0, 5);
+                    character.item_gain(7, 3);
                     character.name = namebox.Text;
                     C_1_0 form2 = new C_1_0(ref character);
                     this.Hide();
@@ -85,6 +86,13 @@ namespace WindowsFormsApp1
                         }
                         break;
                     case 2:
+                        C_1_4 form = new C_1_4(ref character);
+                        this.Hide();
+                        form.ShowDialog();
+                        this.Show();
+                        if (character.real_health <= 0 || character.close == 1)
+                        {
+                        }
                         break;
                     case 3:
                         break;

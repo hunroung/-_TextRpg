@@ -396,5 +396,10 @@ namespace WindowsFormsApp1
             textBox1.AppendText ( "체력이 모두 회복되었다.\r\n");
             setting(ch);
         }
+
+        private void C_2_0_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

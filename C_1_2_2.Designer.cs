@@ -928,6 +928,7 @@
             this.Name = "C_1_2_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_2_2";
+            this.Load += new System.EventHandler(this.C_1_2_2_Load_1);
             this.Shown += new System.EventHandler(this.C_1_2_2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
