@@ -305,7 +305,145 @@ namespace WindowsFormsApp1
 
         private void C_1_2_0_Load(object sender, EventArgs e)
         {
-          
+            if(ch.secret_shop01 == 0)
+            {
+                move_btn_enable();
+                btn_attack.Visible = false;
+                btn_defend.Visible = false;
+                btn_shop_item1.Visible = false;
+                btn_shop_item2.Visible = false;
+                btn_shop_item3.Visible = false;
+                btn_shopout.Visible = false;
+                btn_yes.Enabled = false;
+                btn_no.Enabled = false;
+                textBox1.AppendText ( "던전을 탐색하던 도중 자욱한 연기 사이에서 비밀 상점이 나타났다. \r\n");
+                this.Refresh();
+                Thread.Sleep(2000);
+                textBox1.AppendText("한 번 둘러볼까? \r\n\r\n");
+                this.Refresh();
+                Thread.Sleep(2000);
+                btn_yes.Enabled = true;
+                btn_no.Enabled = true;
+            }
+
+        }
+
+        private void btn_yes_Click(object sender, EventArgs e)
+        {
+            btn_yes.Visible = false;
+            btn_no.Visible = false;
+            btn_shop_item1.Visible = true;
+            btn_shop_item2.Visible = true;
+            btn_shop_item3.Visible = true;
+            btn_shopout.Visible = true;
+            btn_shop_item1.Enabled = false;
+            btn_shop_item2.Enabled = false;
+            btn_shop_item3.Enabled = false;
+            btn_shopout.Enabled = false;
+            textBox1.AppendText("비밀 상점에서는 던전을 탐험하는데 도움이 되는 아이템들이 많았다.\r\n");
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.AppendText("소지하고 있는 코인으로 다양한 아이템을 구매할 수 있어 보인다.\r\n\r\n");
+            this.Refresh();
+            Thread.Sleep(2000);
+            btn_shop_item1.Enabled = true;
+            btn_shop_item2.Enabled = true;
+            btn_shop_item3.Enabled = true;
+            btn_shopout.Enabled = true;
+            textBox1.AppendText("[비밀 상점 아이템 목록]\r\n");
+            textBox1.AppendText("① 회복물약 3개 - 체력을 10 회복합니다. [ 구매가격 : 코인 1개 ]\r\n\r\n");
+            textBox1.AppendText("② 대형회복물약 1개 - 체력을 30 회복합니다. 스킬사용횟수가 1회 추가됩니다. [ 구매가격 : 코인 1개 ]\r\n\r\n");
+            textBox1.AppendText("③ 스킬회복물약 1개 - 스킬사용횟수가 3회 추가됩니다. [ 구매가격 : 코인 1개 ] \r\n\r\n");
+            
+        }
+
+        private void btn_shop_item1_Click(object sender, EventArgs e)
+        {
+            if (ch.item[7] > 0) 
+            {
+                ch.item_gain(0, 3);
+                ch.item[7]--;
+                update();
+                MessageBox.Show("회복물약 3개를 구매하였습니다.");
+            }
+            else if (ch.item[7] == 0)
+            {
+                update();
+                MessageBox.Show("코인이 부족하여 아이템을 구매할 수 없습니다.");
+            }
+        }
+
+        private void btn_shop_item2_Click(object sender, EventArgs e)
+        {
+            if (ch.item[7] > 0)
+            {
+                ch.item_gain(1, 1);
+                ch.item[7]--;
+                update();
+                MessageBox.Show("대형회복물약 1개를 구매하였습니다.");
+            }
+            else if (ch.item[7] == 0)
+            {
+                update();
+                MessageBox.Show("코인이 부족하여 아이템을 구매할 수 없습니다.");
+            }
+        }
+
+        private void btn_shop_item3_Click(object sender, EventArgs e)
+        {
+            if (ch.item[7] > 0)
+            {
+                ch.item_gain(2, 1);
+                ch.item[7]--;
+                update();
+                MessageBox.Show("스킬회복물약 1개를 구매하였습니다.");
+            }
+            else if (ch.item[7] == 0)
+            {
+                update();
+                MessageBox.Show("코인이 부족하여 아이템을 구매할 수 없습니다.");
+            }
+        }
+
+        private void btn_no_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText("비밀 상점을 뒤로한 채 당신은 던전을 탐험하기로 결정했다. \r\n");
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.AppendText("곧이어, 비밀 상점은 자욱한 연기에 가려져 흔적도 없이 사라졌다. \r\n");
+            this.Refresh();
+            Thread.Sleep(2000);
+            btn_yes.Visible = false;
+            btn_no.Visible = false;
+            btn_attack.Visible = true;
+            btn_defend.Visible = true;
+            ch.secret_shop01 = 1;
+            move_btn_able();
+        }
+
+        private void btn_shopout_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText("비밀 상점에서 나온 당신은 다시 던전을 탐험하기로 결정했다. \r\n");
+            this.Refresh();
+            Thread.Sleep(2000);
+            textBox1.AppendText("곧이어, 비밀 상점은 자욱한 연기에 가려져 흔적도 없이 사라졌다. \r\n");
+            this.Refresh();
+            Thread.Sleep(2000);
+            btn_yes.Visible = false;
+            btn_no.Visible = false;
+            btn_shop_item1.Visible = false;
+            btn_shop_item2.Visible = false;
+            btn_shop_item3.Visible = false;
+            btn_shopout.Visible = false;
+            btn_attack.Visible = true;
+            btn_defend.Visible = true;
+            ch.secret_shop01 = 1;
+            move_btn_able();
+        }
+
+        private void C_1_2_0_Load_1(object sender, EventArgs e)
+        {
+
         }
 
 

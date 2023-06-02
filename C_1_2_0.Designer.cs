@@ -104,6 +104,12 @@
             this.btn_close = new System.Windows.Forms.Button();
             this.picture_npc = new System.Windows.Forms.PictureBox();
             this.picture_main = new System.Windows.Forms.PictureBox();
+            this.btn_yes = new System.Windows.Forms.Button();
+            this.btn_no = new System.Windows.Forms.Button();
+            this.btn_shop_item1 = new System.Windows.Forms.Button();
+            this.btn_shop_item2 = new System.Windows.Forms.Button();
+            this.btn_shop_item3 = new System.Windows.Forms.Button();
+            this.btn_shopout = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -845,6 +851,66 @@
             this.picture_main.TabIndex = 117;
             this.picture_main.TabStop = false;
             // 
+            // btn_yes
+            // 
+            this.btn_yes.Location = new System.Drawing.Point(890, 270);
+            this.btn_yes.Name = "btn_yes";
+            this.btn_yes.Size = new System.Drawing.Size(150, 23);
+            this.btn_yes.TabIndex = 149;
+            this.btn_yes.Text = "예";
+            this.btn_yes.UseVisualStyleBackColor = true;
+            this.btn_yes.Click += new System.EventHandler(this.btn_yes_Click);
+            // 
+            // btn_no
+            // 
+            this.btn_no.Location = new System.Drawing.Point(890, 302);
+            this.btn_no.Name = "btn_no";
+            this.btn_no.Size = new System.Drawing.Size(150, 23);
+            this.btn_no.TabIndex = 150;
+            this.btn_no.Text = "아니오";
+            this.btn_no.UseVisualStyleBackColor = true;
+            this.btn_no.Click += new System.EventHandler(this.btn_no_Click);
+            // 
+            // btn_shop_item1
+            // 
+            this.btn_shop_item1.Location = new System.Drawing.Point(889, 270);
+            this.btn_shop_item1.Name = "btn_shop_item1";
+            this.btn_shop_item1.Size = new System.Drawing.Size(50, 23);
+            this.btn_shop_item1.TabIndex = 151;
+            this.btn_shop_item1.Text = "①";
+            this.btn_shop_item1.UseVisualStyleBackColor = true;
+            this.btn_shop_item1.Click += new System.EventHandler(this.btn_shop_item1_Click);
+            // 
+            // btn_shop_item2
+            // 
+            this.btn_shop_item2.Location = new System.Drawing.Point(940, 270);
+            this.btn_shop_item2.Name = "btn_shop_item2";
+            this.btn_shop_item2.Size = new System.Drawing.Size(50, 23);
+            this.btn_shop_item2.TabIndex = 152;
+            this.btn_shop_item2.Text = "②";
+            this.btn_shop_item2.UseVisualStyleBackColor = true;
+            this.btn_shop_item2.Click += new System.EventHandler(this.btn_shop_item2_Click);
+            // 
+            // btn_shop_item3
+            // 
+            this.btn_shop_item3.Location = new System.Drawing.Point(990, 270);
+            this.btn_shop_item3.Name = "btn_shop_item3";
+            this.btn_shop_item3.Size = new System.Drawing.Size(50, 23);
+            this.btn_shop_item3.TabIndex = 153;
+            this.btn_shop_item3.Text = "③";
+            this.btn_shop_item3.UseVisualStyleBackColor = true;
+            this.btn_shop_item3.Click += new System.EventHandler(this.btn_shop_item3_Click);
+            // 
+            // btn_shopout
+            // 
+            this.btn_shopout.Location = new System.Drawing.Point(890, 303);
+            this.btn_shopout.Name = "btn_shopout";
+            this.btn_shopout.Size = new System.Drawing.Size(150, 23);
+            this.btn_shopout.TabIndex = 154;
+            this.btn_shopout.Text = "나가기";
+            this.btn_shopout.UseVisualStyleBackColor = true;
+            this.btn_shopout.Click += new System.EventHandler(this.btn_shopout_Click);
+            // 
             // C_1_2_0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -852,6 +918,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1049, 616);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_shopout);
+            this.Controls.Add(this.btn_shop_item3);
+            this.Controls.Add(this.btn_shop_item2);
+            this.Controls.Add(this.btn_shop_item1);
+            this.Controls.Add(this.btn_no);
+            this.Controls.Add(this.btn_yes);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label18);
@@ -885,7 +957,8 @@
             this.Name = "C_1_2_0";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_1_2_0";
-            this.Load += new System.EventHandler(this.C_1_2_0_Load);
+            this.Load += new System.EventHandler(this.C_1_2_0_Load_1);
+            this.Shown += new System.EventHandler(this.C_1_2_0_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -983,5 +1056,11 @@
         private System.Windows.Forms.Button btn_run;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_yes;
+        private System.Windows.Forms.Button btn_no;
+        private System.Windows.Forms.Button btn_shop_item1;
+        private System.Windows.Forms.Button btn_shop_item2;
+        private System.Windows.Forms.Button btn_shop_item3;
+        private System.Windows.Forms.Button btn_shopout;
     }
 }
