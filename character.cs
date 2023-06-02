@@ -50,12 +50,13 @@ namespace WindowsFormsApp1
         public int max_health = 100;
         public int real_health = 100;
         public int stat_point = 0;
-        public int str = 5;
+        public int str = 5000;
         public int intel = 5;
         public int spd = 5;
         public int def = 5;
 
         public int wiz_visit = 0;
+        public int secret_shop01 = 0;
 
         public int chapter = 1;
         public int chapter_value = 1;
@@ -97,12 +98,25 @@ namespace WindowsFormsApp1
                         this.healed(10);
                         break;
                     case 1:
-                        //아이템 효과
+                        //아이템 효과 - 대형회복물약(30회복, 스킬사용횟수 +1)
+                        this.healed(30);
+                        skill_point += 1;
                         break;
                     case 2:
-                        //아이템 효과
+                        //아이템 효과 - 스킬회복물약(스킬사용횟수 +3)
+                        skill_point += 3;
                         break;
                     case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        //아이템 효과(코인 - 체력을 10 회복합니다. 또한, 비밀 상점의 재화로 사용 가능 합니다.)
+                        this.healed(10);
                         break;
                     default:
                         break;
