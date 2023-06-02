@@ -949,5 +949,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void C_3_2_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
