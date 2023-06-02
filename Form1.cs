@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             save.ShowDialog();
             if(character.name!=null)
             {
-                //character.chapter=2;
+                character.chapter=2;
                 switch (character.chapter)
                 {
                     case 1:

@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
                     boss = new Boss_Bear();
                     break;
                 case 1:
+                    boss = new Boss_snake();
                     break;
                 case 2:
                     break;
