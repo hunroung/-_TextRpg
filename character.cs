@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
         public int max_health = 100;
         public int real_health = 100;
         public int stat_point = 0;
-        public int str = 5000;
+        public int str = 5;
         public int intel = 5;
         public int spd = 5;
         public int def = 5;
