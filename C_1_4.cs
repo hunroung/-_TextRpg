@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TextRpg_packet;
 
 namespace WindowsFormsApp1
 {
@@ -33,6 +34,7 @@ namespace WindowsFormsApp1
         public NPC monster = new NPC();
         byte[] readBuffer = new byte[256];
         byte[] sendBuffer = new byte[256];
+        Pattern pattern = new Pattern();
         public C_1_4(ref character character)
         {
             ch = character;
