@@ -424,7 +424,7 @@ namespace WindowsFormsApp1
         {
             name = "악어 신령";
             skill_name = "비열한 이빨";
-            img = Image.FromFile(".\\Crocodile_Spirit.PNG");
+            img = Image.FromFile(".\\img\\Crocodile_Spirit.PNG");
             img_attack = Image.FromFile(".\\img\\Crocodile_Spirit_attack.PNG");
             img_defend = Image.FromFile(".\\img\\Crocodile_Spirit_defend.PNG");
             img_attacked = Image.FromFile(".\\img\\Crocodile_Spirit_attacked.PNG");
@@ -490,6 +490,77 @@ namespace WindowsFormsApp1
             return 0;
         }
     }
+    public class Little_Rabbit : NPC
+    {
+        public Little_Rabbit()
+        {
+            name = "작은 토끼";
+            skill_name = "들이받기";
+            img = Image.FromFile(".\\img\\Little_Rabbit.png");
+            img_attack = Image.FromFile(".\\img\\Little_Rabbit_attack.png");
+            img_defend = Image.FromFile(".\\img\\Little_Rabbit_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Little_Rabbit_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Little_Rabbit_skill.png");
+            img_dead = Image.FromFile(".\\img\\Little_Rabbit_dead.png");
+            max_health = 100;
+            real_health = 100;
+            defend = 10;
+            damage = 15;
+
+            skill_count_static = 2;
+            skill_count = skill_count_static;
+            exp = 100;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "들이받기")
+                {
+                    skill_count--;
+                    return 15;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class MaxLv_Rabbit : NPC
+    {
+        public MaxLv_Rabbit()
+        {
+            name = "만렙토끼";
+            skill_name = "레프트 훅";
+            img = Image.FromFile(".\\img\\MaxLv_Rabbit.png");
+            img_attack = Image.FromFile(".\\img\\MaxLv_Rabbit_attack.png");
+            img_defend = Image.FromFile(".\\img\\MaxLv_Rabbit_defend.png");
+            img_attacked = Image.FromFile(".\\img\\MaxLv_Rabbit_attacked.png");
+            img_skill = Image.FromFile(".\\img\\MaxLv_Rabbit_skill.png");
+            img_dead = Image.FromFile(".\\img\\MaxLv_Rabbit_dead.png");
+            max_health = 300;
+            real_health = 300;
+            defend = 20;
+            damage = 25;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 200;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "레프트 훅")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+
     public class Fire_Guardian : NPC
     {
         public Fire_Guardian()

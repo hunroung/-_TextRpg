@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
         public int def = 5;
 
         public int wiz_visit = 0;
+        public int tur_visit = 0;
         public int secret_shop01 = 0;
 
         public int chapter = 1;

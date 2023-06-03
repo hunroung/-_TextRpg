@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class C_1_2_2
+    partial class C_2_1_0
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label3 = new System.Windows.Forms.Label();
+            this.npc_health = new System.Windows.Forms.Label();
+            this.item_8 = new System.Windows.Forms.Label();
             this.item_7 = new System.Windows.Forms.Label();
             this.item_6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_right_move = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.체력 = new System.Windows.Forms.Label();
-            this.item_8 = new System.Windows.Forms.Label();
-            this.btn_down_move = new System.Windows.Forms.Button();
             this.item_5 = new System.Windows.Forms.Label();
-            this.btn_item_8 = new System.Windows.Forms.Button();
-            this.npc_name = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.real_health = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.item_4 = new System.Windows.Forms.Label();
             this.item_3 = new System.Windows.Forms.Label();
             this.item_2 = new System.Windows.Forms.Label();
+            this.btn_item_8 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.btn_item_7 = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.leb = new System.Windows.Forms.Label();
+            this.btn_right_move = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmb_skill = new System.Windows.Forms.ComboBox();
+            this.npc_name = new System.Windows.Forms.Label();
+            this.real_health = new System.Windows.Forms.Label();
+            this.체력 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_item_4 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btn_item_7 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_item_3 = new System.Windows.Forms.Button();
@@ -69,44 +76,34 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.item_1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.cmb_skill = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_travel = new System.Windows.Forms.Button();
-            this.btn_left_move = new System.Windows.Forms.Button();
-            this.btn_up_move = new System.Windows.Forms.Button();
-            this.exp = new System.Windows.Forms.Label();
-            this.btn_skill = new System.Windows.Forms.Button();
+            this.btn_run = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.picture_npc = new System.Windows.Forms.PictureBox();
+            this.picture_main = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_spd = new System.Windows.Forms.Button();
+            this.str = new System.Windows.Forms.Label();
             this.btn_defend = new System.Windows.Forms.Button();
             this.btn_attack = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.point = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.btn_def = new System.Windows.Forms.Button();
-            this.btn_spd = new System.Windows.Forms.Button();
             this.btn_intel = new System.Windows.Forms.Button();
             this.btn_str = new System.Windows.Forms.Button();
             this.def = new System.Windows.Forms.Label();
             this.spd = new System.Windows.Forms.Label();
             this.intel = new System.Windows.Forms.Label();
-            this.str = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.leb = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.npc_health = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.btn_run = new System.Windows.Forms.Button();
-            this.btn_yes = new System.Windows.Forms.Button();
-            this.btn_no = new System.Windows.Forms.Button();
-            this.btn_quest_yes = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
-            this.picture_main = new System.Windows.Forms.PictureBox();
-            this.picture_npc = new System.Windows.Forms.PictureBox();
+            this.btn_skill = new System.Windows.Forms.Button();
+            this.btn_left_move = new System.Windows.Forms.Button();
+            this.btn_up_move = new System.Windows.Forms.Button();
+            this.btn_down_move = new System.Windows.Forms.Button();
+            this.btn_travel = new System.Windows.Forms.Button();
+            this.exp = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -116,10 +113,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(115, 306);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.TabIndex = 127;
+            this.label3.Text = "레벨";
+            // 
+            // npc_health
+            // 
+            this.npc_health.AutoSize = true;
+            this.npc_health.Location = new System.Drawing.Point(1109, 310);
+            this.npc_health.Name = "npc_health";
+            this.npc_health.Size = new System.Drawing.Size(31, 15);
+            this.npc_health.TabIndex = 140;
+            this.npc_health.Text = "100";
+            // 
+            // item_8
+            // 
+            this.item_8.AutoSize = true;
+            this.item_8.Location = new System.Drawing.Point(703, 158);
+            this.item_8.Name = "item_8";
+            this.item_8.Size = new System.Drawing.Size(15, 15);
+            this.item_8.TabIndex = 60;
+            this.item_8.Text = "0";
             // 
             // item_7
             // 
@@ -139,62 +163,6 @@
             this.item_6.TabIndex = 58;
             this.item_6.Text = "0";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 305);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 151;
-            this.label3.Text = "레벨";
-            // 
-            // btn_right_move
-            // 
-            this.btn_right_move.Location = new System.Drawing.Point(762, 420);
-            this.btn_right_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_right_move.Name = "btn_right_move";
-            this.btn_right_move.Size = new System.Drawing.Size(171, 29);
-            this.btn_right_move.TabIndex = 166;
-            this.btn_right_move.Text = "이동한다";
-            this.btn_right_move.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1024, 309);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 15);
-            this.label17.TabIndex = 165;
-            this.label17.Text = "체력";
-            // 
-            // 체력
-            // 
-            this.체력.AutoSize = true;
-            this.체력.Location = new System.Drawing.Point(10, 26);
-            this.체력.Name = "체력";
-            this.체력.Size = new System.Drawing.Size(37, 15);
-            this.체력.TabIndex = 159;
-            this.체력.Text = "체력";
-            // 
-            // item_8
-            // 
-            this.item_8.AutoSize = true;
-            this.item_8.Location = new System.Drawing.Point(703, 158);
-            this.item_8.Name = "item_8";
-            this.item_8.Size = new System.Drawing.Size(15, 15);
-            this.item_8.TabIndex = 60;
-            this.item_8.Text = "0";
-            // 
-            // btn_down_move
-            // 
-            this.btn_down_move.Location = new System.Drawing.Point(502, 449);
-            this.btn_down_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_down_move.Name = "btn_down_move";
-            this.btn_down_move.Size = new System.Drawing.Size(171, 29);
-            this.btn_down_move.TabIndex = 169;
-            this.btn_down_move.Text = "이동한다";
-            this.btn_down_move.UseVisualStyleBackColor = true;
-            // 
             // item_5
             // 
             this.item_5.AutoSize = true;
@@ -203,6 +171,33 @@
             this.item_5.Size = new System.Drawing.Size(15, 15);
             this.item_5.TabIndex = 57;
             this.item_5.Text = "0";
+            // 
+            // item_4
+            // 
+            this.item_4.AutoSize = true;
+            this.item_4.Location = new System.Drawing.Point(703, 40);
+            this.item_4.Name = "item_4";
+            this.item_4.Size = new System.Drawing.Size(15, 15);
+            this.item_4.TabIndex = 56;
+            this.item_4.Text = "0";
+            // 
+            // item_3
+            // 
+            this.item_3.AutoSize = true;
+            this.item_3.Location = new System.Drawing.Point(512, 40);
+            this.item_3.Name = "item_3";
+            this.item_3.Size = new System.Drawing.Size(15, 15);
+            this.item_3.TabIndex = 55;
+            this.item_3.Text = "0";
+            // 
+            // item_2
+            // 
+            this.item_2.AutoSize = true;
+            this.item_2.Location = new System.Drawing.Point(327, 40);
+            this.item_2.Name = "item_2";
+            this.item_2.Size = new System.Drawing.Size(15, 15);
+            this.item_2.TabIndex = 54;
+            this.item_2.Text = "0";
             // 
             // btn_item_8
             // 
@@ -213,36 +208,148 @@
             this.btn_item_8.TabIndex = 52;
             this.btn_item_8.Text = "사용";
             this.btn_item_8.UseVisualStyleBackColor = true;
+            this.btn_item_8.Click += new System.EventHandler(this.btn_item_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(663, 158);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 15);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "갯수";
+            // 
+            // btn_item_7
+            // 
+            this.btn_item_7.Location = new System.Drawing.Point(472, 195);
+            this.btn_item_7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_item_7.Name = "btn_item_7";
+            this.btn_item_7.Size = new System.Drawing.Size(53, 29);
+            this.btn_item_7.TabIndex = 46;
+            this.btn_item_7.Text = "사용";
+            this.btn_item_7.UseVisualStyleBackColor = true;
+            this.btn_item_7.Click += new System.EventHandler(this.btn_item_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(1026, 0);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(87, 29);
+            this.btn_save.TabIndex = 150;
+            this.btn_save.Text = "저장하기";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Location = new System.Drawing.Point(1111, 0);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(87, 29);
+            this.btn_close.TabIndex = 149;
+            this.btn_close.Text = "종료하기";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(977, 410);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(37, 15);
+            this.label18.TabIndex = 147;
+            this.label18.Text = "스킬";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(989, 430);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 15);
+            this.label2.TabIndex = 148;
+            this.label2.Text = "0";
+            // 
+            // leb
+            // 
+            this.leb.AutoSize = true;
+            this.leb.Location = new System.Drawing.Point(155, 306);
+            this.leb.Name = "leb";
+            this.leb.Size = new System.Drawing.Size(15, 15);
+            this.leb.TabIndex = 128;
+            this.leb.Text = "0";
+            // 
+            // btn_right_move
+            // 
+            this.btn_right_move.Location = new System.Drawing.Point(762, 421);
+            this.btn_right_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_right_move.Name = "btn_right_move";
+            this.btn_right_move.Size = new System.Drawing.Size(171, 29);
+            this.btn_right_move.TabIndex = 142;
+            this.btn_right_move.Text = "이동한다";
+            this.btn_right_move.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1024, 310);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 15);
+            this.label17.TabIndex = 141;
+            this.label17.Text = "체력";
+            // 
+            // cmb_skill
+            // 
+            this.cmb_skill.FormattingEnabled = true;
+            this.cmb_skill.Location = new System.Drawing.Point(1017, 420);
+            this.cmb_skill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmb_skill.Name = "cmb_skill";
+            this.cmb_skill.Size = new System.Drawing.Size(90, 23);
+            this.cmb_skill.TabIndex = 139;
             // 
             // npc_name
             // 
             this.npc_name.AutoSize = true;
-            this.npc_name.Location = new System.Drawing.Point(1074, 59);
+            this.npc_name.Location = new System.Drawing.Point(1074, 60);
             this.npc_name.Name = "npc_name";
             this.npc_name.Size = new System.Drawing.Size(0, 15);
-            this.npc_name.TabIndex = 162;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_2_2;
-            this.groupBox3.Location = new System.Drawing.Point(785, 490);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(403, 255);
-            this.groupBox3.TabIndex = 161;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "지도?";
+            this.npc_name.TabIndex = 138;
             // 
             // real_health
             // 
             this.real_health.AutoSize = true;
-            this.real_health.Location = new System.Drawing.Point(96, 26);
+            this.real_health.Location = new System.Drawing.Point(96, 27);
             this.real_health.Name = "real_health";
             this.real_health.Size = new System.Drawing.Size(31, 15);
-            this.real_health.TabIndex = 160;
+            this.real_health.TabIndex = 136;
             this.real_health.Text = "100";
+            // 
+            // 체력
+            // 
+            this.체력.AutoSize = true;
+            this.체력.Location = new System.Drawing.Point(10, 27);
+            this.체력.Name = "체력";
+            this.체력.Size = new System.Drawing.Size(37, 15);
+            this.체력.TabIndex = 135;
+            this.체력.Text = "체력";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(48, 60);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(37, 15);
+            this.name.TabIndex = 134;
+            this.name.Text = "이름";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 306);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "경험치";
             // 
             // groupBox1
             // 
@@ -278,50 +385,14 @@
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.item_1);
             this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Location = new System.Drawing.Point(17, 490);
+            this.groupBox1.Location = new System.Drawing.Point(17, 491);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Size = new System.Drawing.Size(751, 255);
-            this.groupBox1.TabIndex = 148;
+            this.groupBox1.TabIndex = 124;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "아이템 박스";
-            // 
-            // item_4
-            // 
-            this.item_4.AutoSize = true;
-            this.item_4.Location = new System.Drawing.Point(703, 40);
-            this.item_4.Name = "item_4";
-            this.item_4.Size = new System.Drawing.Size(15, 15);
-            this.item_4.TabIndex = 56;
-            this.item_4.Text = "0";
-            // 
-            // item_3
-            // 
-            this.item_3.AutoSize = true;
-            this.item_3.Location = new System.Drawing.Point(512, 40);
-            this.item_3.Name = "item_3";
-            this.item_3.Size = new System.Drawing.Size(15, 15);
-            this.item_3.TabIndex = 55;
-            this.item_3.Text = "0";
-            // 
-            // item_2
-            // 
-            this.item_2.AutoSize = true;
-            this.item_2.Location = new System.Drawing.Point(327, 40);
-            this.item_2.Name = "item_2";
-            this.item_2.Size = new System.Drawing.Size(15, 15);
-            this.item_2.TabIndex = 54;
-            this.item_2.Text = "0";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(663, 158);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 15);
-            this.label16.TabIndex = 51;
-            this.label16.Text = "갯수";
             // 
             // pictureBox10
             // 
@@ -341,6 +412,7 @@
             this.btn_item_4.TabIndex = 49;
             this.btn_item_4.Text = "사용";
             this.btn_item_4.UseVisualStyleBackColor = true;
+            this.btn_item_4.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label15
             // 
@@ -359,16 +431,6 @@
             this.pictureBox9.Size = new System.Drawing.Size(82, 81);
             this.pictureBox9.TabIndex = 50;
             this.pictureBox9.TabStop = false;
-            // 
-            // btn_item_7
-            // 
-            this.btn_item_7.Location = new System.Drawing.Point(472, 195);
-            this.btn_item_7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_item_7.Name = "btn_item_7";
-            this.btn_item_7.Size = new System.Drawing.Size(53, 29);
-            this.btn_item_7.TabIndex = 46;
-            this.btn_item_7.Text = "사용";
-            this.btn_item_7.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -397,6 +459,7 @@
             this.btn_item_3.TabIndex = 43;
             this.btn_item_3.Text = "사용";
             this.btn_item_3.UseVisualStyleBackColor = true;
+            this.btn_item_3.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label13
             // 
@@ -425,6 +488,7 @@
             this.btn_item_6.TabIndex = 40;
             this.btn_item_6.Text = "사용";
             this.btn_item_6.UseVisualStyleBackColor = true;
+            this.btn_item_6.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label12
             // 
@@ -453,6 +517,7 @@
             this.btn_item_5.TabIndex = 37;
             this.btn_item_5.Text = "사용";
             this.btn_item_5.UseVisualStyleBackColor = true;
+            this.btn_item_5.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label10
             // 
@@ -481,6 +546,7 @@
             this.btn_item_2.TabIndex = 34;
             this.btn_item_2.Text = "사용";
             this.btn_item_2.UseVisualStyleBackColor = true;
+            this.btn_item_2.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_item_1
             // 
@@ -491,6 +557,7 @@
             this.btn_item_1.TabIndex = 32;
             this.btn_item_1.Text = "사용";
             this.btn_item_1.UseVisualStyleBackColor = true;
+            this.btn_item_1.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // label9
             // 
@@ -538,96 +605,110 @@
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
             // 
-            // cmb_skill
-            // 
-            this.cmb_skill.FormattingEnabled = true;
-            this.cmb_skill.Location = new System.Drawing.Point(1017, 419);
-            this.cmb_skill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmb_skill.Name = "cmb_skill";
-            this.cmb_skill.Size = new System.Drawing.Size(90, 23);
-            this.cmb_skill.TabIndex = 163;
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(215, 55);
+            this.textBox1.Location = new System.Drawing.Point(215, 56);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(775, 349);
-            this.textBox1.TabIndex = 146;
+            this.textBox1.TabIndex = 122;
             // 
-            // btn_travel
+            // btn_run
             // 
-            this.btn_travel.Location = new System.Drawing.Point(502, 12);
-            this.btn_travel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_travel.Name = "btn_travel";
-            this.btn_travel.Size = new System.Drawing.Size(171, 29);
-            this.btn_travel.TabIndex = 170;
-            this.btn_travel.Text = "탐험한다";
-            this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_run.Location = new System.Drawing.Point(1017, 455);
+            this.btn_run.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_run.Name = "btn_run";
+            this.btn_run.Size = new System.Drawing.Size(171, 29);
+            this.btn_run.TabIndex = 133;
+            this.btn_run.Text = "도망친다";
+            this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
             // 
-            // btn_left_move
+            // groupBox3
             // 
-            this.btn_left_move.Location = new System.Drawing.Point(255, 420);
-            this.btn_left_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_left_move.Name = "btn_left_move";
-            this.btn_left_move.Size = new System.Drawing.Size(171, 29);
-            this.btn_left_move.TabIndex = 168;
-            this.btn_left_move.Text = "이동한다";
-            this.btn_left_move.UseVisualStyleBackColor = true;
-            this.btn_left_move.Click += new System.EventHandler(this.btn_left_move_Click);
+            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_2;
+            this.groupBox3.Location = new System.Drawing.Point(785, 491);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(403, 255);
+            this.groupBox3.TabIndex = 137;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "지도?";
             // 
-            // btn_up_move
+            // picture_npc
             // 
-            this.btn_up_move.Location = new System.Drawing.Point(502, 412);
-            this.btn_up_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_up_move.Name = "btn_up_move";
-            this.btn_up_move.Size = new System.Drawing.Size(171, 29);
-            this.btn_up_move.TabIndex = 167;
-            this.btn_up_move.Text = "이동한다";
-            this.btn_up_move.UseVisualStyleBackColor = true;
+            this.picture_npc.Location = new System.Drawing.Point(1017, 82);
+            this.picture_npc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picture_npc.Name = "picture_npc";
+            this.picture_npc.Size = new System.Drawing.Size(171, 220);
+            this.picture_npc.TabIndex = 123;
+            this.picture_npc.TabStop = false;
             // 
-            // exp
+            // picture_main
             // 
-            this.exp.AutoSize = true;
-            this.exp.Location = new System.Drawing.Point(77, 305);
-            this.exp.Name = "exp";
-            this.exp.Size = new System.Drawing.Size(26, 15);
-            this.exp.TabIndex = 150;
-            this.exp.Text = "0%";
+            this.picture_main.Location = new System.Drawing.Point(17, 82);
+            this.picture_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picture_main.Name = "picture_main";
+            this.picture_main.Size = new System.Drawing.Size(171, 220);
+            this.picture_main.TabIndex = 121;
+            this.picture_main.TabStop = false;
             // 
-            // btn_skill
+            // label11
             // 
-            this.btn_skill.Location = new System.Drawing.Point(1114, 418);
-            this.btn_skill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_skill.Name = "btn_skill";
-            this.btn_skill.Size = new System.Drawing.Size(74, 29);
-            this.btn_skill.TabIndex = 156;
-            this.btn_skill.Text = "스킬사용";
-            this.btn_skill.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(138, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 15);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "포인트";
+            // 
+            // btn_spd
+            // 
+            this.btn_spd.Location = new System.Drawing.Point(98, 80);
+            this.btn_spd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_spd.Name = "btn_spd";
+            this.btn_spd.Size = new System.Drawing.Size(33, 20);
+            this.btn_spd.TabIndex = 18;
+            this.btn_spd.Text = "^";
+            this.btn_spd.UseVisualStyleBackColor = true;
+            this.btn_spd.Click += new System.EventHandler(this.btn_str_Click);
+            // 
+            // str
+            // 
+            this.str.AutoSize = true;
+            this.str.Location = new System.Drawing.Point(79, 21);
+            this.str.Name = "str";
+            this.str.Size = new System.Drawing.Size(15, 15);
+            this.str.TabIndex = 12;
+            this.str.Text = "5";
             // 
             // btn_defend
             // 
-            this.btn_defend.Location = new System.Drawing.Point(1017, 376);
+            this.btn_defend.Location = new System.Drawing.Point(1017, 377);
             this.btn_defend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_defend.Name = "btn_defend";
             this.btn_defend.Size = new System.Drawing.Size(171, 29);
-            this.btn_defend.TabIndex = 155;
+            this.btn_defend.TabIndex = 131;
             this.btn_defend.Text = "방어한다";
             this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
             // 
             // btn_attack
             // 
-            this.btn_attack.Location = new System.Drawing.Point(1017, 336);
+            this.btn_attack.Location = new System.Drawing.Point(1017, 337);
             this.btn_attack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_attack.Name = "btn_attack";
             this.btn_attack.Size = new System.Drawing.Size(171, 29);
-            this.btn_attack.TabIndex = 154;
+            this.btn_attack.TabIndex = 130;
             this.btn_attack.Text = "기본 공격한다";
             this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
             // groupBox2
             // 
@@ -645,12 +726,12 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(17, 336);
+            this.groupBox2.Location = new System.Drawing.Point(17, 337);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Size = new System.Drawing.Size(191, 146);
-            this.groupBox2.TabIndex = 153;
+            this.groupBox2.TabIndex = 129;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "스텟";
             // 
@@ -663,15 +744,6 @@
             this.point.TabIndex = 9;
             this.point.Text = "0";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(138, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 15);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "포인트";
-            // 
             // btn_def
             // 
             this.btn_def.Location = new System.Drawing.Point(98, 110);
@@ -682,17 +754,6 @@
             this.btn_def.Text = "^";
             this.btn_def.UseVisualStyleBackColor = true;
             this.btn_def.Click += new System.EventHandler(this.btn_str_Click);
-            // 
-            // btn_spd
-            // 
-            this.btn_spd.Location = new System.Drawing.Point(98, 80);
-            this.btn_spd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_spd.Name = "btn_spd";
-            this.btn_spd.Size = new System.Drawing.Size(33, 20);
-            this.btn_spd.TabIndex = 18;
-            this.btn_spd.Text = "^";
-            this.btn_spd.UseVisualStyleBackColor = true;
-            this.btn_spd.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_intel
             // 
@@ -743,15 +804,6 @@
             this.intel.TabIndex = 13;
             this.intel.Text = "5";
             // 
-            // str
-            // 
-            this.str.AutoSize = true;
-            this.str.Location = new System.Drawing.Point(79, 21);
-            this.str.Name = "str";
-            this.str.Size = new System.Drawing.Size(15, 15);
-            this.str.TabIndex = 12;
-            this.str.Text = "5";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -788,193 +840,107 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "힘";
             // 
-            // label18
+            // btn_skill
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(977, 409);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 15);
-            this.label18.TabIndex = 171;
-            this.label18.Text = "스킬";
+            this.btn_skill.Location = new System.Drawing.Point(1114, 419);
+            this.btn_skill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_skill.Name = "btn_skill";
+            this.btn_skill.Size = new System.Drawing.Size(74, 29);
+            this.btn_skill.TabIndex = 132;
+            this.btn_skill.Text = "스킬사용";
+            this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
             // 
-            // label2
+            // btn_left_move
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(989, 429);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 15);
-            this.label2.TabIndex = 172;
-            this.label2.Text = "0";
+            this.btn_left_move.Location = new System.Drawing.Point(255, 421);
+            this.btn_left_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_left_move.Name = "btn_left_move";
+            this.btn_left_move.Size = new System.Drawing.Size(171, 29);
+            this.btn_left_move.TabIndex = 144;
+            this.btn_left_move.Text = "이동한다";
+            this.btn_left_move.UseVisualStyleBackColor = true;
             // 
-            // leb
+            // btn_up_move
             // 
-            this.leb.AutoSize = true;
-            this.leb.Location = new System.Drawing.Point(155, 305);
-            this.leb.Name = "leb";
-            this.leb.Size = new System.Drawing.Size(15, 15);
-            this.leb.TabIndex = 152;
-            this.leb.Text = "0";
+            this.btn_up_move.Location = new System.Drawing.Point(502, 413);
+            this.btn_up_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_up_move.Name = "btn_up_move";
+            this.btn_up_move.Size = new System.Drawing.Size(171, 29);
+            this.btn_up_move.TabIndex = 143;
+            this.btn_up_move.Text = "이동한다";
+            this.btn_up_move.UseVisualStyleBackColor = true;
+            this.btn_up_move.Click += new System.EventHandler(this.btn_up_move_Click);
             // 
-            // label1
+            // btn_down_move
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 305);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
-            this.label1.TabIndex = 149;
-            this.label1.Text = "경험치";
+            this.btn_down_move.Location = new System.Drawing.Point(502, 450);
+            this.btn_down_move.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_down_move.Name = "btn_down_move";
+            this.btn_down_move.Size = new System.Drawing.Size(171, 29);
+            this.btn_down_move.TabIndex = 145;
+            this.btn_down_move.Text = "이동한다";
+            this.btn_down_move.UseVisualStyleBackColor = true;
+            this.btn_down_move.Click += new System.EventHandler(this.btn_down_move_Click);
             // 
-            // npc_health
+            // btn_travel
             // 
-            this.npc_health.AutoSize = true;
-            this.npc_health.Location = new System.Drawing.Point(1109, 309);
-            this.npc_health.Name = "npc_health";
-            this.npc_health.Size = new System.Drawing.Size(31, 15);
-            this.npc_health.TabIndex = 164;
-            this.npc_health.Text = "100";
+            this.btn_travel.Location = new System.Drawing.Point(502, 13);
+            this.btn_travel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_travel.Name = "btn_travel";
+            this.btn_travel.Size = new System.Drawing.Size(171, 29);
+            this.btn_travel.TabIndex = 146;
+            this.btn_travel.Text = "탐험한다";
+            this.btn_travel.UseVisualStyleBackColor = true;
             // 
-            // name
+            // exp
             // 
-            this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(48, 59);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(37, 15);
-            this.name.TabIndex = 158;
-            this.name.Text = "이름";
+            this.exp.AutoSize = true;
+            this.exp.Location = new System.Drawing.Point(77, 306);
+            this.exp.Name = "exp";
+            this.exp.Size = new System.Drawing.Size(26, 15);
+            this.exp.TabIndex = 126;
+            this.exp.Text = "0%";
             // 
-            // btn_run
-            // 
-            this.btn_run.Location = new System.Drawing.Point(1017, 454);
-            this.btn_run.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_run.Name = "btn_run";
-            this.btn_run.Size = new System.Drawing.Size(171, 29);
-            this.btn_run.TabIndex = 157;
-            this.btn_run.Text = "도망친다";
-            this.btn_run.UseVisualStyleBackColor = true;
-            // 
-            // btn_yes
-            // 
-            this.btn_yes.Location = new System.Drawing.Point(1017, 336);
-            this.btn_yes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_yes.Name = "btn_yes";
-            this.btn_yes.Size = new System.Drawing.Size(171, 29);
-            this.btn_yes.TabIndex = 173;
-            this.btn_yes.Text = "네";
-            this.btn_yes.UseVisualStyleBackColor = true;
-            this.btn_yes.Visible = false;
-            this.btn_yes.Click += new System.EventHandler(this.btn_yes_Click);
-            // 
-            // btn_no
-            // 
-            this.btn_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_no.Location = new System.Drawing.Point(1017, 378);
-            this.btn_no.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_no.Name = "btn_no";
-            this.btn_no.Size = new System.Drawing.Size(171, 29);
-            this.btn_no.TabIndex = 174;
-            this.btn_no.Text = "아니오";
-            this.btn_no.UseVisualStyleBackColor = true;
-            this.btn_no.Visible = false;
-            this.btn_no.Click += new System.EventHandler(this.btn_no_Click);
-            // 
-            // btn_quest_yes
-            // 
-            this.btn_quest_yes.Location = new System.Drawing.Point(1017, 336);
-            this.btn_quest_yes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_quest_yes.Name = "btn_quest_yes";
-            this.btn_quest_yes.Size = new System.Drawing.Size(171, 29);
-            this.btn_quest_yes.TabIndex = 175;
-            this.btn_quest_yes.Text = "수락합니다";
-            this.btn_quest_yes.UseVisualStyleBackColor = true;
-            this.btn_quest_yes.Visible = false;
-            this.btn_quest_yes.Click += new System.EventHandler(this.btn_quest_yes_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(1026, -1);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(87, 29);
-            this.btn_save.TabIndex = 177;
-            this.btn_save.Text = "저장하기";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Location = new System.Drawing.Point(1111, -1);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(87, 29);
-            this.btn_close.TabIndex = 176;
-            this.btn_close.Text = "종료하기";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // picture_main
-            // 
-            this.picture_main.Location = new System.Drawing.Point(17, 81);
-            this.picture_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picture_main.Name = "picture_main";
-            this.picture_main.Size = new System.Drawing.Size(171, 220);
-            this.picture_main.TabIndex = 145;
-            this.picture_main.TabStop = false;
-            // 
-            // picture_npc
-            // 
-            this.picture_npc.Location = new System.Drawing.Point(1017, 81);
-            this.picture_npc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picture_npc.Name = "picture_npc";
-            this.picture_npc.Size = new System.Drawing.Size(171, 220);
-            this.picture_npc.TabIndex = 147;
-            this.picture_npc.TabStop = false;
-            // 
-            // C_1_2_2
+            // C_2_1_0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1199, 770);
+            this.ClientSize = new System.Drawing.Size(1200, 770);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.npc_health);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_close);
-            this.Controls.Add(this.btn_quest_yes);
-            this.Controls.Add(this.btn_no);
-            this.Controls.Add(this.btn_yes);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_right_move);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.체력);
-            this.Controls.Add(this.btn_down_move);
-            this.Controls.Add(this.picture_main);
-            this.Controls.Add(this.npc_name);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.real_health);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cmb_skill);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.picture_npc);
-            this.Controls.Add(this.btn_travel);
-            this.Controls.Add(this.btn_left_move);
-            this.Controls.Add(this.btn_up_move);
-            this.Controls.Add(this.exp);
-            this.Controls.Add(this.btn_skill);
-            this.Controls.Add(this.btn_defend);
-            this.Controls.Add(this.btn_attack);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.leb);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.npc_health);
+            this.Controls.Add(this.btn_right_move);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.cmb_skill);
+            this.Controls.Add(this.npc_name);
+            this.Controls.Add(this.real_health);
+            this.Controls.Add(this.체력);
             this.Controls.Add(this.name);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_run);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "C_1_2_2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "C_1_2_2";
-            this.Load += new System.EventHandler(this.C_1_2_2_Load_1);
-            this.Shown += new System.EventHandler(this.C_1_2_2_Load);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.picture_npc);
+            this.Controls.Add(this.picture_main);
+            this.Controls.Add(this.btn_defend);
+            this.Controls.Add(this.btn_attack);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btn_skill);
+            this.Controls.Add(this.btn_left_move);
+            this.Controls.Add(this.btn_up_move);
+            this.Controls.Add(this.btn_down_move);
+            this.Controls.Add(this.btn_travel);
+            this.Controls.Add(this.exp);
+            this.Name = "C_2_1_0";
+            this.Text = "C_2_1_0";
+            this.Shown += new System.EventHandler(this.C_2_1_0_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -985,10 +951,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -996,30 +962,36 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label npc_health;
+        private System.Windows.Forms.Label item_8;
         private System.Windows.Forms.Label item_7;
         private System.Windows.Forms.Label item_6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_right_move;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label 체력;
-        private System.Windows.Forms.Label item_8;
-        private System.Windows.Forms.Button btn_down_move;
-        private System.Windows.Forms.PictureBox picture_main;
         private System.Windows.Forms.Label item_5;
-        private System.Windows.Forms.Button btn_item_8;
-        private System.Windows.Forms.Label npc_name;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label real_health;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label item_4;
         private System.Windows.Forms.Label item_3;
         private System.Windows.Forms.Label item_2;
+        private System.Windows.Forms.Button btn_item_8;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btn_item_7;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label leb;
+        private System.Windows.Forms.Button btn_right_move;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmb_skill;
+        private System.Windows.Forms.Label npc_name;
+        private System.Windows.Forms.Label real_health;
+        private System.Windows.Forms.Label 체력;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btn_item_4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button btn_item_7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btn_item_3;
@@ -1038,42 +1010,33 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label item_1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ComboBox cmb_skill;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_run;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox picture_npc;
-        private System.Windows.Forms.Button btn_travel;
-        private System.Windows.Forms.Button btn_left_move;
-        private System.Windows.Forms.Button btn_up_move;
-        private System.Windows.Forms.Label exp;
-        private System.Windows.Forms.Button btn_skill;
+        private System.Windows.Forms.PictureBox picture_main;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_spd;
+        private System.Windows.Forms.Label str;
         private System.Windows.Forms.Button btn_defend;
         private System.Windows.Forms.Button btn_attack;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label point;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_def;
-        private System.Windows.Forms.Button btn_spd;
         private System.Windows.Forms.Button btn_intel;
         private System.Windows.Forms.Button btn_str;
         private System.Windows.Forms.Label def;
         private System.Windows.Forms.Label spd;
         private System.Windows.Forms.Label intel;
-        private System.Windows.Forms.Label str;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label leb;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label npc_health;
-        private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Button btn_run;
-        private System.Windows.Forms.Button btn_yes;
-        private System.Windows.Forms.Button btn_no;
-        private System.Windows.Forms.Button btn_quest_yes;
-        private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_skill;
+        private System.Windows.Forms.Button btn_left_move;
+        private System.Windows.Forms.Button btn_up_move;
+        private System.Windows.Forms.Button btn_down_move;
+        private System.Windows.Forms.Button btn_travel;
+        private System.Windows.Forms.Label exp;
     }
 }
