@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         public int chapter1_boss = 2;//챕터1 보스수
         public int chapter2_boss;//챕터2 보스수
-        public int chapter3_boss;//챕터3 보스수
+        public int chapter3_boss=1;//챕터3 보스수
 
         public int max_skill_point = 3;//사용 가능한 스킬 횟수
 
@@ -209,8 +209,20 @@ namespace WindowsFormsApp1
                     skill_point--;
                     return Meteor();
                 }
+                else if (skill_name == "108번뇌")
+                {
+                    main_skill = Image.FromFile(".\\img\\main_character_skill_" + skill_name + ".png");
+                    skill_point--;
+                    return Weapon();
+                }
             }
             return 0;
+        }
+        public int Weapon()
+        {
+            double damage = 50;
+            damage = (double)(str + item_str) * 0.5 + damage;
+            return (int)damage;
         }
         public int Meteor()
         {

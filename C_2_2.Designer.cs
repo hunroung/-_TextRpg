@@ -866,6 +866,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1050, 614);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
@@ -900,6 +901,7 @@
             this.Controls.Add(this.btn_up_move);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "C_2_2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_2_2";
             this.Load += new System.EventHandler(this.C_2_2_Load_2);
             this.Shown += new System.EventHandler(this.C_2_2_Load);

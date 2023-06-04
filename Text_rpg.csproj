@@ -245,6 +245,18 @@
     <Compile Include="C_3_3.Designer.cs">
       <DependentUpon>C_3_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_3_3_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_3_0.Designer.cs">
+      <DependentUpon>C_3_3_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_3_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_3_1.Designer.cs">
+      <DependentUpon>C_3_3_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_3_4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +383,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_3_3.resx">
       <DependentUpon>C_3_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_3_0.resx">
+      <DependentUpon>C_3_3_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_3_1.resx">
+      <DependentUpon>C_3_3_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_3_4.resx">
       <DependentUpon>C_3_4.cs</DependentUpon>

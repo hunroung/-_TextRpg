@@ -51,6 +51,26 @@ namespace WindowsFormsApp1
                             break;
                     }
                     break;
+                case 2:
+                    switch (a)
+                    {
+                        case 0:
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch (a)
+                    {
+                        case 0:
+                            boss = new Poor_king();
+                            boss.name = "각성한 왕초";
+                            boss.real_health = 500;
+                            boss.max_health = 500;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
+                            break;
+                    }
+                    break;
             }
             
         }

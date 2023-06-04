@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.boss = boss;
             picture_npc.Visible = false;
+            chapter_ = chapter;
         }
 
         private void Boss_Load(object sender, EventArgs e)
