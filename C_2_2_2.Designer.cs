@@ -891,7 +891,8 @@
             // groupBox3
             // 
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_3;
+            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._2_2_2;
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Location = new System.Drawing.Point(784, 491);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";

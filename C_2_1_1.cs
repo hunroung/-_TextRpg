@@ -356,9 +356,9 @@ namespace WindowsFormsApp1
                 npc_name.Text = "별주부";
                 textBox1.AppendText("그건... 토끼 간이 아닌가요? 설마 저를 위해서? \r\n");
                 textBox1.AppendText("이 은혜를 어찌 값아야 할지... 제가 지금 가진건 이게 전부군요. \r\n\r\n");
-                textBox1.AppendText("[exp 500 을 획득하였습니다.] \r\n[회복 포션 5개를 획득하였습니다.] ");
+                textBox1.AppendText("[exp 500 을 획득하였습니다.] \r\n[스킬회복물약 2개를 획득하였습니다.] ");
                 for (int i = 0; i < 51; i++) ch.exp_gain(10);
-                ch.item_gain(0, 5);
+                ch.item_gain(2, 2);
                 picture_npc.Image = Image.FromFile(".\\img\\tur3.png");
                 update();
             }

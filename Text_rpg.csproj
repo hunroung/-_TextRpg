@@ -528,6 +528,14 @@
     <None Include="img\1_3_3.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\2_1.png" />
+    <None Include="2_1.png" />
+    <None Include="2_1_0.PNG" />
+    <None Include="2_1_1.png" />
+    <None Include="2_2.PNG" />
+    <None Include="2_2_0.PNG" />
+    <None Include="2_2_1.PNG" />
+    <None Include="2_2_2.PNG" />
     <Content Include="img\blue_shadow.PNG" />
     <Content Include="img\blue_shadow_attack.PNG" />
     <Content Include="img\blue_shadow_attacked.PNG" />

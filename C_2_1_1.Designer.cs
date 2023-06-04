@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picture_main = new System.Windows.Forms.PictureBox();
             this.point = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_def = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.btn_quest_yes = new System.Windows.Forms.Button();
             this.btn_no = new System.Windows.Forms.Button();
             this.btn_yes = new System.Windows.Forms.Button();
-            this.picture_npc = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.leb = new System.Windows.Forms.Label();
@@ -79,36 +77,39 @@
             this.item_3 = new System.Windows.Forms.Label();
             this.item_2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_item_4 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btn_item_7 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_item_3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_item_6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_item_5 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_item_2 = new System.Windows.Forms.Button();
             this.btn_item_1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.item_1 = new System.Windows.Forms.Label();
             this.btn_down_move = new System.Windows.Forms.Button();
             this.npc_name = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.real_health = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picture_main = new System.Windows.Forms.PictureBox();
+            this.picture_npc = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -117,18 +118,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picture_main
-            // 
-            this.picture_main.Location = new System.Drawing.Point(17, 82);
-            this.picture_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picture_main.Name = "picture_main";
-            this.picture_main.Size = new System.Drawing.Size(171, 220);
-            this.picture_main.TabIndex = 178;
-            this.picture_main.TabStop = false;
             // 
             // point
             // 
@@ -438,15 +429,6 @@
             this.btn_yes.Visible = false;
             this.btn_yes.Click += new System.EventHandler(this.btn_yes_Click);
             // 
-            // picture_npc
-            // 
-            this.picture_npc.Location = new System.Drawing.Point(1017, 82);
-            this.picture_npc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picture_npc.Name = "picture_npc";
-            this.picture_npc.Size = new System.Drawing.Size(171, 220);
-            this.picture_npc.TabIndex = 180;
-            this.picture_npc.TabStop = false;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -630,15 +612,6 @@
             this.label16.TabIndex = 51;
             this.label16.Text = "갯수";
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(574, 143);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox10.TabIndex = 53;
-            this.pictureBox10.TabStop = false;
-            // 
             // btn_item_4
             // 
             this.btn_item_4.Location = new System.Drawing.Point(663, 79);
@@ -657,15 +630,6 @@
             this.label15.Size = new System.Drawing.Size(37, 15);
             this.label15.TabIndex = 48;
             this.label15.Text = "갯수";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(574, 26);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox9.TabIndex = 50;
-            this.pictureBox9.TabStop = false;
             // 
             // btn_item_7
             // 
@@ -686,15 +650,6 @@
             this.label14.TabIndex = 45;
             this.label14.Text = "갯수";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(383, 143);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox8.TabIndex = 47;
-            this.pictureBox8.TabStop = false;
-            // 
             // btn_item_3
             // 
             this.btn_item_3.Location = new System.Drawing.Point(472, 79);
@@ -713,15 +668,6 @@
             this.label13.Size = new System.Drawing.Size(37, 15);
             this.label13.TabIndex = 42;
             this.label13.Text = "갯수";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(383, 26);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
             // 
             // btn_item_6
             // 
@@ -742,15 +688,6 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "갯수";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(198, 143);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox6.TabIndex = 41;
-            this.pictureBox6.TabStop = false;
-            // 
             // btn_item_5
             // 
             this.btn_item_5.Location = new System.Drawing.Point(98, 196);
@@ -769,15 +706,6 @@
             this.label10.Size = new System.Drawing.Size(37, 15);
             this.label10.TabIndex = 36;
             this.label10.Text = "갯수";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(9, 143);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
             // 
             // btn_item_2
             // 
@@ -817,15 +745,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "갯수";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(198, 26);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
-            // 
             // item_1
             // 
             this.item_1.AutoSize = true;
@@ -853,19 +772,6 @@
             this.npc_name.Name = "npc_name";
             this.npc_name.Size = new System.Drawing.Size(0, 15);
             this.npc_name.TabIndex = 195;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_2_2;
-            this.groupBox3.Location = new System.Drawing.Point(785, 491);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(403, 255);
-            this.groupBox3.TabIndex = 194;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "지도?";
             // 
             // real_health
             // 
@@ -919,6 +825,101 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "아이템 박스";
             // 
+            // picture_main
+            // 
+            this.picture_main.Location = new System.Drawing.Point(17, 82);
+            this.picture_main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picture_main.Name = "picture_main";
+            this.picture_main.Size = new System.Drawing.Size(171, 220);
+            this.picture_main.TabIndex = 178;
+            this.picture_main.TabStop = false;
+            // 
+            // picture_npc
+            // 
+            this.picture_npc.Location = new System.Drawing.Point(1017, 82);
+            this.picture_npc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picture_npc.Name = "picture_npc";
+            this.picture_npc.Size = new System.Drawing.Size(171, 220);
+            this.picture_npc.TabIndex = 180;
+            this.picture_npc.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._2_1_1;
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox3.Location = new System.Drawing.Point(785, 491);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(403, 255);
+            this.groupBox3.TabIndex = 194;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "지도?";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Location = new System.Drawing.Point(574, 143);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox10.TabIndex = 53;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(574, 26);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox9.TabIndex = 50;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(383, 143);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox8.TabIndex = 47;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(383, 26);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(198, 143);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(9, 143);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(198, 26);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox4.TabIndex = 35;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.item_0;
@@ -971,9 +972,11 @@
             this.Name = "C_2_1_1";
             this.Text = "C_2_1_1";
             this.Shown += new System.EventHandler(this.C_2_1_1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -982,8 +985,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
