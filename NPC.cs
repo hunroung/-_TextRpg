@@ -424,7 +424,7 @@ namespace WindowsFormsApp1
         {
             name = "악어 신령";
             skill_name = "비열한 이빨";
-            img = Image.FromFile(".\\Crocodile_Spirit.PNG");
+            img = Image.FromFile(".\\img\\Crocodile_Spirit.PNG");
             img_attack = Image.FromFile(".\\img\\Crocodile_Spirit_attack.PNG");
             img_defend = Image.FromFile(".\\img\\Crocodile_Spirit_defend.PNG");
             img_attacked = Image.FromFile(".\\img\\Crocodile_Spirit_attacked.PNG");
@@ -808,6 +808,222 @@ namespace WindowsFormsApp1
                 {
                     skill_count--;
                     return 50;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class piranha : NPC
+    {
+        public piranha()
+        {
+            name = "피라냐";
+            skill_name = "날카로운 이빨";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 150;
+            real_health = 150;
+            defend = 25;
+            damage = 25;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 110;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "날카로운 이빨")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class mosquito : NPC
+    {
+        public mosquito()
+        {
+            name = "모기";
+            skill_name = "물기";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 100;
+            real_health = 100;
+            defend = 30;
+            damage = 30;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "물기")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class big_mosquito : NPC
+    {
+        public big_mosquito()
+        {
+            name = "대왕 모기";
+            skill_name = "크게 물기";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 160;
+            real_health = 160;
+            defend = 30;
+            damage = 30;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 130;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "크게 물기")
+                {
+                    skill_count--;
+                    return 40;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class green_nepen : NPC
+    {
+        public green_nepen()
+        {
+            name = "초록 네펜데스";
+            skill_name = "독 내뿜기";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 150;
+            real_health = 150;
+            defend = 10;
+            damage = 10;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "독 내뿜기")
+                {
+                    skill_count--;
+                    return 50;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class blue_nepen : NPC
+    {
+        public blue_nepen()
+        {
+            name = "푸른 네펜데스";
+            skill_name = "얼음 내뿜기";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 160;
+            real_health = 160;
+            defend = 10;
+            damage = 10;
+
+            skill_count_static = 4;
+            skill_count = skill_count_static;
+            exp = 130;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "얼음 내뿜기")
+                {
+                    skill_count--;
+                    return 60;
+                }
+
+            }
+            return 0;
+        }
+    }
+
+    public class red_nepen : NPC
+    {
+        public red_nepen()
+        {
+            name = "붉은 네펜데스";
+            skill_name = "불 내뿜기";
+            img = Image.FromFile(".\\img\\red_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            max_health = 200;
+            real_health = 200;
+            defend = 10;
+            damage = 5;
+
+            skill_count_static = 5;
+            skill_count = skill_count_static;
+            exp = 150;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "불 내뿜기")
+                {
+                    skill_count--;
+                    return 70;
                 }
 
             }

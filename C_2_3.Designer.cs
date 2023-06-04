@@ -805,6 +805,7 @@
             this.btn_down_move.TabIndex = 208;
             this.btn_down_move.Text = "이동한다";
             this.btn_down_move.UseVisualStyleBackColor = true;
+            this.btn_down_move.Click += new System.EventHandler(this.btn_down_move_Click);
             // 
             // btn_left_move
             // 

@@ -197,6 +197,24 @@
     <Compile Include="C_2_3.Designer.cs">
       <DependentUpon>C_2_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_2_3_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_3_0.Designer.cs">
+      <DependentUpon>C_2_3_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_3_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_3_1.Designer.cs">
+      <DependentUpon>C_2_3_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_3_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_3_2.Designer.cs">
+      <DependentUpon>C_2_3_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_2_4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +232,24 @@
     </Compile>
     <Compile Include="C_3_1.Designer.cs">
       <DependentUpon>C_3_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_1_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_1_0.Designer.cs">
+      <DependentUpon>C_3_1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_1_1.Designer.cs">
+      <DependentUpon>C_3_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_1_2.Designer.cs">
+      <DependentUpon>C_3_1_2.cs</DependentUpon>
     </Compile>
     <Compile Include="C_3_2.cs">
       <SubType>Form</SubType>
@@ -360,6 +396,15 @@
     <EmbeddedResource Include="C_2_3.resx">
       <DependentUpon>C_2_3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3_0.resx">
+      <DependentUpon>C_2_3_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3_1.resx">
+      <DependentUpon>C_2_3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3_2.resx">
+      <DependentUpon>C_2_3_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_2_4.resx">
       <DependentUpon>C_2_4.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +413,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_3_1.resx">
       <DependentUpon>C_3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1_0.resx">
+      <DependentUpon>C_3_1_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1_1.resx">
+      <DependentUpon>C_3_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1_2.resx">
+      <DependentUpon>C_3_1_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_3_2.resx">
       <DependentUpon>C_3_2.cs</DependentUpon>
