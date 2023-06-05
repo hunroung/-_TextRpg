@@ -861,7 +861,7 @@ namespace WindowsFormsApp1
 
         private void btn_up_move_Click(object sender, EventArgs e)
         {
-            /*
+            
             C_3_3_0 form = new C_3_3_0(ref ch);
             this.Hide();
             form.ShowDialog();
@@ -873,7 +873,7 @@ namespace WindowsFormsApp1
             this.Show();
             update();
             this.Refresh();
-            */
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {

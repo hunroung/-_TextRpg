@@ -838,7 +838,8 @@
             // groupBox3
             // 
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_1;
+            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._2_11;
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Location = new System.Drawing.Point(687, 393);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(353, 204);
@@ -866,7 +867,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 616);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1049, 616);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.npc_health);
@@ -900,6 +902,7 @@
             this.Controls.Add(this.exp);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "C_2_1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_2_1";
             this.Load += new System.EventHandler(this.C_2_1_Load_2);
             this.Shown += new System.EventHandler(this.C_2_1_Load);

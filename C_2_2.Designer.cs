@@ -554,7 +554,8 @@
             // groupBox3
             // 
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1_3;
+            this.groupBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._2_2;
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Location = new System.Drawing.Point(687, 393);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(353, 204);
@@ -805,6 +806,7 @@
             this.btn_down_move.TabIndex = 208;
             this.btn_down_move.Text = "이동한다";
             this.btn_down_move.UseVisualStyleBackColor = true;
+            this.btn_down_move.Click += new System.EventHandler(this.btn_down_move_Click);
             // 
             // btn_left_move
             // 
@@ -866,7 +868,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 614);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1049, 614);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_close);
@@ -900,6 +903,7 @@
             this.Controls.Add(this.btn_up_move);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "C_2_2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_2_2";
             this.Load += new System.EventHandler(this.C_2_2_Load_2);
             this.Shown += new System.EventHandler(this.C_2_2_Load);

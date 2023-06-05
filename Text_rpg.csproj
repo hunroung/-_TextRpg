@@ -197,6 +197,24 @@
     <Compile Include="C_2_3.Designer.cs">
       <DependentUpon>C_2_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_2_3_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_3_0.Designer.cs">
+      <DependentUpon>C_2_3_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_3_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_3_1.Designer.cs">
+      <DependentUpon>C_2_3_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_3_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_3_2.Designer.cs">
+      <DependentUpon>C_2_3_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_2_4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +232,24 @@
     </Compile>
     <Compile Include="C_3_1.Designer.cs">
       <DependentUpon>C_3_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_1_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_1_0.Designer.cs">
+      <DependentUpon>C_3_1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_1_1.Designer.cs">
+      <DependentUpon>C_3_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_1_2.Designer.cs">
+      <DependentUpon>C_3_1_2.cs</DependentUpon>
     </Compile>
     <Compile Include="C_3_2.cs">
       <SubType>Form</SubType>
@@ -245,6 +281,18 @@
     <Compile Include="C_3_3.Designer.cs">
       <DependentUpon>C_3_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_3_3_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_3_0.Designer.cs">
+      <DependentUpon>C_3_3_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_3_3_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_3_3_1.Designer.cs">
+      <DependentUpon>C_3_3_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_3_4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +310,36 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_1_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_1_0.Designer.cs">
+      <DependentUpon>C_2_1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_1_1.Designer.cs">
+      <DependentUpon>C_2_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_2_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_2_0.Designer.cs">
+      <DependentUpon>C_2_2_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_2_1.Designer.cs">
+      <DependentUpon>C_2_2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_2_2.Designer.cs">
+      <DependentUpon>C_2_2_2.cs</DependentUpon>
     </Compile>
     <Compile Include="NPC.cs" />
     <Compile Include="Packet.cs" />
@@ -342,11 +420,23 @@
     <EmbeddedResource Include="C_2_1.resx">
       <DependentUpon>C_2_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_2_1_0.resx">
+      <DependentUpon>C_2_1_0.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_2_2.resx">
       <DependentUpon>C_2_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_2_3.resx">
       <DependentUpon>C_2_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3_0.resx">
+      <DependentUpon>C_2_3_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3_1.resx">
+      <DependentUpon>C_2_3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_3_2.resx">
+      <DependentUpon>C_2_3_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_2_4.resx">
       <DependentUpon>C_2_4.cs</DependentUpon>
@@ -356,6 +446,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_3_1.resx">
       <DependentUpon>C_3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1_0.resx">
+      <DependentUpon>C_3_1_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1_1.resx">
+      <DependentUpon>C_3_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_1_2.resx">
+      <DependentUpon>C_3_1_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_3_2.resx">
       <DependentUpon>C_3_2.cs</DependentUpon>
@@ -372,6 +471,12 @@
     <EmbeddedResource Include="C_3_3.resx">
       <DependentUpon>C_3_3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_3_3_0.resx">
+      <DependentUpon>C_3_3_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_3_3_1.resx">
+      <DependentUpon>C_3_3_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_3_4.resx">
       <DependentUpon>C_3_4.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +485,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_1_1.resx">
+      <DependentUpon>C_2_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2_0.resx">
+      <DependentUpon>C_2_2_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2_1.resx">
+      <DependentUpon>C_2_2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2_2.resx">
+      <DependentUpon>C_2_2_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -510,6 +627,14 @@
     <None Include="img\1_3_3.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\2_1.png" />
+    <None Include="2_1.png" />
+    <None Include="2_1_0.PNG" />
+    <None Include="2_1_1.png" />
+    <None Include="2_2.PNG" />
+    <None Include="2_2_0.PNG" />
+    <None Include="2_2_1.PNG" />
+    <None Include="2_2_2.PNG" />
     <Content Include="img\blue_shadow.PNG" />
     <Content Include="img\blue_shadow_attack.PNG" />
     <Content Include="img\blue_shadow_attacked.PNG" />

@@ -858,19 +858,8 @@ namespace WindowsFormsApp1
 
         private void btn_up_move_Click(object sender, EventArgs e)
         {
-            /*
-            C_2_3_0 form = new C_2_3_0(ref ch);
-            this.Hide();
-            form.ShowDialog();
-
-            if (ch.real_health <= 0 || ch.close == 1)
-            {
-                this.Close();
-            }
-            this.Show();
-            update();
-            this.Refresh();
-            */
+            
+            
         }
 
         private void C_2_3_Shown(object sender, EventArgs e)
@@ -950,6 +939,23 @@ namespace WindowsFormsApp1
 
         private void C_2_3_Load_2(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_down_move_Click(object sender, EventArgs e)
+        {
+
+            C_2_3_0 form = new C_2_3_0(ref ch);
+            this.Hide();
+            form.ShowDialog();
+
+            if (ch.real_health <= 0 || ch.close == 1)
+            {
+                this.Close();
+            }
+            this.Show();
+            update();
+            this.Refresh();
 
         }
     }
