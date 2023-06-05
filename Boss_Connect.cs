@@ -20,31 +20,59 @@ namespace WindowsFormsApp1
         NetworkStream m_stream_;
         public NPC boss_;
         int boss_type_;
+        int chapter_;
         public Boss_Connect()
         {
             InitializeComponent();
         }
-        public Boss_Connect(ref TcpClient m_client,ref NPC boss,ref NetworkStream m_stream,int boss_type)
+        public Boss_Connect(ref TcpClient m_client,ref NPC boss,ref NetworkStream m_stream,int boss_type, int chapter)
         {
             InitializeComponent();
             m_client_= m_client;
             m_stream= m_stream_;
             boss_ = boss;
             boss_type_ = boss_type;
+            chapter_ = chapter;
         }
         public void select_boss(ref NPC boss,int a)
         {
-            switch (a)
+            switch(chapter_)
             {
-                case 0:
-                    boss = new Boss_Bear();
-                    break;
                 case 1:
-                    boss = new Boss_snake();
+                    switch (a)
+                    {
+                        case 0:
+                            boss = new Boss_Bear();
+                            break;
+                        case 1:
+                            boss = new Boss_snake();
+                            break;
+                        case 2:
+                            break;
+                    }
                     break;
                 case 2:
+                    switch (a)
+                    {
+                        case 0:
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch (a)
+                    {
+                        case 0:
+                            boss = new Poor_king();
+                            boss.name = "각성한 왕초";
+                            boss.real_health = 500;
+                            boss.max_health = 500;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
+                            break;
+                    }
                     break;
             }
+            
         }
 
         private void Boss_Connect_Load(object sender, EventArgs e)
@@ -95,7 +123,7 @@ namespace WindowsFormsApp1
                 }
             }
             progressBar1.Value = 100;
-            Boss b = new Boss(boss_);
+            Boss b = new Boss(boss_,chapter_);
             b.ShowDialog();
             this.Close();
         }

@@ -120,6 +120,18 @@ namespace WindowsFormsApp1
                             {
                                 character = new character();
                             }
+                            else if (character.chapter == 3)
+                            {
+                                C_3_0 form7 = new C_3_0(ref character);
+                                this.Hide();
+                                form7.ShowDialog();
+                                this.Show();
+                                if (character.real_health <= 0 || character.close == 1)
+                                {
+                                    character = new character();
+                                }
+
+                            }
                         }
                         break;
                     case 2:
@@ -151,17 +163,6 @@ namespace WindowsFormsApp1
                         if (character.real_health <= 0 || character.close == 1)
                         {
                             character = new character();
-                        }
-                        else if (character.chapter == 3)
-                        {
-                            C_3_0 form5 = new C_3_0(ref character);
-                            this.Hide();
-                            form5.ShowDialog();
-                            this.Show();
-                            if (character.real_health <= 0 || character.close == 1)
-                            {
-                                character = new character();
-                            }
                         }
                         break;
                 

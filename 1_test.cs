@@ -35,6 +35,20 @@ namespace WindowsFormsApp1
             act_btn_enable();
             picture_main.Image = character.main;
         }
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -175,9 +189,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -347,11 +361,11 @@ namespace WindowsFormsApp1
             //@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@
             textBox1.AppendText("당신은 깊은 숲으로 들어왔다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             //@@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@@
             textBox1.AppendText("당신은 이상함을 느꼈다. 나무가 움직이는 것 같다. \r\n");
             this.Refresh();
-            Thread.Sleep(2000);
+            Delay(2000);
             //@@@@@@@@@@@@@@@@@@@@몬스터 등장@@@@@@@@@@@@@@@@@@
             monster = new slime();
             fight = 1;

@@ -5,17 +5,36 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class C_3_0 : Form
+    public partial class C_3_2_2 : Form
     {
-        public C_3_0()
+        public C_3_2_2()
         {
             InitializeComponent();
+        }
+
+        private void C_3_2_2_Load(object sender, EventArgs e)
+        {
+
+        }
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
+        //해당 부분 copy 필요
+        public int visit = 0;
+        public character ch;
+        public int fight = 0;
+        public NPC monster = new NPC();
+        public C_3_2_2(ref character character)
+        {
+            ch = character;
+            InitializeComponent();
+            setting(character);
+            item_btn_enable();
+            act_btn_enable();
+            picture_main.Image = character.main;
         }
         private static DateTime Delay(int MS)
         {
@@ -32,74 +51,25 @@ namespace WindowsFormsApp1
             return DateTime.Now;
         }
 
-        private void C_3_0_Load(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
-            move_btn_enable();
-            textBox1.AppendText ( "당신은 자욱한 안개 속에서 신비로운 생명체들을 지나 다리의 끝에 도달한다.\r\n");
-            this.Refresh();
-            Delay(2000);
-            textBox1.AppendText ( "섬에 다가갈수록 신비로운 사원의 모습이 뚜렷해진다.\r\n");
-            this.Refresh();
-            Delay(2000);
-            textBox1.AppendText ( "황금과 옥으로 장식된 아치형 문은 당신이 다가서자 자연스럽게 열린다.\r\n");
-            this.Refresh();
-            Delay(2000);
-            textBox1.AppendText ( "사원 안으로 들어선 순간, 신성한 분위기와 함께 머리가 맑아지는 향이 당신을 맞이한다.\r\n");
-            this.Refresh();
-            Delay(2000);
-            textBox1.AppendText ( "길게 이어진 회랑 양쪽에는 아름답게 조각된 강철 기둥들이 빛을 받아 빛난다.\r\n");
-            this.Refresh();
-            Delay(2000);
-            textBox1.AppendText ( "회랑 가운데에 위치한 신성한 불은 단단한 대리석 화로 안에 피워져 있다.\r\n");
-            this.Refresh();
-            Delay(2000);
-            textBox1.AppendText ( "영원을 상징하는 신성한 불이 당신을 영원하게 만든다.\r\n");
-            move_btn_able();
+            ch.save();
         }
-        public int visit = 0;
-        public character ch;
-
-        //public slime slime = new slime();
-
         private void btn_close_Click(object sender, EventArgs e)
         {
             ch.close = 1;
             this.Close();
         }
-        public C_3_0(ref character character)
-        {
-
-
-            //string name = "슬라임";
-            //slime.name = name;
-            ch = character;
-
-            InitializeComponent();
-
-
-            setting(character);
-            item_btn_enable();
-            act_btn_enable();
-            picture_main.Image = character.main;
-            btn_left_move.Enabled = false; //2챕터로는 못가는
-            //picture_npc.Image = slime.img;
-            //스킬 옮겨 담기
-            for (int i = 0; i < character.skill_count; i++)
-            {
-                cmb_skill.Items.Add(character.skill[i]);
-            }
-
-
-        }
 
         //폼 로딩시 세팅 단계
         public void setting(character character)
         {
-            //따로 추가
+            if (fight == 1)
+            {
+                npc_name.Text = monster.name;
+                npc_health.Text = monster.real_health.ToString();
+            }
 
-            //npc_name.Text = slime.name;
-            //npc_health.Text = slime.real_health.ToString();
-            //따로 추가
             if (character.item_str > 0)
             {
                 str.Text = character.str.ToString() + " +" + character.item_str.ToString();
@@ -149,6 +119,14 @@ namespace WindowsFormsApp1
             else
             {
                 stat_btn_setting(true);
+            }
+            if (cmb_skill.Items.Count < ch.skill_count)
+            {
+                cmb_skill.Items.Clear();
+                for (int i = 0; i < ch.skill_count; i++)
+                {
+                    cmb_skill.Items.Add(ch.skill[i]);
+                }
             }
 
         }
@@ -212,9 +190,9 @@ namespace WindowsFormsApp1
         //업데이트 용
         public void update()
         {
-            Thread.Sleep(100);
+            Delay(100);
             setting(ch);
-            Thread.Sleep(100);
+            Delay(100);
         }
         public void move_btn_enable()
         {
@@ -373,57 +351,39 @@ namespace WindowsFormsApp1
             }
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        
-        private void btn_right_move_Click(object sender, EventArgs e)
-        {
-            C_3_1 form = new C_3_1(ref ch);
-            this.Hide();
-            form.ShowDialog();
 
-            if (ch.real_health <= 0 || ch.close == 1)
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@전투 시스템@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private void _1_test_Load(object sender, EventArgs e)
+        {
+            move_btn_enable(); //필수
+
+            //@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@
+            textBox1.AppendText("당신은 기도실로 들어왔다. \r\n");
+            this.Refresh();
+            Delay(2000);
+            //@@@@@@@@@@@@@@@@@@@@@한줄 대사@@@@@@@@@@@@@@@@@@@@@@
+            textBox1.AppendText("당신은 눈 앞의 석상에 묘한 기분을 느끼며 왠지 모르게 기도를 해야겠다는 생각이 들었다. \r\n");
+            this.Refresh();
+            Delay(2000);
+            if(MessageBox.Show("석상을 향해 기도하시겠습니까?","기도 하시겠습니까?",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                MessageBox.Show("당신은 석상의 힘에 의해 정신이 침식 되었고 사망하였습니다.");
+                picture_main.Image = ch.main_dead;
+                update();
+                this.Refresh();
+                ch.damaged(ch.max_health);
                 this.Close();
             }
-            this.Show();
-            update();
-            this.Refresh();
-        }
-        
-        private void btn_left_move_Click(object sender, EventArgs e)
-        {
+            else
+            {
+                MessageBox.Show("이런! 당신이 예의를 표하지 않자 석상은 당신을 추방하였습니다.");
+                this.Close();
+            }
 
-        }
-
-        private void btn_up_move_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            ch.save();
-        }
-
-        private void btn_travel_Click(object sender, EventArgs e)
-        {
-            ch.healed(ch.max_health);
-            textBox1.AppendText ( "체력이 모두 회복되었다.\r\n");
-            setting(ch);
-        }
-
-        private void btn_attack_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void C_3_0_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_left_move_Click_1(object sender, EventArgs e)
-        {
-
+            item_btn_able(ch); // 필수
+            act_btn_able(); // 필수
         }
     }
 }

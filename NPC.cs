@@ -813,4 +813,76 @@ namespace WindowsFormsApp1
             return 0;
         }
     }
+    public class Blinder : NPC
+    {
+        public Blinder()
+        {
+            name = "맹인";
+            skill_name = "심안";
+            img = Image.FromFile(".\\img\\Blinder.png");
+            img_attack = Image.FromFile(".\\img\\Blinder_attack.png");
+            img_defend = Image.FromFile(".\\img\\Blinder_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Blinder_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Blinder_skill.png");
+            img_dead = Image.FromFile(".\\img\\Blinder_dead.png");
+            max_health = 200;
+            real_health = 200;
+            defend = 50;
+            damage = 20;
+
+            skill_count_static = 8;
+            skill_count = skill_count_static;
+            exp = 120;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "심안")
+                {
+                    skill_count--;
+                    return 30;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class Poor_king : NPC
+    {
+        public Poor_king()
+        {
+            name = "왕초";
+            skill_name = "108번뇌";
+            img = Image.FromFile(".\\img\\Poor_king.png");
+            img_attack = Image.FromFile(".\\img\\Poor_king_attack.png");
+            img_defend = Image.FromFile(".\\img\\Poor_king_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Poor_king_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Poor_king_skill.png");
+            img_dead = Image.FromFile(".\\img\\Poor_king_dead.png");
+            max_health = 300;
+            real_health = 300;
+            defend = 0;
+            damage = 20;
+
+            skill_count_static = 4;
+            skill_count = skill_count_static;
+            exp = 400;
+        }
+        public override int skill(string skill_name)
+        {
+
+            if (skill_count > 0)
+            {
+                if (skill_name == "108번뇌")
+                {
+                    skill_count--;
+                    return 50;
+                }
+
+            }
+            return 0;
+        }
+    }
 }
