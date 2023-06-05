@@ -89,13 +89,6 @@
             this.name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_run = new System.Windows.Forms.Button();
-            this.btn_skill = new System.Windows.Forms.Button();
-            this.btn_defend = new System.Windows.Forms.Button();
-            this.btn_attack = new System.Windows.Forms.Button();
-            this.picture_npc = new System.Windows.Forms.PictureBox();
-            this.picture_main = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -107,10 +100,15 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_run = new System.Windows.Forms.Button();
+            this.btn_skill = new System.Windows.Forms.Button();
+            this.btn_defend = new System.Windows.Forms.Button();
+            this.btn_attack = new System.Windows.Forms.Button();
+            this.picture_npc = new System.Windows.Forms.PictureBox();
+            this.picture_main = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -122,6 +120,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).BeginInit();
             this.SuspendLayout();
             // 
             // point
@@ -520,6 +520,7 @@
             this.btn_travel.TabIndex = 209;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_up_move
             // 
@@ -737,73 +738,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "아이템 박스";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(188, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(679, 280);
-            this.textBox1.TabIndex = 185;
-            // 
-            // btn_run
-            // 
-            this.btn_run.Location = new System.Drawing.Point(890, 363);
-            this.btn_run.Name = "btn_run";
-            this.btn_run.Size = new System.Drawing.Size(150, 23);
-            this.btn_run.TabIndex = 196;
-            this.btn_run.Text = "도망친다";
-            this.btn_run.UseVisualStyleBackColor = true;
-            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
-            // 
-            // btn_skill
-            // 
-            this.btn_skill.Location = new System.Drawing.Point(975, 334);
-            this.btn_skill.Name = "btn_skill";
-            this.btn_skill.Size = new System.Drawing.Size(65, 23);
-            this.btn_skill.TabIndex = 195;
-            this.btn_skill.Text = "스킬사용";
-            this.btn_skill.UseVisualStyleBackColor = true;
-            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
-            // 
-            // btn_defend
-            // 
-            this.btn_defend.Location = new System.Drawing.Point(890, 301);
-            this.btn_defend.Name = "btn_defend";
-            this.btn_defend.Size = new System.Drawing.Size(150, 23);
-            this.btn_defend.TabIndex = 194;
-            this.btn_defend.Text = "방어한다";
-            this.btn_defend.UseVisualStyleBackColor = true;
-            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
-            // 
-            // btn_attack
-            // 
-            this.btn_attack.Location = new System.Drawing.Point(890, 269);
-            this.btn_attack.Name = "btn_attack";
-            this.btn_attack.Size = new System.Drawing.Size(150, 23);
-            this.btn_attack.TabIndex = 193;
-            this.btn_attack.Text = "기본 공격한다";
-            this.btn_attack.UseVisualStyleBackColor = true;
-            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
-            // 
-            // picture_npc
-            // 
-            this.picture_npc.Location = new System.Drawing.Point(890, 65);
-            this.picture_npc.Name = "picture_npc";
-            this.picture_npc.Size = new System.Drawing.Size(150, 176);
-            this.picture_npc.TabIndex = 186;
-            this.picture_npc.TabStop = false;
-            // 
-            // picture_main
-            // 
-            this.picture_main.Location = new System.Drawing.Point(15, 65);
-            this.picture_main.Name = "picture_main";
-            this.picture_main.Size = new System.Drawing.Size(150, 176);
-            this.picture_main.TabIndex = 184;
-            this.picture_main.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.item_7;
@@ -896,6 +830,73 @@
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(188, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(679, 280);
+            this.textBox1.TabIndex = 185;
+            // 
+            // btn_run
+            // 
+            this.btn_run.Location = new System.Drawing.Point(890, 363);
+            this.btn_run.Name = "btn_run";
+            this.btn_run.Size = new System.Drawing.Size(150, 23);
+            this.btn_run.TabIndex = 196;
+            this.btn_run.Text = "도망친다";
+            this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
+            // 
+            // btn_skill
+            // 
+            this.btn_skill.Location = new System.Drawing.Point(975, 334);
+            this.btn_skill.Name = "btn_skill";
+            this.btn_skill.Size = new System.Drawing.Size(65, 23);
+            this.btn_skill.TabIndex = 195;
+            this.btn_skill.Text = "스킬사용";
+            this.btn_skill.UseVisualStyleBackColor = true;
+            this.btn_skill.Click += new System.EventHandler(this.btn_skill_Click);
+            // 
+            // btn_defend
+            // 
+            this.btn_defend.Location = new System.Drawing.Point(890, 301);
+            this.btn_defend.Name = "btn_defend";
+            this.btn_defend.Size = new System.Drawing.Size(150, 23);
+            this.btn_defend.TabIndex = 194;
+            this.btn_defend.Text = "방어한다";
+            this.btn_defend.UseVisualStyleBackColor = true;
+            this.btn_defend.Click += new System.EventHandler(this.btn_defend_Click);
+            // 
+            // btn_attack
+            // 
+            this.btn_attack.Location = new System.Drawing.Point(890, 269);
+            this.btn_attack.Name = "btn_attack";
+            this.btn_attack.Size = new System.Drawing.Size(150, 23);
+            this.btn_attack.TabIndex = 193;
+            this.btn_attack.Text = "기본 공격한다";
+            this.btn_attack.UseVisualStyleBackColor = true;
+            this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
+            // 
+            // picture_npc
+            // 
+            this.picture_npc.Location = new System.Drawing.Point(890, 65);
+            this.picture_npc.Name = "picture_npc";
+            this.picture_npc.Size = new System.Drawing.Size(150, 176);
+            this.picture_npc.TabIndex = 186;
+            this.picture_npc.TabStop = false;
+            // 
+            // picture_main
+            // 
+            this.picture_main.Location = new System.Drawing.Point(15, 65);
+            this.picture_main.Name = "picture_main";
+            this.picture_main.Size = new System.Drawing.Size(150, 176);
+            this.picture_main.TabIndex = 184;
+            this.picture_main.TabStop = false;
+            // 
             // C_3_1_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -936,13 +937,12 @@
             this.Name = "C_3_1_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_3_1_2";
+            this.Load += new System.EventHandler(this.C_3_1_2_Load_1);
             this.Shown += new System.EventHandler(this.C_3_1_2_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -954,6 +954,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_npc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_main)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

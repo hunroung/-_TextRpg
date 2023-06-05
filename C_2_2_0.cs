@@ -337,5 +337,21 @@ namespace WindowsFormsApp1
                 textBox1.AppendText("무언가 지나간 듯 나무들이 쓰러져 있다.\r\n그 틈으로 지나갈 수 있어 보인다.\r\n");
             }
         }
+
+        private void btn_travel_Click(object sender, EventArgs e)
+        {
+            if (monster.real_health <= 0)
+            {
+                picture_npc.Image = monster.img;
+                monster.real_health = monster.max_health;
+                monster.revive();
+                textBox1.Text = "또 다른 " + npc_name.Text + "이 나타났다.\r\n"; // 대사 변경 선택 사항
+                setting(ch);
+                move_btn_enable();
+                item_btn_able(ch);
+                act_btn_able();
+
+            }
+        }
     }
 }

@@ -885,7 +885,18 @@ namespace WindowsFormsApp1
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            if (monster.real_health <= 0)
+            {
+                picture_npc.Image = monster.img;
+                monster.real_health = monster.max_health;
+                monster.revive();
+                textBox1.Text = "또 다른 " + npc_name.Text + "이 나타났다.\r\n"; // 대사 변경 선택 사항
+                setting(ch);
+                move_btn_enable();
+                item_btn_able(ch);
+                act_btn_able();
 
+            }
         }
         private void btn_str_Click(object sender, EventArgs e)
         {

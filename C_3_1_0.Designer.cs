@@ -99,14 +99,14 @@
             this.name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_run = new System.Windows.Forms.Button();
             this.btn_skill = new System.Windows.Forms.Button();
             this.btn_defend = new System.Windows.Forms.Button();
             this.btn_attack = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -585,6 +585,7 @@
             this.btn_travel.TabIndex = 209;
             this.btn_travel.Text = "탐험한다";
             this.btn_travel.UseVisualStyleBackColor = true;
+            this.btn_travel.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_up_move
             // 
@@ -819,6 +820,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "아이템 박스";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.item_7;
+            this.pictureBox1.Location = new System.Drawing.Point(502, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox1.TabIndex = 215;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.item_2;
+            this.pictureBox2.Location = new System.Drawing.Point(335, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox2.TabIndex = 214;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::WindowsFormsApp1.Properties.Resources.item_1;
+            this.pictureBox11.Location = new System.Drawing.Point(173, 20);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox11.TabIndex = 213;
+            this.pictureBox11.TabStop = false;
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -870,33 +898,6 @@
             this.btn_attack.UseVisualStyleBackColor = true;
             this.btn_attack.Click += new System.EventHandler(this.btn_attack_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.item_7;
-            this.pictureBox1.Location = new System.Drawing.Point(502, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox1.TabIndex = 215;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.item_2;
-            this.pictureBox2.Location = new System.Drawing.Point(335, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox2.TabIndex = 214;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::WindowsFormsApp1.Properties.Resources.item_1;
-            this.pictureBox11.Location = new System.Drawing.Point(173, 20);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox11.TabIndex = 213;
-            this.pictureBox11.TabStop = false;
-            // 
             // C_3_1_0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -937,6 +938,7 @@
             this.Name = "C_3_1_0";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C_3_1_0";
+            this.Load += new System.EventHandler(this.C_3_1_0_Load_1);
             this.Shown += new System.EventHandler(this.C_3_1_0_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();

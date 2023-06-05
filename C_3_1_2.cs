@@ -917,6 +917,11 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void C_3_1_2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

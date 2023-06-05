@@ -61,29 +61,34 @@ namespace WindowsFormsApp1
                     this.Show();
                     if (character.chapter == 2)
                     {
+                        character.close = 0;
                         C_2_0 form3 = new C_2_0(ref character);
                         this.Hide();
                         form3.ShowDialog();
                         this.Show();
                         if (character.chapter == 3)
                         {
+                            character.close = 0;
                             C_3_0 form4 = new C_3_0(ref character);
                             this.Hide();
                             form4.ShowDialog();
                             this.Show();
                             if (character.real_health == 0 || character.close == 1)
                             {
+                                character.close = 0;
                                 character = new character();
                             }
                         }
                         else if (character.real_health == 0 || character.close == 1)
                         {
+                            character.close = 0;
                             character = new character();
                         }
                     }
                     else if (character.real_health==0 || character.close == 1)
                     {
-                        character= new character();
+                        character.close = 0;
+                        character = new character();
                     }
                 }
             }
@@ -91,6 +96,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            character.close = 0;
             save save = new save(ref character);
             save.ShowDialog();
             if(character.name!=null)
@@ -99,66 +105,78 @@ namespace WindowsFormsApp1
                 switch (character.chapter)
                 {
                     case 1:
+                        character.close = 0;
                         C_1_0 form2 = new C_1_0(ref character);
                         form2.ShowDialog();
                         if (character.chapter == 2)
                         {
+                            character.close = 0;
                             C_2_0 form3 = new C_2_0(ref character);
                             this.Hide();
                             form3.ShowDialog();
                             this.Show();
                             if (character.chapter == 3)
                             {
+                                character.close = 0;
                                 C_3_0 form7 = new C_3_0(ref character);
                                 this.Hide();
                                 form7.ShowDialog();
                                 this.Show();
                                 if (character.real_health <= 0 || character.close == 1)
                                 {
+                                    character.close = 0;
                                     character = new character();
                                 }
 
                             }
                             else if (character.real_health <= 0 || character.close == 1)
                             {
+                                character.close = 0;
                                 character = new character();
                             }
                         }
                         else if (character.real_health == 0||character.close==1)
                         {
+                            character.close = 0;
                             character = new character();
                         }
                         
                         break;
                     case 2:
                         C_2_0 form = new C_2_0(ref character);
+                        character.close = 0;
                         this.Hide();
                         form.ShowDialog();
                         this.Show();
                         if (character.chapter == 3)
                         {
+                            character.close = 0;
                             C_3_0 form3 = new C_3_0(ref character);
                             this.Hide();
                             form3.ShowDialog();
                             this.Show();
                             if (character.real_health <= 0 || character.close == 1)
                             {
+                                character.close = 0;
                                 character = new character();
                             }
                         }
                         else if (character.real_health <= 0 || character.close == 1)
                         {
+                            character.close = 0;
                             character = new character();
                         }
                         
                         break;
                     case 3:
                         C_3_0 form4 = new C_3_0(ref character);
+                        character.close = 0;
                         this.Hide();
                         form4.ShowDialog();
                         this.Show();
                         if (character.real_health <= 0 || character.close == 1)
                         {
+                            character.close = 0;
                             character = new character();
                         }
                         break;
