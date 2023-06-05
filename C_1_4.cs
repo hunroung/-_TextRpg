@@ -197,15 +197,67 @@ namespace WindowsFormsApp1
             setting(ch);
             Delay(100);
         }
-        
+
         private void btn_str_Click(object sender, EventArgs e)
         {
-
+            Button button = (Button)sender;
+            switch (button.Name.ToString())
+            {
+                case "btn_str":
+                    ch.str += 1;
+                    ch.stat_use();
+                    break;
+                case "btn_intel":
+                    ch.intel += 1;
+                    ch.stat_use();
+                    break;
+                case "btn_spd":
+                    ch.spd += 1;
+                    ch.stat_use();
+                    break;
+                case "btn_def":
+                    ch.def += 1;
+                    ch.stat_use();
+                    break;
+                default:
+                    break;
+            }
+            update();
         }
         //아이템 사용
         private void btn_item_Click(object sender, EventArgs e)
         {
-
+            Button button = (Button)sender;
+            switch (button.Name.ToString())
+            {
+                case "btn_item_1":
+                    ch.item_use(0);
+                    break;
+                case "btn_item_2":
+                    ch.item_use(1);
+                    break;
+                case "btn_item_3":
+                    ch.item_use(2);
+                    break;
+                case "btn_item_4":
+                    ch.item_use(3);
+                    break;
+                case "btn_item_5":
+                    ch.item_use(4);
+                    break;
+                case "btn_item_6":
+                    ch.item_use(5);
+                    break;
+                case "btn_item_7":
+                    ch.item_use(6);
+                    break;
+                case "btn_item_8":
+                    ch.item_use(7);
+                    break;
+                default:
+                    break;
+            }
+            update();
         }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)

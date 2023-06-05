@@ -63,13 +63,13 @@ namespace WindowsFormsApp1
                     {
                         C_2_0 form3 = new C_2_0(ref character);
                         this.Hide();
-                        form2.ShowDialog();
+                        form3.ShowDialog();
                         this.Show();
                         if (character.chapter == 3)
                         {
                             C_3_0 form4 = new C_3_0(ref character);
                             this.Hide();
-                            form2.ShowDialog();
+                            form4.ShowDialog();
                             this.Show();
                             if (character.real_health == 0 || character.close == 1)
                             {
