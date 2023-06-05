@@ -388,11 +388,6 @@ namespace WindowsFormsApp1
             update();
             this.Refresh();
         }
-        
-        private void btn_left_move_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_up_move_Click(object sender, EventArgs e)
         {
