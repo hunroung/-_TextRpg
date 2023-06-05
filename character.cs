@@ -21,9 +21,9 @@ namespace WindowsFormsApp1
         public static int max_name = 15;//이름 최대 길이
         public static int max_skill = 10;//스킬 최대 개수
 
-        public int chapter1_boss = 2;//챕터1 보스수
-        public int chapter2_boss;//챕터2 보스수
-        public int chapter3_boss=1;//챕터3 보스수
+        public int chapter1_boss = 3;//챕터1 보스수
+        public int chapter2_boss=2;//챕터2 보스수
+        public int chapter3_boss=3;//챕터3 보스수
 
         public int max_skill_point = 3;//사용 가능한 스킬 횟수
 

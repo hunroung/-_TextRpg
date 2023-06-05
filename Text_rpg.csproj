@@ -299,6 +299,12 @@
     <Compile Include="C_3_4.Designer.cs">
       <DependentUpon>C_3_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="End.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="End.Designer.cs">
+      <DependentUpon>End.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +486,9 @@
     <EmbeddedResource Include="C_3_4.resx">
       <DependentUpon>C_3_4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="End.resx">
+      <DependentUpon>End.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -635,6 +644,21 @@
     <None Include="2_2_0.PNG" />
     <None Include="2_2_1.PNG" />
     <None Include="2_2_2.PNG" />
+    <None Include="img\2_3.png" />
+    <None Include="img\2_3_0.png" />
+    <None Include="img\2_3_1.png" />
+    <None Include="img\2_3_2.png" />
+    <None Include="img\3_1.png" />
+    <None Include="img\3_1_0.png" />
+    <None Include="img\3_1_1.png" />
+    <None Include="img\3_1_2.png" />
+    <None Include="img\3_2.png" />
+    <None Include="img\3_2_0.png" />
+    <None Include="img\3_2_1.png" />
+    <None Include="img\3_2_2.png" />
+    <None Include="img\3_3.png" />
+    <None Include="img\3_3_0.png" />
+    <None Include="img\3_3_1.png" />
     <Content Include="img\blue_shadow.PNG" />
     <Content Include="img\blue_shadow_attack.PNG" />
     <Content Include="img\blue_shadow_attacked.PNG" />
@@ -653,6 +677,9 @@
     <Content Include="img\goblin_dead.PNG" />
     <Content Include="img\goblin_defend.PNG" />
     <Content Include="img\goblin_skill.PNG" />
+    <None Include="img\item_1.png" />
+    <None Include="img\item_2.png" />
+    <None Include="img\item_7.png" />
     <Content Include="img\main_character_skill_메테오.png" />
     <Content Include="img\Mist_Fairy.PNG" />
     <Content Include="img\Mist_Fairy_attack.PNG" />

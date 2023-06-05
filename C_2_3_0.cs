@@ -928,6 +928,11 @@ namespace WindowsFormsApp1
             this.Refresh();
         }
 
+        private void btn_down_move_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }

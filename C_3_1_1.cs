@@ -934,6 +934,11 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void btn_up_move_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }

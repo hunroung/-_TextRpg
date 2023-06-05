@@ -19,11 +19,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void C_1_4_Load(object sender, EventArgs e)
-        {
-
-        }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@form 복사시에 아래 부분 복사 후 Form2 를 새로 만든 폼 이름으로 바꿀것.
         //해당 부분 copy 필요
         TcpClient m_client;
@@ -205,64 +200,12 @@ namespace WindowsFormsApp1
         
         private void btn_str_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_str":
-                    ch.str += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_intel":
-                    ch.intel += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_spd":
-                    ch.spd += 1;
-                    ch.stat_use();
-                    break;
-                case "btn_def":
-                    ch.def += 1;
-                    ch.stat_use();
-                    break;
-                default:
-                    break;
-            }
-            update();
+
         }
         //아이템 사용
         private void btn_item_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            switch (button.Name.ToString())
-            {
-                case "btn_item_1":
-                    ch.item_use(0);
-                    break;
-                case "btn_item_2":
-                    ch.item_use(1);
-                    break;
-                case "btn_item_3":
-                    ch.item_use(2);
-                    break;
-                case "btn_item_4":
-                    ch.item_use(3);
-                    break;
-                case "btn_item_5":
-                    ch.item_use(4);
-                    break;
-                case "btn_item_6":
-                    ch.item_use(5);
-                    break;
-                case "btn_item_7":
-                    ch.item_use(6);
-                    break;
-                case "btn_item_8":
-                    ch.item_use(7);
-                    break;
-                default:
-                    break;
-            }
-            update();
+
         }
         //아이템 버튼 활성화 하기
         public void item_btn_able(character character)
@@ -419,6 +362,8 @@ namespace WindowsFormsApp1
                     m_stream.Close();
                     m_client.Close();
                     ch.close = 1;
+                    MessageBox.Show("보스를 물리쳤다!");
+                    this.Close();
                 }
             }
 
@@ -495,6 +440,8 @@ namespace WindowsFormsApp1
                 m_stream.Close();
                 m_client.Close();
                 ch.close = 1;
+                MessageBox.Show("보스를 물리쳤다!");
+                this.Close();
             }
             update();
             this.Refresh();
@@ -599,6 +546,8 @@ namespace WindowsFormsApp1
                         m_stream.Close();
                         m_client.Close();
                         ch.close = 1;
+                        MessageBox.Show("보스를 물리쳤다!");
+                        this.Close();
                     }
                 }
 
@@ -675,6 +624,8 @@ namespace WindowsFormsApp1
                     m_stream.Close();
                     m_client.Close();
                     ch.close = 1;
+                    MessageBox.Show("보스를 물리쳤다!");
+                    this.Close();
                 }
                 update();
                 this.Refresh();
@@ -1032,6 +983,8 @@ namespace WindowsFormsApp1
             
             call_server.ShowDialog();
             monster = call_server.boss_;
+            m_stream=call_server.m_stream_;
+            m_client = call_server.m_client_;
             picture_npc.Image = monster.img;
             fight = 1;
             textBox1.AppendText("이런! 보스 몬스터 " + monster.name + " 이(가) 나타났다!!\r\n");
@@ -1041,6 +994,11 @@ namespace WindowsFormsApp1
             item_btn_able(ch); // 필수
             act_btn_able(); // 필수
             update();
+        }
+
+        private void C_1_4_Load(object sender, EventArgs e)
+        {
+
         }
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@전투 시스템@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

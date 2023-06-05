@@ -413,6 +413,13 @@ namespace WindowsFormsApp1
                     m_stream.Flush();
                     m_stream.Close();
                     m_client.Close();
+                    MessageBox.Show("보스를 물리쳤다!");
+                    End ed = new End(ref ch);
+                    ed.ShowDialog();
+                    ch.close = 1;
+
+                    this.Close();
+                    return;
                 }
             }
 
@@ -487,7 +494,12 @@ namespace WindowsFormsApp1
                 m_stream.Flush();
                 m_stream.Close();
                 m_client.Close();
-
+                MessageBox.Show("보스를 물리쳤다!");
+                End ed = new End(ref ch);
+                ed.ShowDialog();
+                ch.close = 1;
+                this.Close();
+                return;
             }
             update();
             this.Refresh();
@@ -591,7 +603,12 @@ namespace WindowsFormsApp1
                         m_stream.Flush();
                         m_stream.Close();
                         m_client.Close();
-
+                        MessageBox.Show("보스를 물리쳤다!");
+                        End ed = new End(ref ch);
+                        ed.ShowDialog();
+                        ch.close = 1;
+                        this.Close();
+                        return;
                     }
                 }
 
@@ -666,7 +683,12 @@ namespace WindowsFormsApp1
                     m_stream.Flush();
                     m_stream.Close();
                     m_client.Close();
-
+                    MessageBox.Show("보스를 물리쳤다!");
+                    End ed = new End(ref ch);
+                    ed.ShowDialog();
+                    ch.close = 1;
+                    this.Close();
+                    return;
                 }
                 update();
                 this.Refresh();
@@ -1039,10 +1061,12 @@ namespace WindowsFormsApp1
         private void C_3_4_Load_1(object sender, EventArgs e)
         {
             m_client = new TcpClient();
-            Boss_Connect call_server = new Boss_Connect(ref m_client, ref monster, ref m_stream, ch.chapter1_boss, ch.chapter);
+            Boss_Connect call_server = new Boss_Connect(ref m_client, ref monster, ref m_stream, ch.chapter3_boss, ch.chapter);
 
             call_server.ShowDialog();
             monster = call_server.boss_;
+            m_stream = call_server.m_stream_;
+            m_client = call_server.m_client_;
             picture_npc.Image = monster.img;
             fight = 1;
             textBox1.AppendText("이런! 보스 몬스터 " + monster.name + " 이(가) 나타났다!!\r\n");
@@ -1052,6 +1076,11 @@ namespace WindowsFormsApp1
             item_btn_able(ch); // 필수
             act_btn_able(); // 필수
             update();
+        }
+
+        private void C_3_4_Load(object sender, EventArgs e)
+        {
+
         }
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@전투 시스템@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

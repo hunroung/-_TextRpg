@@ -16,8 +16,8 @@ namespace WindowsFormsApp1
 {
     public partial class Boss_Connect : Form
     {
-        TcpClient m_client_;
-        NetworkStream m_stream_;
+        public TcpClient m_client_;
+        public NetworkStream m_stream_;
         public NPC boss_;
         int boss_type_;
         int chapter_;
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             m_client_= m_client;
-            m_stream= m_stream_;
+            m_stream_= m_stream;
             boss_ = boss;
             boss_type_ = boss_type;
             chapter_ = chapter;
@@ -48,6 +48,12 @@ namespace WindowsFormsApp1
                             boss = new Boss_snake();
                             break;
                         case 2:
+                            boss = new Goblin();
+                            boss.name = "무자비한 고블린";
+                            boss.real_health = 200;
+                            boss.max_health = 200;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
                             break;
                     }
                     break;
@@ -55,6 +61,20 @@ namespace WindowsFormsApp1
                     switch (a)
                     {
                         case 0:
+                            boss = new MaxLv_Rabbit();
+                            boss.name = "초월한 토끼";
+                            boss.real_health = 300;
+                            boss.max_health = 300;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
+                            break;
+                        case 1:
+                            boss = new Turtle_God();
+                            boss.name = "신에 가까운 거북";
+                            boss.real_health = 300;
+                            boss.max_health = 300;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
                             break;
                     }
                     break;
@@ -64,6 +84,22 @@ namespace WindowsFormsApp1
                         case 0:
                             boss = new Poor_king();
                             boss.name = "각성한 왕초";
+                            boss.real_health = 500;
+                            boss.max_health = 500;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
+                            break;
+                        case 1:
+                            boss = new Temple_Assassin();
+                            boss.name = "정예 암살자";
+                            boss.real_health = 500;
+                            boss.max_health = 500;
+                            boss.skill_count_static = 20;
+                            boss.skill_count = boss.skill_count_static;
+                            break;
+                        case 2:
+                            boss = new Temple_Knight();
+                            boss.name = "정예 기사";
                             boss.real_health = 500;
                             boss.max_health = 500;
                             boss.skill_count_static = 20;

@@ -48,10 +48,9 @@
             // 
             // picture_npc
             // 
-            this.picture_npc.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.picture_npc.Location = new System.Drawing.Point(221, 135);
+            this.picture_npc.Location = new System.Drawing.Point(278, 168);
             this.picture_npc.Name = "picture_npc";
-            this.picture_npc.Size = new System.Drawing.Size(598, 266);
+            this.picture_npc.Size = new System.Drawing.Size(515, 263);
             this.picture_npc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_npc.TabIndex = 94;
             this.picture_npc.TabStop = false;

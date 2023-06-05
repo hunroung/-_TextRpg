@@ -175,12 +175,12 @@ namespace WindowsFormsApp1
         {
             name = "고대 앤트";
             skill_name = "넝쿨 채찍";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
+            img = Image.FromFile(".\\img\\Ent.png");
+            img_attack = Image.FromFile(".\\img\\Ent_attack.png");
+            img_defend = Image.FromFile(".\\img\\Ent_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Ent_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Ent_skill.png");
+            img_dead = Image.FromFile(".\\img\\Ent_dead.png");
             max_health = 300;
             real_health = 300;
             defend = 30;
@@ -753,12 +753,12 @@ namespace WindowsFormsApp1
             img_attacked = Image.FromFile(".\\img\\Boss_Bear_attacked.png");
             img_skill = Image.FromFile(".\\img\\Boss_Bear_skill.png");
             img_dead = Image.FromFile(".\\img\\Boss_Bear_dead.png");
-            max_health = 500;
-            real_health = 500;
+            max_health = 200;
+            real_health = 200;
             defend = 40;
             damage = 20;
 
-            skill_count_static = 4;
+            skill_count_static = 20;
             skill_count = skill_count_static;
             exp = 500;
         }
@@ -789,12 +789,12 @@ namespace WindowsFormsApp1
             img_attacked = Image.FromFile(".\\img\\Boss_snake_attacked.png");
             img_skill = Image.FromFile(".\\img\\Boss_snake_skill.png");
             img_dead = Image.FromFile(".\\img\\Boss_snake_dead.png");
-            max_health = 500;
-            real_health = 500;
+            max_health = 200;
+            real_health = 200;
             defend = 40;
             damage = 20;
 
-            skill_count_static = 10;
+            skill_count_static = 20;
             skill_count = skill_count_static;
             exp = 500;
         }
@@ -892,12 +892,12 @@ namespace WindowsFormsApp1
         {
             name = "피라냐";
             skill_name = "날카로운 이빨";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\piranha.PNG");
+            img_attack = Image.FromFile(".\\img\\piranha.PNG");
+            img_defend = Image.FromFile(".\\img\\piranha.PNG");
+            img_attacked = Image.FromFile(".\\img\\piranha.PNG");
+            img_skill = Image.FromFile(".\\img\\piranha.PNG");
+            img_dead = Image.FromFile(".\\img\\piranha.PNG");
             max_health = 150;
             real_health = 150;
             defend = 25;
@@ -928,12 +928,12 @@ namespace WindowsFormsApp1
         {
             name = "모기";
             skill_name = "물기";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\mosquito.PNG");
+            img_attack = Image.FromFile(".\\img\\mosquito.PNG");
+            img_defend = Image.FromFile(".\\img\\mosquito.PNG");
+            img_attacked = Image.FromFile(".\\img\\mosquito.PNG");
+            img_skill = Image.FromFile(".\\img\\mosquito.PNG");
+            img_dead = Image.FromFile(".\\img\\mosquito.PNG");
             max_health = 100;
             real_health = 100;
             defend = 30;
@@ -964,12 +964,12 @@ namespace WindowsFormsApp1
         {
             name = "대왕 모기";
             skill_name = "크게 물기";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\big_mosquito.PNG");
+            img_attack = Image.FromFile(".\\img\\big_mosquito.PNG");
+            img_defend = Image.FromFile(".\\img\\big_mosquito.PNG");
+            img_attacked = Image.FromFile(".\\img\\big_mosquito.PNG");
+            img_skill = Image.FromFile(".\\img\\big_mosquito.PNG");
+            img_dead = Image.FromFile(".\\img\\big_mosquito.PNG");
             max_health = 160;
             real_health = 160;
             defend = 30;
