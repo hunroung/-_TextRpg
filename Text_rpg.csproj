@@ -311,6 +311,36 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_2_1_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_1_0.Designer.cs">
+      <DependentUpon>C_2_1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_1_1.Designer.cs">
+      <DependentUpon>C_2_1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_2_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_2_0.Designer.cs">
+      <DependentUpon>C_2_2_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_2_1.Designer.cs">
+      <DependentUpon>C_2_2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_2_2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_2_2_2.Designer.cs">
+      <DependentUpon>C_2_2_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="NPC.cs" />
     <Compile Include="Packet.cs" />
     <Compile Include="Program.cs" />
@@ -390,6 +420,9 @@
     <EmbeddedResource Include="C_2_1.resx">
       <DependentUpon>C_2_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_2_1_0.resx">
+      <DependentUpon>C_2_1_0.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_2_2.resx">
       <DependentUpon>C_2_2.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,6 +485,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_1_1.resx">
+      <DependentUpon>C_2_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2_0.resx">
+      <DependentUpon>C_2_2_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2_1.resx">
+      <DependentUpon>C_2_2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_2_2_2.resx">
+      <DependentUpon>C_2_2_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -582,6 +627,14 @@
     <None Include="img\1_3_3.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\2_1.png" />
+    <None Include="2_1.png" />
+    <None Include="2_1_0.PNG" />
+    <None Include="2_1_1.png" />
+    <None Include="2_2.PNG" />
+    <None Include="2_2_0.PNG" />
+    <None Include="2_2_1.PNG" />
+    <None Include="2_2_2.PNG" />
     <Content Include="img\blue_shadow.PNG" />
     <Content Include="img\blue_shadow_attack.PNG" />
     <Content Include="img\blue_shadow_attacked.PNG" />

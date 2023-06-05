@@ -490,26 +490,97 @@ namespace WindowsFormsApp1
             return 0;
         }
     }
+    public class Little_Rabbit : NPC
+    {
+        public Little_Rabbit()
+        {
+            name = "작은 토끼";
+            skill_name = "들이받기";
+            img = Image.FromFile(".\\img\\Little_Rabbit.png");
+            img_attack = Image.FromFile(".\\img\\Little_Rabbit_attack.png");
+            img_defend = Image.FromFile(".\\img\\Little_Rabbit_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Little_Rabbit_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Little_Rabbit_skill.png");
+            img_dead = Image.FromFile(".\\img\\Little_Rabbit_dead.png");
+            max_health = 100;
+            real_health = 100;
+            defend = 10;
+            damage = 15;
+
+            skill_count_static = 2;
+            skill_count = skill_count_static;
+            exp = 100;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "들이받기")
+                {
+                    skill_count--;
+                    return 15;
+                }
+
+            }
+            return 0;
+        }
+    }
+    public class MaxLv_Rabbit : NPC
+    {
+        public MaxLv_Rabbit()
+        {
+            name = "만렙토끼";
+            skill_name = "레프트 훅";
+            img = Image.FromFile(".\\img\\MaxLv_Rabbit.png");
+            img_attack = Image.FromFile(".\\img\\MaxLv_Rabbit_attack.png");
+            img_defend = Image.FromFile(".\\img\\MaxLv_Rabbit_defend.png");
+            img_attacked = Image.FromFile(".\\img\\MaxLv_Rabbit_attacked.png");
+            img_skill = Image.FromFile(".\\img\\MaxLv_Rabbit_skill.png");
+            img_dead = Image.FromFile(".\\img\\MaxLv_Rabbit_dead.png");
+            max_health = 300;
+            real_health = 300;
+            defend = 20;
+            damage = 25;
+
+            skill_count_static = 3;
+            skill_count = skill_count_static;
+            exp = 200;
+        }
+        public override int skill(string skill_name)
+        {
+            if (skill_count > 0)
+            {
+                if (skill_name == "레프트 훅")
+                {
+                    skill_count--;
+                    return 35;
+                }
+
+            }
+            return 0;
+        }
+    }
+
     public class Fire_Guardian : NPC
     {
         public Fire_Guardian()
         {
             name = "불 수호자";
             skill_name = "방화";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
-            max_health = 150;
-            real_health = 150;
-            defend = 35;
-            damage = 20;
+            img = Image.FromFile(".\\img\\Fire_Guardian.png");
+            img_attack = Image.FromFile(".\\img\\Fire_Guardian_attack.png");
+            img_defend = Image.FromFile(".\\img\\Fire_Guardian_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Fire_Guardian_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Fire_Guardian_skill.png");
+            img_dead = Image.FromFile(".\\img\\Fire_Guardian_dead.png");
+            max_health = 250;
+            real_health = 250;
+            defend = 30;
+            damage = 30;
 
             skill_count_static = 3;
             skill_count = skill_count_static;
-            exp = 120;
+            exp = 300;
         }
         public override int skill(string skill_name)
         {
@@ -519,7 +590,7 @@ namespace WindowsFormsApp1
                 if (skill_name == "방화")
                 {
                     skill_count--;
-                    return 35;
+                    return 45;
                 }
 
             }
@@ -532,20 +603,20 @@ namespace WindowsFormsApp1
         {
             name = "사원의 암살자";
             skill_name = "사악한 비수";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
-            max_health = 150;
-            real_health = 150;
-            defend = 35;
-            damage = 20;
+            img = Image.FromFile(".\\img\\Temple_Assassin.png");
+            img_attack = Image.FromFile(".\\img\\Temple_Assassin_attack.png");
+            img_defend = Image.FromFile(".\\img\\Temple_Assassin_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Temple_Assassin_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Temple_Assassin_skill.png");
+            img_dead = Image.FromFile(".\\img\\Temple_Assassin_dead.png");
+            max_health = 200;
+            real_health = 200;
+            defend = 15;
+            damage = 35;
 
             skill_count_static = 3;
             skill_count = skill_count_static;
-            exp = 120;
+            exp = 350;
         }
         public override int skill(string skill_name)
         {
@@ -555,7 +626,7 @@ namespace WindowsFormsApp1
                 if (skill_name == "사악한 비수")
                 {
                     skill_count--;
-                    return 35;
+                    return 60;
                 }
 
             }
@@ -568,20 +639,20 @@ namespace WindowsFormsApp1
         {
             name = "사원의 기사";
             skill_name = "불 가르기";
-            img = Image.FromFile(".\\img\\slim.png");
-            img_attack = Image.FromFile(".\\img\\slim_attack.png");
-            img_defend = Image.FromFile(".\\img\\slim_defend.png");
-            img_attacked = Image.FromFile(".\\img\\slim_attacked.png");
-            img_skill = Image.FromFile(".\\img\\slim_skill.png");
-            img_dead = Image.FromFile(".\\img\\slim_dead.png");
-            max_health = 150;
-            real_health = 150;
-            defend = 35;
-            damage = 20;
+            img = Image.FromFile(".\\img\\Temple_Knight.png");
+            img_attack = Image.FromFile(".\\img\\Temple_Knight_attack.png");
+            img_defend = Image.FromFile(".\\img\\Temple_Knight_defend.png");
+            img_attacked = Image.FromFile(".\\img\\Temple_Knight_attacked.png");
+            img_skill = Image.FromFile(".\\img\\Temple_Knight_skill.png");
+            img_dead = Image.FromFile(".\\img\\Temple_Knight_dead.png");
+            max_health = 300;
+            real_health = 300;
+            defend = 30;
+            damage = 30;
 
             skill_count_static = 3;
             skill_count = skill_count_static;
-            exp = 120;
+            exp = 400;
         }
         public override int skill(string skill_name)
         {
@@ -591,7 +662,7 @@ namespace WindowsFormsApp1
                 if (skill_name == "불 가르기")
                 {
                     skill_count--;
-                    return 35;
+                    return 45;
                 }
 
             }

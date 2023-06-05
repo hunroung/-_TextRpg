@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
             textBox1.AppendText ( "당신은 위화감이 느껴지는 방향을 가만히 응시한다.\r\n");
             this.Refresh();
             Delay(2000);
-            textBox1.AppendText ( "그러자 대리석 기둥 뒤에서 양손에 단검을 든 사람이 걸어나온다.\r\n");
+            textBox1.AppendText ( "그러자 대리석 기둥 뒤에서 왼손에 단검을 든 사람이 걸어나온다.\r\n");
 
             this.Refresh();
             Delay(2000);
