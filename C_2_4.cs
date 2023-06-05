@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
             btn_attack.Enabled = false;
             btn_defend.Enabled = false;
             btn_skill.Enabled = false;
-            btn_run.Enabled = false;
+            //btn_run.Enabled = false;
         }
         //공격, 방어, 스킬, 도망 버튼 활성화
         public void act_btn_able()
@@ -138,7 +138,7 @@ namespace WindowsFormsApp1
             btn_attack.Enabled = true;
             btn_defend.Enabled = true;
             btn_skill.Enabled = true;
-            btn_run.Enabled = true;
+            //btn_run.Enabled = true;
         }
 
         //stat 포인트에 따라 버튼 활성화 , 비활성화
@@ -411,7 +411,14 @@ namespace WindowsFormsApp1
                     textBox1.AppendText(npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n");//변경 필요
                     picture_npc.Image = monster.img_dead;
                     picture_main.Image = ch.main_attack;
-
+                    ch.chapter = 3;
+                    pattern.Typee = (int)Packet_Type.종료;
+                    Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                    m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                    m_stream.Flush();
+                    m_stream.Close();
+                    m_client.Close();
+                    ch.close = 1;
                 }
             }
 
@@ -480,7 +487,14 @@ namespace WindowsFormsApp1
                 textBox1.AppendText(npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n");//변경 필요
                 picture_npc.Image = monster.img_dead;
                 picture_main.Image = ch.main_attack;
-
+                ch.chapter = 3;
+                pattern.Typee = (int)Packet_Type.종료;
+                Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                m_stream.Flush();
+                m_stream.Close();
+                m_client.Close();
+                ch.close = 1;
             }
             update();
             this.Refresh();
@@ -577,7 +591,14 @@ namespace WindowsFormsApp1
                         ch.item_gain(0, 3);//변경 필요
                         textBox1.AppendText(npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n");//변경 필요
                         picture_npc.Image = monster.img_dead;
-
+                        ch.chapter = 3;
+                        pattern.Typee = (int)Packet_Type.종료;
+                        Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                        m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                        m_stream.Flush();
+                        m_stream.Close();
+                        m_client.Close();
+                        ch.close = 1;
                     }
                 }
 
@@ -646,7 +667,14 @@ namespace WindowsFormsApp1
                     ch.item_gain(0, 3);//변경 필요
                     textBox1.AppendText(npc_name.Text + "이 죽었다. exp : " + monster.exp.ToString() + " 획득, 회복 포션 3개 획득\r\n");//변경 필요
                     picture_npc.Image = monster.img_dead;
-
+                    ch.chapter = 3;
+                    pattern.Typee = (int)Packet_Type.종료;
+                    Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                    m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                    m_stream.Flush();
+                    m_stream.Close();
+                    m_client.Close();
+                    ch.close = 1;
                 }
                 update();
                 this.Refresh();

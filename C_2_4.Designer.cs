@@ -63,7 +63,6 @@
             this.item_1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_run = new System.Windows.Forms.Button();
             this.btn_defend = new System.Windows.Forms.Button();
             this.btn_attack = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -460,15 +459,6 @@
             this.textBox1.Size = new System.Drawing.Size(679, 280);
             this.textBox1.TabIndex = 212;
             // 
-            // btn_run
-            // 
-            this.btn_run.Location = new System.Drawing.Point(890, 364);
-            this.btn_run.Name = "btn_run";
-            this.btn_run.Size = new System.Drawing.Size(150, 23);
-            this.btn_run.TabIndex = 223;
-            this.btn_run.Text = "도망친다";
-            this.btn_run.UseVisualStyleBackColor = true;
-            // 
             // btn_defend
             // 
             this.btn_defend.Location = new System.Drawing.Point(890, 302);
@@ -854,7 +844,6 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_run);
             this.Controls.Add(this.btn_defend);
             this.Controls.Add(this.btn_attack);
             this.Controls.Add(this.groupBox3);
@@ -943,7 +932,6 @@
         private System.Windows.Forms.Label item_1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_run;
         private System.Windows.Forms.Button btn_defend;
         private System.Windows.Forms.Button btn_attack;
         private System.Windows.Forms.GroupBox groupBox3;
