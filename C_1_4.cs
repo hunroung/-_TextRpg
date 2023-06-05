@@ -340,6 +340,7 @@ namespace WindowsFormsApp1
 
             }
         }
+
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
@@ -351,8 +352,48 @@ namespace WindowsFormsApp1
         {
             act_btn_enable();
             item_btn_enable();
-            Random rand = new Random();
-            int k = rand.Next(3);
+            int k;
+
+            pattern.chapter = 1;
+            pattern.pattern = 0;
+            pattern.Typee = (int)Packet_Type.패턴;
+
+            Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+            m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+            m_stream.Flush();
+
+            while (true)
+            {
+                try
+                {
+                    m_stream.Read(readBuffer, 0, readBuffer.Length);
+
+                    Packet packet = (Packet)Packet.Desserialize(readBuffer);
+
+                    if (packet.Typee == (int)Packet_Type.패턴)
+                    {
+                        pattern = (Pattern)Packet.Desserialize(readBuffer);
+                        for (int i = 0; i < 256; i++)
+                        {
+                            sendBuffer[i] = 0;
+                        }
+                        k = pattern.pattern;
+                        break;
+                    }
+                    else if (packet.Typee == (int)Packet_Type.에러)
+                    {
+                        Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                        m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                        m_stream.Flush();
+                    }
+                }
+                catch
+                {
+                    m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                    m_stream.Flush();
+                }
+            }
+
             if (k == 1)
             {
                 if (monster.defense(ch.attack()) == 1)
@@ -477,8 +518,47 @@ namespace WindowsFormsApp1
             {
                 act_btn_enable();
                 item_btn_enable();
-                Random rand = new Random();
-                int k = rand.Next(3);
+                int k;
+
+                pattern.chapter = 1;
+                pattern.pattern = 2;
+                pattern.Typee = (int)Packet_Type.패턴;
+
+                Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                m_stream.Flush();
+
+                while (true)
+                {
+                    try
+                    {
+                        m_stream.Read(readBuffer, 0, readBuffer.Length);
+
+                        Packet packet = (Packet)Packet.Desserialize(readBuffer);
+
+                        if (packet.Typee == (int)Packet_Type.패턴)
+                        {
+                            pattern = (Pattern)Packet.Desserialize(readBuffer);
+                            for (int i = 0; i < 256; i++)
+                            {
+                                sendBuffer[i] = 0;
+                            }
+                            k = pattern.pattern;
+                            break;
+                        }
+                        else if (packet.Typee == (int)Packet_Type.에러)
+                        {
+                            Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                            m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                            m_stream.Flush();
+                        }
+                    }
+                    catch
+                    {
+                        m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                        m_stream.Flush();
+                    }
+                }
 
                 if (k == 1)
                 {
@@ -598,8 +678,49 @@ namespace WindowsFormsApp1
         {
             act_btn_enable();
             item_btn_enable();
-            Random rand = new Random();
-            int k = rand.Next(3);
+
+            int k;
+
+            pattern.chapter = 1;
+            pattern.pattern = 1;
+            pattern.Typee = (int)Packet_Type.패턴;
+
+            Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+            m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+            m_stream.Flush();
+
+            while (true)
+            {
+                try
+                {
+                    m_stream.Read(readBuffer, 0, readBuffer.Length);
+
+                    Packet packet = (Packet)Packet.Desserialize(readBuffer);
+
+                    if (packet.Typee == (int)Packet_Type.패턴)
+                    {
+                        pattern = (Pattern)Packet.Desserialize(readBuffer);
+                        for (int i = 0; i < 256; i++)
+                        {
+                            sendBuffer[i] = 0;
+                        }
+                        k = pattern.pattern;
+                        break;
+                    }
+                    else if (packet.Typee == (int)Packet_Type.에러)
+                    {
+                        Packet.Serialize(pattern).CopyTo(sendBuffer, 0);
+                        m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                        m_stream.Flush();
+                    }
+                }
+                catch
+                {
+                    m_stream.Write(sendBuffer, 0, sendBuffer.Length);
+                    m_stream.Flush();
+                }
+            }
+
             switch (k)
             {
                 case 0://슬라임이 공격을 선택한 경우

@@ -884,7 +884,7 @@
             this.Name = "C_2_4";
             this.Text = "C_2_4";
             this.Load += new System.EventHandler(this.C_2_4_Load_1);
-            this.Shown += new System.EventHandler(this.C_2_4_Load);
+            this.Shown += new System.EventHandler(this.C_2_4_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
