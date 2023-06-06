@@ -675,12 +675,12 @@ namespace WindowsFormsApp1
         {
             name = "얼음 유령";
             skill_name = "고드름";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\ice_ghost_slim.PNG");
+            img_attack = Image.FromFile(".\\img\\ice_ghost_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\ice_ghost_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\ice_ghost_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\ice_ghost_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\ice_ghost_dead.PNG");
             max_health = 60;
             real_health = 60;
             defend = 10;
@@ -711,12 +711,12 @@ namespace WindowsFormsApp1
         {
             name = "화염 유령";
             skill_name = "파이어볼";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\fire_ghost.PNG");
+            img_attack = Image.FromFile(".\\img\\fire_ghost_attack.PNG");
+            img_defend = Image.FromFile(".\\img\\fire_ghost_defend.PNG");
+            img_attacked = Image.FromFile(".\\img\\fire_ghost_attacked.PNG");
+            img_skill = Image.FromFile(".\\img\\fire_ghost_skill.PNG");
+            img_dead = Image.FromFile(".\\img\\fire_ghost_dead.PNG");
             max_health = 80;
             real_health = 80;
             defend = 5;
