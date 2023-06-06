@@ -1000,12 +1000,12 @@ namespace WindowsFormsApp1
         {
             name = "초록 네펜데스";
             skill_name = "독 내뿜기";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\green_nepen.PNG");
+            img_attack = Image.FromFile(".\\img\\green_nepen.PNG");
+            img_defend = Image.FromFile(".\\img\\green_nepen.PNG");
+            img_attacked = Image.FromFile(".\\img\\green_nepen.PNG");
+            img_skill = Image.FromFile(".\\img\\green_nepen.PNG");
+            img_dead = Image.FromFile(".\\img\\green_nepen.PNG");
             max_health = 150;
             real_health = 150;
             defend = 10;
@@ -1036,12 +1036,12 @@ namespace WindowsFormsApp1
         {
             name = "푸른 네펜데스";
             skill_name = "얼음 내뿜기";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\blue_nepen.PNG");
+            img_attack = Image.FromFile(".\\img\\blue_nepen.PNG");
+            img_defend = Image.FromFile(".\\img\\blue_nepen.PNG");
+            img_attacked = Image.FromFile(".\\img\\blue_nepen.PNG");
+            img_skill = Image.FromFile(".\\img\\blue_nepen.PNG");
+            img_dead = Image.FromFile(".\\img\\blue_nepen.PNG");
             max_health = 160;
             real_health = 160;
             defend = 10;
@@ -1072,12 +1072,12 @@ namespace WindowsFormsApp1
         {
             name = "붉은 네펜데스";
             skill_name = "불 내뿜기";
-            img = Image.FromFile(".\\img\\red_slim.PNG");
-            img_attack = Image.FromFile(".\\img\\red_slim_attack.PNG");
-            img_defend = Image.FromFile(".\\img\\red_slim_defend.PNG");
-            img_attacked = Image.FromFile(".\\img\\red_slim_attacked.PNG");
-            img_skill = Image.FromFile(".\\img\\red_slim_skill.PNG");
-            img_dead = Image.FromFile(".\\img\\red_slim_dead.PNG");
+            img = Image.FromFile(".\\img\\red_nepen.PNG");
+            img_attack = Image.FromFile(".\\img\\red_nepen.PNG");
+            img_defend = Image.FromFile(".\\img\\red_nepen.PNG");
+            img_attacked = Image.FromFile(".\\img\\red_nepen.PNG");
+            img_skill = Image.FromFile(".\\img\\red_nepen.PNG");
+            img_dead = Image.FromFile(".\\img\\red_nepen.PNG");
             max_health = 200;
             real_health = 200;
             defend = 10;
