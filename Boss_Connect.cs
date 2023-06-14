@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
                 {
                     byte[] readBuffer = new byte[256];
                     byte[] sendBuffer = new byte[256];
-                    m_client_.Connect("223.194.45.82", 32338);
+                    m_client_.Connect("", 32338);
                     b_try = false;
                     m_stream_ = m_client_.GetStream();
                     TextRpg_packet.Boss Boss_packet = new TextRpg_packet.Boss();

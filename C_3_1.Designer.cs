@@ -245,7 +245,7 @@
             this.btn_def.TabIndex = 19;
             this.btn_def.Text = "^";
             this.btn_def.UseVisualStyleBackColor = true;
-            this.btn_def.Click += new System.EventHandler(this.btn_item_Click);
+            this.btn_def.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_intel
             // 
@@ -255,7 +255,7 @@
             this.btn_intel.TabIndex = 17;
             this.btn_intel.Text = "^";
             this.btn_intel.UseVisualStyleBackColor = true;
-            this.btn_intel.Click += new System.EventHandler(this.btn_item_Click);
+            this.btn_intel.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // btn_str
             // 
@@ -265,7 +265,7 @@
             this.btn_str.TabIndex = 16;
             this.btn_str.Text = "^";
             this.btn_str.UseVisualStyleBackColor = true;
-            this.btn_str.Click += new System.EventHandler(this.btn_item_Click);
+            this.btn_str.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // def
             // 
@@ -371,7 +371,7 @@
             this.btn_spd.TabIndex = 18;
             this.btn_spd.Text = "^";
             this.btn_spd.UseVisualStyleBackColor = true;
-            this.btn_spd.Click += new System.EventHandler(this.btn_item_Click);
+            this.btn_spd.Click += new System.EventHandler(this.btn_str_Click);
             // 
             // str
             // 
